@@ -1,6 +1,6 @@
-# Contributing to CodePrep.AI
+# Contributing to CodePrep
 
-Thanks for helping improve CodePrep.AI. Contributions should keep the app easy to run locally and avoid committing real credentials, local databases, or generated build artifacts.
+Thanks for helping improve CodePrep. Contributions should keep the app easy to run locally and avoid committing real credentials, local databases, or generated build artifacts.
 
 ## Local Setup
 
@@ -12,8 +12,8 @@ cd codeprep-ai
 Backend:
 
 ```bash
-conda create -n codeprep python=3.13
-conda activate codeprep
+python3 -m venv backend/.venv
+source backend/.venv/bin/activate
 pip install -r backend/requirements.txt
 cp backend/src/.env.example backend/src/.env
 ```
@@ -33,12 +33,14 @@ Run these before opening a pull request:
 ```bash
 cd frontend
 npm run lint
+npm test
 npm run build
 ```
 
 ```bash
 cd backend
 pip install -r requirements-ci.txt
+ruff check src tests
 pytest
 ```
 

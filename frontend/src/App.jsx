@@ -1,30 +1,30 @@
-import ClerkProviderWithRoutes from "./auth/ClerkProviderWithRoutes.jsx"
-import { Routes, Route } from "react-router-dom"
-import { Layout } from "./layout/Layout.jsx"
+import { lazy, Suspense } from "react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { ChallengeGenerator } from "./challenge/ChallengeGenerator.jsx"
 import { HistoryPanel } from "./history/HistoryPanel.jsx"
-import { AuthenticationPage } from "./auth/AuthenticationPage.jsx"
+import DemoLayout from "./layout/DemoLayout.jsx"
+import DemoApiProvider from "./utils/DemoApiProvider.jsx"
 import "./App.css"
 
-// App is the root component that sets up routing and authentication providers
+const mode = import.meta.env.VITE_CODEPREP_MODE === "live" ? "live" : "demo"
+const LiveApp = lazy(() => import("./LiveApp.jsx"))
+
 function App() {
+  if (mode === "live") {
+    return <Suspense fallback={<div className="app-boot">Loading CodePrep</div>}><LiveApp /></Suspense>
+  }
+
   return (
-    // Wrap the app with ClerkProvider for authentication and BrowserRouter for routing
-    <ClerkProviderWithRoutes>
-      <Routes>
-        {/* Route for the sign-in page */}
-        <Route path="/sign-in/*" element={<AuthenticationPage />} />
-        {/* Route for the sign-up page */}
-        <Route path="/sign-up" element={<AuthenticationPage />} />
-        {/* Protected routes wrapped in the main Layout */}
-        <Route element={<Layout />}>
-          {/* Main challenge generator page */}
-          <Route path="/" element={<ChallengeGenerator />} />
-          {/* Challenge history page */}
-          <Route path="/history" element={<HistoryPanel />} />
-        </Route>
-      </Routes>
-    </ClerkProviderWithRoutes>
+    <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <DemoApiProvider>
+        <Routes>
+          <Route element={<DemoLayout />}>
+            <Route path="/" element={<ChallengeGenerator />} />
+            <Route path="/history" element={<HistoryPanel />} />
+          </Route>
+        </Routes>
+      </DemoApiProvider>
+    </BrowserRouter>
   )
 }
 

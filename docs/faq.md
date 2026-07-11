@@ -1,25 +1,29 @@
 # FAQ
 
-## Why use Llama 3?
+## Does the demo call an LLM?
 
-Meta-Llama-3-8B-Instruct is strong enough to generate varied interview-style coding questions while remaining accessible through Hugging Face.
+No. The default frontend uses labeled, deterministic fixtures so anyone can inspect the full interaction without credentials. Set `VITE_CODEPREP_MODE=live` for the authenticated API path.
 
-## Can I use a different model?
+## Does the backend download an 8B model?
 
-Yes. Set `CODEPREP_MODEL_ID` in `backend/src/.env` or update the default in `backend/src/ai_generator.py`.
+No. It uses Hugging Face's hosted inference client. This keeps API startup and CI lightweight and makes model latency an explicit service dependency.
 
-## Why does the first generated challenge take a while?
+## Can I change the model?
 
-The model is loaded lazily on the first generation request so the API can start and run tests without downloading the LLM.
+Yes. Set `CODEPREP_MODEL_ID`. The replacement must support chat completion and return the JSON contract described in [Architecture](architecture.md).
+
+## What happens when generation fails?
+
+The request returns a generic `503`. The database transaction is rolled back, no challenge is stored, and the user's quota remains unchanged.
 
 ## How does quota work?
 
-Each user receives a daily quota. The backend resets quota when at least 24 hours have passed since the user's last reset timestamp.
+Each user starts with 50 generations. The quota resets after 24 hours. Challenge creation and the decrement occur in one transaction.
 
 ## Where is data stored?
 
-The default local database is SQLite at `backend/challenges.db`. You can point SQLAlchemy to another database with `DATABASE_URL`.
+Local development defaults to `backend/challenges.db`. Configure `DATABASE_URL` for another SQLAlchemy-supported database.
 
 ## How do I report a bug?
 
-Open an issue at <https://github.com/ethanvillalovoz/codeprep-ai/issues>.
+Open a focused issue in the [GitHub issue tracker](https://github.com/ethanvillalovoz/codeprep-ai/issues).

@@ -1,16 +1,24 @@
-from fastapi import APIRouter, Request, HTTPException, Depends
+import json
+import logging
+import os
+from typing import Annotated
+
+from fastapi import APIRouter, Depends, HTTPException, Request
+from sqlalchemy.orm import Session
+from svix.webhooks import Webhook, WebhookVerificationError
+
 from ..database.db import create_challenge_quota
 from ..database.models import get_db
-from svix.webhooks import Webhook
-import os
-import json
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
+DatabaseSession = Annotated[Session, Depends(get_db)]
+
 
 @router.post("/clerk")
 async def handle_user_created(
     request: Request,
-    db=Depends(get_db)
+    db: DatabaseSession,
 ):
     """
     Endpoint to handle Clerk webhook events for user creation.
@@ -22,10 +30,7 @@ async def handle_user_created(
 
     if not webhook_secret:
         # If the secret is not set, return a server error
-        raise HTTPException(
-            status_code=500,
-            detail="CLERK_WEBHOOK_SECRET not set"
-        )
+        raise HTTPException(status_code=503, detail="Webhook processing is temporarily unavailable")
 
     # Read the raw request body and headers
     body = await request.body()
@@ -47,11 +52,18 @@ async def handle_user_created(
         # Extract user data and user ID from the payload
         user_data = data.get("data", {})
         user_id = user_data.get("id")
+        if not user_id:
+            raise HTTPException(status_code=400, detail="Missing user identifier")
 
         # Create a challenge quota record for the new user
         create_challenge_quota(db, user_id)
 
         return {"status": "success"}
-    except Exception as e:
-        # If verification fails or any error occurs, return unauthorized
-        raise HTTPException(status_code=401, detail=str(e))
+    except HTTPException:
+        raise
+    except (WebhookVerificationError, json.JSONDecodeError) as exc:
+        raise HTTPException(status_code=401, detail="Invalid webhook") from exc
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unable to process Clerk webhook")
+        raise HTTPException(status_code=500, detail="Unable to process webhook") from exc

@@ -1,58 +1,34 @@
-# CodePrep.AI Demo Strategy
+# Demo Strategy
 
-CodePrep.AI is best presented as a reproducible local app plus screenshots or a short walkthrough video. It should not advertise a public live demo unless the frontend, backend, authentication, model access, and persistence layer are all deployed and monitored together.
+CodePrep ships an interactive local demo instead of a nonfunctional public shell.
 
-## Current Public Demo
+## Public Review Path
 
-- README screenshot gallery:
-  - `docs/screenshots/home.png`
-  - `docs/screenshots/challenge.png`
-  - `docs/screenshots/history.png`
-- Local reproduction through the README quick start and usage guide.
+1. Run `npm install && npm run dev` in `frontend/`.
+2. Select a difficulty and generate a deterministic challenge.
+3. Commit to an answer and inspect the explanation.
+4. Open History to review completed questions.
 
-## Why Not GitHub Pages
+The demo is labeled in the interface and never implies that fixtures are live model output.
 
-GitHub Pages only hosts static files. It cannot run:
+## README Media
 
-- The FastAPI backend.
-- Clerk-protected challenge generation and history requests.
-- Hugging Face model inference.
-- SQLite or another configured database.
-- Server-side environment variables and secrets.
+`docs/media/codeprep-workspace.gif` is built from browser-verified product states:
 
-For that reason, a GitHub Pages link would only show a static shell unless the backend and service configuration were hosted elsewhere.
+- Ready workspace.
+- Generation in progress.
+- Unanswered challenge.
+- Correct answer and explanation.
+- Session history.
 
-## Recommended Public Demo Format
+The underlying desktop and mobile captures remain in `docs/media/` for inspection.
 
-The strongest next demo artifact would be a short GIF or video that shows:
+## Hosted Deployment Criteria
 
-1. Signing in or landing on an authenticated session.
-2. Choosing a challenge difficulty.
-3. Generating a coding question.
-4. Selecting an answer and viewing feedback.
-5. Opening the challenge history view.
+Only advertise a hosted live mode after the following are deployed and monitored together:
 
-Keep the walkthrough around 30 to 60 seconds and focus on the product behavior instead of setup.
-
-## Local Reproduction Checklist
-
-Before recording a walkthrough:
-
-- Create and activate the backend Python environment.
-- Install backend dependencies from `backend/requirements.txt`.
-- Configure `backend/src/.env` with Clerk and Hugging Face credentials.
-- Log in with `huggingface-cli login` if required by the model.
-- Start the backend with `python server.py`.
-- Install frontend dependencies.
-- Configure `frontend/.env` with the Clerk publishable key and API URL.
-- Start the frontend with `npm run dev`.
-
-## If A Hosted Demo Is Added Later
-
-A real public live demo should only be linked after:
-
-- Backend and frontend deployments are stable.
-- Clerk callback URLs and allowed origins are configured for production.
-- Hugging Face access tokens are stored as server-side secrets.
-- Model latency, memory requirements, rate limits, and expected costs are understood.
-- The README clearly labels the hosted demo as maintained.
+- Vite frontend with Clerk production keys.
+- FastAPI service with restricted origins.
+- Hosted relational database and migrations.
+- Hugging Face inference token and known provider limits.
+- Error monitoring, request limits, and cost controls.

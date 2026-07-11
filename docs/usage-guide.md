@@ -1,104 +1,61 @@
 # Usage Guide
 
-This guide covers local setup, configuration, and common development tasks for CodePrep.AI.
-
-## 1. Install Dependencies
-
-Backend:
-
-```bash
-conda create -n codeprep python=3.13
-conda activate codeprep
-pip install -r backend/requirements.txt
-```
-
-Frontend:
+## Interactive Demo
 
 ```bash
 cd frontend
 npm install
-```
-
-## 2. Configure Environment Variables
-
-Backend:
-
-```bash
-cp backend/src/.env.example backend/src/.env
-```
-
-Frontend:
-
-```bash
-cp frontend/.env.example frontend/.env
-```
-
-Fill in the Clerk and Hugging Face values before running the app.
-
-## 3. Run Locally
-
-Start the backend:
-
-```bash
-cd backend
-huggingface-cli login
-python server.py
-```
-
-Start the frontend:
-
-```bash
-cd frontend
 npm run dev
 ```
 
-Visit `http://localhost:5173`.
+Visit `http://localhost:5173`. Demo mode is the default and requires no environment variables.
 
-## 4. Use the App
+## Live Development
 
-1. Sign in with Clerk.
-2. Select a difficulty.
-3. Generate a challenge.
-4. Choose an answer to reveal the explanation.
-5. Visit the history page to review previous challenges.
-6. Watch the daily quota counter reset after 24 hours.
-
-## 5. Test Clerk Webhooks Locally
-
-Use Ngrok only when testing Clerk webhook delivery:
+### Backend
 
 ```bash
-ngrok http 8000
+python3 -m venv backend/.venv
+source backend/.venv/bin/activate
+pip install -r backend/requirements.txt
+cp backend/src/.env.example backend/src/.env
+cd backend
+python server.py
 ```
 
-Set the Clerk webhook target to:
-
-```text
-https://your-ngrok-domain.ngrok-free.app/webhooks/clerk
-```
-
-## 6. Development Checks
-
-Frontend:
+### Frontend
 
 ```bash
 cd frontend
-npm run lint
-npm run build
+cp .env.example .env
+npm install
+npm run dev
 ```
 
-Backend:
+Add `VITE_CODEPREP_MODE=live` and your Clerk publishable key to `frontend/.env`.
+
+## Practice Flow
+
+1. Choose Easy, Medium, or Hard.
+2. Generate one challenge.
+3. Select an answer once.
+4. Review the validated answer and explanation.
+5. Open History to revisit recent generations.
+
+## Clerk Webhooks
+
+For local webhook testing, expose port `8000` through your preferred tunnel and configure Clerk to send `user.created` to `/webhooks/clerk`. The endpoint rejects unsigned payloads and safely ignores unrelated event types.
+
+## Checks
 
 ```bash
-cd backend
-pip install -r requirements-ci.txt
-pytest
+cd frontend && npm run check
+cd ../backend && ../backend/.venv/bin/ruff check src tests && ../backend/.venv/bin/pytest -q
 ```
 
-## 7. Troubleshooting
+## Troubleshooting
 
-- Missing Clerk key: confirm `frontend/.env` has `VITE_CLERK_PUBLISHABLE_KEY`.
-- Auth failures: confirm backend `CLERK_API_KEY`, `JWT_KEY`, and `ALLOWED_ORIGINS`.
-- Model access errors: confirm your Hugging Face account has access to the configured model.
-- Slow first challenge: the backend loads the LLM on the first generation request.
-- Database confusion: delete local `backend/challenges.db` and restart the API to recreate SQLite tables.
+- `503 Authentication is temporarily unavailable`: set `CLERK_API_KEY`.
+- `503 Challenge generation is temporarily unavailable`: verify `HUGGINGFACE_TOKEN`, model access, and provider availability.
+- Browser CORS failure: add the exact frontend origin to `ALLOWED_ORIGINS`.
+- Empty local data: confirm `DATABASE_URL` points to the expected database file.
