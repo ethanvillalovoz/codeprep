@@ -5,8 +5,8 @@ Thanks for helping improve CodePrep. Contributions should keep the app easy to r
 ## Local Setup
 
 ```bash
-git clone https://github.com/ethanvillalovoz/codeprep-ai.git
-cd codeprep-ai
+git clone https://github.com/ethanvillalovoz/codeprep.git
+cd codeprep
 ```
 
 Backend:

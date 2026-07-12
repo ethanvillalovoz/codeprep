@@ -26,4 +26,4 @@ Local development defaults to `backend/challenges.db`. Configure `DATABASE_URL` 
 
 ## How do I report a bug?
 
-Open a focused issue in the [GitHub issue tracker](https://github.com/ethanvillalovoz/codeprep-ai/issues).
+Open a focused issue in the [GitHub issue tracker](https://github.com/ethanvillalovoz/codeprep/issues).

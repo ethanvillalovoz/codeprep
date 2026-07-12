@@ -25,7 +25,7 @@ export function Layout() {
             <Navigation />
             <UserButton />
           </SignedIn>
-          <a href="https://github.com/ethanvillalovoz/codeprep-ai" target="_blank" rel="noreferrer">
+          <a href="https://github.com/ethanvillalovoz/codeprep" target="_blank" rel="noreferrer">
             Repository
           </a>
         </div>

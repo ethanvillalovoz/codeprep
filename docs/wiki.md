@@ -16,6 +16,6 @@ CodePrep practices one technical decision at a time: generate a validated multip
 
 ## Need Help?
 
-- Open an issue: <https://github.com/ethanvillalovoz/codeprep-ai/issues>
+- Open an issue: <https://github.com/ethanvillalovoz/codeprep/issues>
 - Review setup instructions in the [usage guide](usage-guide.md)
 - Read the system design in [architecture](architecture.md)

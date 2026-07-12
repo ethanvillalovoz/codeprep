@@ -14,7 +14,7 @@ export default function DemoLayout() {
             <NavLink to="/" end>Practice</NavLink>
             <NavLink to="/history">History</NavLink>
           </nav>
-          <a href="https://github.com/ethanvillalovoz/codeprep-ai" target="_blank" rel="noreferrer">Repository</a>
+          <a href="https://github.com/ethanvillalovoz/codeprep" target="_blank" rel="noreferrer">Repository</a>
         </div>
       </header>
       <main className="app-main"><Outlet /></main>

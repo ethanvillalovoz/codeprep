@@ -1,6 +1,6 @@
 # CodePrep
 
-[![CI](https://github.com/ethanvillalovoz/codeprep-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanvillalovoz/codeprep-ai/actions/workflows/ci.yml)
+[![CI](https://github.com/ethanvillalovoz/codeprep/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanvillalovoz/codeprep/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-MIT-222222.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-19-222222.svg)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-222222.svg)](https://fastapi.tiangolo.com/)
@@ -23,8 +23,8 @@ A focused coding-interview practice workspace that generates one multiple-choice
 The frontend starts in demo mode by default. Its fixtures use the same data contract as the live API.
 
 ```bash
-git clone https://github.com/ethanvillalovoz/codeprep-ai.git
-cd codeprep-ai/frontend
+git clone https://github.com/ethanvillalovoz/codeprep.git
+cd codeprep/frontend
 npm install
 npm run dev
 ```
