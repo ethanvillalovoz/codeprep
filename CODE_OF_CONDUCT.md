@@ -1,6 +1,6 @@
 # Code of Conduct
 
-CodePrep.AI welcomes respectful collaboration.
+CodePrep welcomes respectful collaboration.
 
 ## Expected Behavior
 

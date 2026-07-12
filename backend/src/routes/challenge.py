@@ -1,28 +1,36 @@
-from datetime import datetime
 import json
+import logging
+from typing import Annotated, Literal
 
-from fastapi import APIRouter, Request, HTTPException, Depends
+from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy.orm import Session
 
-from ..ai_generator import generate_challenge_with_llm
+from ..ai_generator import ChallengeGenerationError, generate_challenge_with_llm
 from ..database.db import (
-    get_challenge_quota,
     create_challenge,
     create_challenge_quota,
+    get_challenge_quota,
+    get_user_challenges,
     reset_quota_if_needed,
-    get_user_challenges
 )
-from ..utils import authenticate_and_get_user_details
 from ..database.models import get_db
+from ..utils import authenticate_and_get_user_details
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
+DatabaseSession = Annotated[Session, Depends(get_db)]
+
+
+def get_authenticated_user_id(request: Request) -> str:
+    user_id = authenticate_and_get_user_details(request).get("user_id")
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+    return user_id
+
 
 class ChallengeRequest(BaseModel):
-    """
-    Pydantic model for validating challenge generation requests.
-    """
-    difficulty: str
+    difficulty: Literal["easy", "medium", "hard"]
 
     model_config = ConfigDict(
         json_schema_extra={
@@ -32,100 +40,97 @@ class ChallengeRequest(BaseModel):
         }
     )
 
+
+def serialize_challenge(challenge):
+    return {
+        "id": challenge.id,
+        "difficulty": challenge.difficulty,
+        "title": challenge.title,
+        "options": json.loads(challenge.options),
+        "correct_answer_id": challenge.correct_answer_id,
+        "explanation": challenge.explanation,
+        "timestamp": challenge.date_created.isoformat(),
+    }
+
+
 @router.post("/generate-challenge")
-async def generate_challenge(
-    request: ChallengeRequest,
-    request_obj: Request,
-    db: Session = Depends(get_db)
+def generate_challenge(
+    payload: ChallengeRequest,
+    request: Request,
+    db: DatabaseSession,
 ):
-    """
-    Endpoint to generate a new coding challenge for the authenticated user.
-    Checks and updates the user's quota, generates a challenge using the LLM,
-    stores it in the database, and returns the challenge data.
-    """
     try:
-        # Authenticate user and get user_id
-        user_details = authenticate_and_get_user_details(request_obj)
-        user_id = user_details.get("user_id")
-        
-        # Get or create the user's quota record, and reset if needed
+        user_id = get_authenticated_user_id(request)
+
         quota = get_challenge_quota(db, user_id)
         if not quota:
             quota = create_challenge_quota(db, user_id)
         quota = reset_quota_if_needed(db, quota)
 
-        # Check if user has quota remaining
         if quota.quota_remaining <= 0:
             raise HTTPException(status_code=429, detail="Quota exhausted")
 
-        # Generate a challenge using the LLM
-        challenge_data = generate_challenge_with_llm(request.difficulty)
+        challenge_data = generate_challenge_with_llm(payload.difficulty)
 
-        # Store the new challenge in the database
         new_challenge = create_challenge(
             db=db,
-            difficulty=request.difficulty,
+            difficulty=payload.difficulty,
             created_by=user_id,
             title=challenge_data["title"],
             options=json.dumps(challenge_data["options"]),
             correct_answer_id=challenge_data["correct_answer_id"],
-            explanation=challenge_data["explanation"]
+            explanation=challenge_data["explanation"],
         )
 
-        # Decrement the user's quota and commit changes
         quota.quota_remaining -= 1
         db.commit()
+        db.refresh(new_challenge)
 
-        # Return the challenge data to the frontend
-        return {
-            "id": new_challenge.id,
-            "difficulty": request.difficulty,
-            "title": new_challenge.title,
-            "options": json.loads(new_challenge.options),
-            "correct_answer_id": new_challenge.correct_answer_id,
-            "explanation": new_challenge.explanation,
-            "timestamp": new_challenge.date_created.isoformat()
-        }
-    
+        return serialize_challenge(new_challenge)
+
     except HTTPException:
+        db.rollback()
         raise
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+    except ChallengeGenerationError as exc:
+        db.rollback()
+        logger.warning("Challenge generation failed: %s", exc)
+        raise HTTPException(
+            status_code=503,
+            detail="Challenge generation is temporarily unavailable",
+        ) from exc
+    except Exception as exc:
+        db.rollback()
+        logger.exception("Unexpected challenge generation failure")
+        raise HTTPException(
+            status_code=500,
+            detail="Unable to generate a challenge",
+        ) from exc
+
 
 @router.get("/my-history")
-async def my_history(
+def my_history(
     request: Request,
-    db: Session = Depends(get_db)
+    db: DatabaseSession,
 ):
-    """
-    Endpoint to retrieve the authenticated user's challenge history.
-    """
-    user_details = authenticate_and_get_user_details(request)
-    user_id = user_details.get("user_id")
-
+    user_id = get_authenticated_user_id(request)
     challenges = get_user_challenges(db, user_id)
-    return {"challenges": challenges}
+    return {"challenges": [serialize_challenge(item) for item in challenges]}
+
 
 @router.get("/quota")
-async def get_quota(
+def get_quota(
     request: Request,
-    db: Session = Depends(get_db)
+    db: DatabaseSession,
 ):
-    """
-    Endpoint to retrieve the authenticated user's current challenge quota.
-    Resets the quota if 24 hours have passed since the last reset.
-    """
-    user_details = authenticate_and_get_user_details(request)
-    user_id = user_details.get("user_id")
+    user_id = get_authenticated_user_id(request)
 
     quota = get_challenge_quota(db, user_id)
     if not quota:
-        # If no quota record exists, return default values
-        return {
-            "user_id": user_id,
-            "quota_remaining": 0,
-            "last_reset_date": datetime.now()
-        }
-    
+        quota = create_challenge_quota(db, user_id)
+
     quota = reset_quota_if_needed(db, quota)
-    return quota
+    return {
+        "user_id": quota.user_id,
+        "quota_remaining": quota.quota_remaining,
+        "last_reset_date": quota.last_reset_date.isoformat(),
+    }

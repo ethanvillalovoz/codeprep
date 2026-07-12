@@ -1,117 +1,116 @@
 import { useCallback, useEffect, useState } from "react"
 import { MCQChallenge } from "./MCQChallenge.jsx"
-import { useApi } from "../utils/api.js"
+import { useApi } from "../utils/api-context.js"
 
-// ChallengeGenerator is the main component for generating and displaying coding challenges
+const difficulties = ["easy", "medium", "hard"]
+const quotaMax = 50
+
 export function ChallengeGenerator() {
-  // State for the current challenge, loading status, and error messages
   const [challenge, setChallenge] = useState(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState(null)
-
-  // Custom API hook for making backend requests
-  const { makeRequest } = useApi()
-  // State for selected difficulty and user quota
-  const [difficulty, setDifficulty] = useState("easy")
+  const [difficulty, setDifficulty] = useState("medium")
   const [quota, setQuota] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState("")
+  const { makeRequest, mode } = useApi()
 
-  // Fetch the current quota from the backend
   const fetchQuota = useCallback(async () => {
     try {
-      const data = await makeRequest("quota")
-      setQuota(data)
-    } catch (err) {
-      setError(err.message || "Failed to load quota")
+      setQuota(await makeRequest("quota"))
+    } catch (requestError) {
+      setError(requestError.message || "Quota is temporarily unavailable")
     }
   }, [makeRequest])
 
-  // Fetch the user's quota when the component mounts
   useEffect(() => {
     fetchQuota()
   }, [fetchQuota])
 
-  // Generate a new challenge based on the selected difficulty
   const generateChallenge = async () => {
     setIsLoading(true)
-    setError(null)
+    setError("")
     setChallenge(null)
     try {
-      const data = await makeRequest("generate-challenge", {
+      const nextChallenge = await makeRequest("generate-challenge", {
         method: "POST",
         body: JSON.stringify({ difficulty }),
       })
-      setChallenge(data)
-      fetchQuota()
-    } catch (err) {
-      setError(err.message || "Failed to generate challenge")
+      setChallenge(nextChallenge)
+      await fetchQuota()
+    } catch (requestError) {
+      setError(requestError.message || "Challenge generation failed")
     } finally {
       setIsLoading(false)
     }
   }
 
-  // Calculate the next quota reset time (24 hours after last reset)
-  const getNextResetTime = () => {
-    if (!quota?.last_reset_date) return null
-    const resetDate = new Date(quota.last_reset_date)
-    resetDate.setHours(resetDate.getHours() + 24)
-    return resetDate
-  }
-
-  // Quota progress bar calculation
-  const quotaMax = 50
-  const quotaUsed = quotaMax - (quota?.quota_remaining || 0)
-  const quotaPercent = Math.min(100, Math.round((quotaUsed / quotaMax) * 100))
+  const remaining = quota?.quota_remaining ?? 0
+  const remainingPercent = Math.max(0, Math.min(100, (remaining / quotaMax) * 100))
 
   return (
-    <div className="challenge-container">
-      {/* Page title */}
-      <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>AI Interview Practice</h2>
-      {/* Quota display and progress bar */}
-      <div className="quota-display">
-        <p>Challenges remaining today: {quota?.quota_remaining || 0}</p>
-        <div className="quota-progress">
-          <div className="quota-progress-bar" style={{ width: `${100 - quotaPercent}%` }}></div>
+    <section className="practice-workspace" aria-labelledby="practice-title">
+      <div className="practice-heading">
+        <div>
+          <p className="eyebrow">01 / Practice workspace</p>
+          <h1 id="practice-title">Practice the decision, not the trivia.</h1>
+          <p className="practice-copy">
+            Generate one focused multiple-choice challenge, commit to an answer,
+            then inspect the reasoning.
+          </p>
         </div>
-        {quota?.quota_remaining === 0 && (
-          <p>Next reset: {getNextResetTime()?.toLocaleString()}</p>
-        )}
+        <div className="session-meta">
+          <span>{mode === "demo" ? "Demo session" : "Authenticated session"}</span>
+          <strong>{remaining} / {quotaMax}</strong>
+          <div className="quota-track" aria-label={`${remaining} challenges remaining`}>
+            <span style={{ width: `${remainingPercent}%` }} />
+          </div>
+        </div>
       </div>
-      {/* Difficulty selector */}
-      <div className="difficulty-selector">
-        <label htmlFor="difficulty">Select Difficulty:</label>
-        <select
-          id="difficulty"
-          value={difficulty}
-          onChange={(e) => setDifficulty(e.target.value)}
-          disabled={isLoading}
+
+      <div className="practice-controls">
+        <div className="difficulty-control" aria-label="Challenge difficulty">
+          <span>Difficulty</span>
+          <div className="segmented-control">
+            {difficulties.map((level) => (
+              <button
+                key={level}
+                type="button"
+                className={difficulty === level ? "is-active" : ""}
+                aria-pressed={difficulty === level}
+                onClick={() => setDifficulty(level)}
+                disabled={isLoading}
+              >
+                {level}
+              </button>
+            ))}
+          </div>
+        </div>
+        <button
+          type="button"
+          className="generate-button"
+          onClick={generateChallenge}
+          disabled={isLoading || remaining === 0}
         >
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
+          {isLoading ? "Generating" : challenge ? "Next challenge" : "Generate challenge"}
+        </button>
       </div>
-      {/* Generate challenge button */}
-      <button
-        onClick={generateChallenge}
-        disabled={isLoading || quota?.quota_remaining === 0}
-        className="generate-button"
-      >
-        {isLoading ? "Generating..." : "Generate Challenge"}
-      </button>
-      {/* Error message display */}
-      {error && (
-        <div className="error-message">
-          <p>{error}</p>
-        </div>
-      )}
-      {/* Loading skeleton while generating */}
-      {isLoading && (
-        <div className="challenge-card skeleton" style={{ height: 200, marginTop: 32 }}></div>
-      )}
-      {/* Render the challenge if available */}
-      {challenge && (
-        <MCQChallenge challenge={challenge} />
-      )}
-    </div>
+
+      {error ? <p className="error-message" role="alert">{error}</p> : null}
+
+      <div className="challenge-stage" aria-live="polite">
+        {isLoading ? (
+          <div className="generation-state" role="status">
+            <span className="pulse-dot" aria-hidden="true" />
+            <p>Constructing a {difficulty} challenge and checking its answer set.</p>
+          </div>
+        ) : null}
+        {!isLoading && challenge ? <MCQChallenge key={challenge.id} challenge={challenge} /> : null}
+        {!isLoading && !challenge ? (
+          <div className="empty-challenge">
+            <span>Ready</span>
+            <p>No active challenge</p>
+          </div>
+        ) : null}
+      </div>
+    </section>
   )
 }

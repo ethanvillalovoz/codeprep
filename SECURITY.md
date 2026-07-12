@@ -13,6 +13,6 @@ Do not commit:
 - Hugging Face tokens
 - `.env` files
 - Generated SQLite databases with user IDs or challenge history
-- Model weights or cached artifacts
+- Model artifacts or provider response logs containing user data
 
 Use the provided `.env.example` files for documentation only.

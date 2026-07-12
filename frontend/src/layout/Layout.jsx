@@ -1,35 +1,39 @@
-import { SignedOut, UserButton, SignedIn } from "@clerk/clerk-react"
-import { Outlet, Link, Navigate } from "react-router-dom"
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react"
+import { Navigate, NavLink, Outlet } from "react-router-dom"
 
-// Layout component defines the main structure and navigation for the app
+const Navigation = () => (
+  <nav aria-label="Primary navigation">
+    <NavLink to="/" end>Practice</NavLink>
+    <NavLink to="/history">History</NavLink>
+  </nav>
+)
+
 export function Layout() {
   return (
     <div className="app-layout">
-      {/* App header with title and navigation */}
       <header className="app-header">
-        <div className="header-content">
-          <h1>CodePrep.AI</h1>
-          <nav>
-            {/* Show navigation links and user button only when signed in */}
-            <SignedIn>
-              <Link to="/">Generate Challenge</Link>
-              <Link to="/history">History</Link>
-              <UserButton />
-            </SignedIn>
-          </nav>
+        <NavLink className="brand" to="/" aria-label="CodePrep home">
+          <span className="brand-mark" aria-hidden="true">CP</span>
+          <span>
+            <strong>CodePrep</strong>
+            <small>Interview practice</small>
+          </span>
+        </NavLink>
+
+        <div className="header-actions">
+          <SignedIn>
+            <Navigation />
+            <UserButton />
+          </SignedIn>
+          <a href="https://github.com/ethanvillalovoz/codeprep" target="_blank" rel="noreferrer">
+            Repository
+          </a>
         </div>
       </header>
 
-      {/* Main content area */}
       <main className="app-main">
-        {/* Redirect to sign-in page if user is signed out */}
-        <SignedOut>
-          <Navigate to="/sign-in" replace />
-        </SignedOut>
-        {/* Render child routes if user is signed in */}
-        <SignedIn>
-          <Outlet />
-        </SignedIn>
+        <SignedOut><Navigate to="/sign-in" replace /></SignedOut>
+        <SignedIn><Outlet /></SignedIn>
       </main>
     </div>
   )

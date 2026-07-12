@@ -2,6 +2,7 @@ import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 from .routes import challenge, webhooks
 
 
@@ -13,15 +14,24 @@ def get_allowed_origins():
     return [origin.strip() for origin in raw_origins.split(",") if origin.strip()]
 
 
-app = FastAPI(title="CodePrep.AI API")
+app = FastAPI(
+    title="CodePrep API",
+    description="Authenticated coding challenge generation and practice history.",
+    version="1.1.0",
+)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=get_allowed_origins(),
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST"],
+    allow_headers=["Authorization", "Content-Type"],
 )
+
+
+@app.get("/")
+def root():
+    return {"name": "CodePrep API", "docs": "/docs", "health": "/health"}
 
 
 @app.get("/health")

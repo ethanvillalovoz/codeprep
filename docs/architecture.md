@@ -1,58 +1,58 @@
 # Architecture
 
-CodePrep.AI is a full-stack coding interview practice app with a React frontend, FastAPI backend, Clerk authentication, SQLite persistence, and Hugging Face challenge generation.
+CodePrep has two frontend execution modes and one production API contract.
 
-## System Overview
+## Runtime Modes
+
+### Demo
+
+The default Vite build uses `DemoApiProvider`. It adds a short, intentional delay and serves deterministic challenges through the same `makeRequest()` interface used by production. This gives reviewers an honest, fully interactive product walkthrough without pretending that a hosted model or authentication service is available.
+
+### Live
+
+`VITE_CODEPREP_MODE=live` lazy-loads Clerk and `LiveApiProvider`. This keeps auth code out of the public demo bundle while preserving the complete signed-in flow.
 
 ```mermaid
-graph TD
-    User[User] --> Frontend[React + Vite frontend]
-    Frontend --> Clerk[Clerk authentication]
-    Frontend --> API[FastAPI backend]
-    API --> DB[(SQLite database)]
-    API --> LLM[Hugging Face LLM]
-    Clerk --> Webhook[Clerk webhook]
-    Webhook --> API
+flowchart TD
+    UI[React workspace] --> MODE{Runtime mode}
+    MODE -->|demo| FIX[Deterministic fixtures]
+    MODE -->|live| AUTH[Clerk session]
+    AUTH --> API[FastAPI]
+    API --> QUOTA[Quota check]
+    API --> LLM[Hosted inference]
+    LLM --> SCHEMA[Pydantic schema]
+    SCHEMA --> TX[Atomic challenge + quota transaction]
+    TX --> DB[(SQLite or Postgres)]
 ```
 
-## Runtime Flow
+## Generation Contract
 
-1. The user signs in through Clerk.
-2. The React app requests a Clerk token and calls the FastAPI backend.
-3. The backend verifies the request through Clerk.
-4. The quota service checks whether the user has daily challenge capacity.
-5. The LLM generator creates a multiple-choice challenge for the selected difficulty.
-6. SQLAlchemy stores the generated challenge and updates the user's quota.
-7. The frontend renders the challenge, explanation, and history views.
+The provider must return:
 
-## Backend Structure
+- A 10-500 character prompt.
+- Exactly four unique, non-empty answer options.
+- A correct answer index from `0` to `3`.
+- A 20-2,000 character explanation.
 
-- `backend/server.py`: local Uvicorn entrypoint.
-- `backend/src/app.py`: FastAPI app, CORS configuration, health check, and router registration.
-- `backend/src/ai_generator.py`: Hugging Face model loading and challenge generation.
-- `backend/src/database/`: SQLAlchemy models and persistence helpers.
-- `backend/src/routes/challenge.py`: challenge generation, quota, and history endpoints.
-- `backend/src/routes/webhooks.py`: Clerk webhook handler for user provisioning.
-- `backend/src/utils.py`: Clerk authentication helper.
+`GeneratedChallenge` validates this contract. Malformed or empty provider responses become a generic `503`; they are not stored and do not decrement quota.
 
-## Frontend Structure
+## Trust Boundaries
 
-- `frontend/src/auth/`: Clerk provider and auth page.
-- `frontend/src/challenge/`: challenge generation and multiple-choice UI.
-- `frontend/src/history/`: challenge history view.
-- `frontend/src/layout/`: authenticated app shell and navigation.
-- `frontend/src/utils/api.js`: authenticated API client.
+- Model and Clerk secrets stay in backend environment variables.
+- CORS accepts configured origins, `GET`/`POST`, and only required headers.
+- Clerk webhooks are signature-verified before user data is read.
+- Auth failures and provider exceptions return generic public messages.
+- History responses are ordered newest-first and limited to 100 records.
 
-## Configuration Boundaries
+## Persistence
 
-- `VITE_API_BASE_URL` controls which backend the frontend calls.
-- `ALLOWED_ORIGINS` controls FastAPI CORS origins.
-- `DATABASE_URL` controls the SQLAlchemy database target.
-- `CODEPREP_MODEL_ID` can swap the Hugging Face model without code changes.
+SQLite is the zero-configuration local default. `DATABASE_URL` can point SQLAlchemy at a hosted relational database. Production deployment should add migrations and managed Postgres before horizontal scaling.
 
-## Extension Points
+## Source Map
 
-- Add new challenge formats in `backend/src/ai_generator.py` and `frontend/src/challenge/`.
-- Add practice modes by extending the challenge request schema and prompt.
-- Replace SQLite with Postgres by changing `DATABASE_URL` and running migrations.
-- Add deployment by replacing the intentionally absent placeholder CD flow with a concrete provider-specific workflow.
+- `backend/src/ai_generator.py`: hosted inference and output validation.
+- `backend/src/routes/challenge.py`: auth, quota, generation, and transaction orchestration.
+- `backend/src/routes/webhooks.py`: signed Clerk provisioning events.
+- `backend/src/database/`: persistence models and helpers.
+- `frontend/src/utils/`: demo/live implementations of one request contract.
+- `frontend/src/challenge/`: generation, selection, and explanation states.

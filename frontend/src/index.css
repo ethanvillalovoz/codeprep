@@ -1,30 +1,31 @@
-/* Set base font and rendering for the app */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  letter-spacing: 0;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;   /* Smoother fonts on WebKit browsers */
-  -moz-osx-font-smoothing: grayscale;    /* Smoother fonts on macOS Firefox */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Remove default margin and set minimum size for the body */
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
+  margin: 0;
 }
 
-/* Inherit font and add pointer cursor for all buttons */
-button {
-  font-family: inherit;
-  cursor: pointer;
-  transition: all 0.2s; /* Smooth transitions for button interactions */
+button,
+select {
+  color: inherit;
+  font: inherit;
 }
 
-/* Add a visible outline for accessibility when a button is focused */
-button:focus,
-button:focus-visible {
-  outline: 2px solid var(--primary-color);
+:focus-visible {
+  outline: 2px solid #35675b;
   outline-offset: 2px;
 }

@@ -1,101 +1,77 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 
-// MCQChallenge displays a multiple-choice coding challenge card
+const optionLabels = ["A", "B", "C", "D"]
+
+function parseOptions(options) {
+  if (Array.isArray(options)) return options
+  if (typeof options !== "string") return []
+  try {
+    const parsed = JSON.parse(options)
+    return Array.isArray(parsed) ? parsed : []
+  } catch {
+    return []
+  }
+}
+
 export function MCQChallenge({ challenge, showExplanation = false, onCorrect }) {
-  // State to track which option the user selected
   const [selectedOption, setSelectedOption] = useState(null)
-  // State to control whether the explanation is shown
-  const [shouldShowExplanation, setShouldShowExplanation] = useState(showExplanation)
-  // State for user rating (thumbs up/down)
   const [rating, setRating] = useState(null)
+  const options = useMemo(() => parseOptions(challenge.options), [challenge.options])
+  const answered = selectedOption !== null
+  const reveal = showExplanation || answered
+  const correct = selectedOption === challenge.correct_answer_id
 
-  // Parse options if they are stored as a JSON string
-  const options =
-    typeof challenge.options === "string"
-      ? JSON.parse(challenge.options)
-      : challenge.options
-
-  // Handle when a user selects an option
-  const handleOptionSelect = (index) => {
-    // Prevent changing answer after selection
-    if (selectedOption !== null) {
-      return
-    }
+  const selectOption = (index) => {
+    if (answered || showExplanation) return
     setSelectedOption(index)
-    setShouldShowExplanation(true)
-    // Call onCorrect callback if the correct answer is selected
-    if (index === challenge.correct_answer_id && onCorrect) {
-      onCorrect()
-    }
+    if (index === challenge.correct_answer_id) onCorrect?.()
   }
 
-  const handleOptionKeyDown = (event, index) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault()
-      handleOptionSelect(index)
-    }
-  }
-
-  // Determine the CSS class for each option based on selection and correctness
-  const getOptionClass = (index) => {
-    if (selectedOption === null) {
-      return "option"
-    }
-    if (index === challenge.correct_answer_id) {
-      return "option correct"
-    }
-    if (index === selectedOption && index !== challenge.correct_answer_id) {
-      return "option incorrect"
-    }
-    return "option"
+  const optionClass = (index) => {
+    if (!reveal) return "answer-option"
+    if (index === challenge.correct_answer_id) return "answer-option is-correct"
+    if (index === selectedOption) return "answer-option is-incorrect"
+    return "answer-option is-muted"
   }
 
   return (
-    <div className="challenge-card">
-      {/* Difficulty badge */}
-      <span className={`difficulty-badge ${challenge.difficulty}`}>
-        {challenge.difficulty.charAt(0).toUpperCase() + challenge.difficulty.slice(1)}
-      </span>
-      {/* Challenge title */}
-      <h3 className="challenge-title">{challenge.title}</h3>
-      {/* Render all options */}
-      <div className="options">
+    <article className="challenge-card">
+      <div className="challenge-meta">
+        <span>{challenge.difficulty}</span>
+        <span>{showExplanation ? "Completed" : answered ? (correct ? "Correct" : "Review") : "Unanswered"}</span>
+      </div>
+      <h2>{challenge.title}</h2>
+
+      <div className="options" role="group" aria-label="Answer options">
         {options.map((option, index) => (
-          <div
-            className={getOptionClass(index)}
-            key={index}
-            onClick={() => handleOptionSelect(index)}
-            onKeyDown={(event) => handleOptionKeyDown(event, index)}
-            tabIndex={0}
-            role="button"
+          <button
+            className={optionClass(index)}
+            key={`${option}-${index}`}
+            type="button"
+            onClick={() => selectOption(index)}
+            disabled={answered || showExplanation}
             aria-pressed={selectedOption === index}
-            style={{ outline: "none" }}
           >
-            {option}
-          </div>
+            <span>{optionLabels[index] ?? index + 1}</span>
+            <code>{option}</code>
+          </button>
         ))}
       </div>
-      {/* Show explanation after an option is selected */}
-      {shouldShowExplanation && selectedOption !== null && (
-        <div className="explanation">
-          <h4>Explanation</h4>
+
+      {reveal ? (
+        <section className="explanation" aria-label="Answer explanation">
+          <span>Explanation</span>
           <p>{challenge.explanation}</p>
+        </section>
+      ) : null}
+
+      {answered ? (
+        <div className="rating" aria-label="Challenge feedback">
+          <span>Challenge quality</span>
+          <button type="button" className={rating === "useful" ? "is-selected" : ""} onClick={() => setRating("useful")}>Useful</button>
+          <button type="button" className={rating === "needs-work" ? "is-selected" : ""} onClick={() => setRating("needs-work")}>Needs work</button>
         </div>
-      )}
-      {/* Rating buttons for user feedback */}
-      <div className="rating">
-        <span>Rate this challenge:</span>
-        <button
-          aria-label="Thumbs up"
-          onClick={() => setRating("up")}
-          style={{ color: rating === "up" ? "#43a047" : undefined }}
-        >👍</button>
-        <button
-          aria-label="Thumbs down"
-          onClick={() => setRating("down")}
-          style={{ color: rating === "down" ? "#e53935" : undefined }}
-        >👎</button>
-      </div>
-    </div>
+      ) : null}
+    </article>
   )
 }
