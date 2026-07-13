@@ -26,6 +26,10 @@ select {
 }
 
 :focus-visible {
-  outline: 2px solid #35675b;
+  outline: 2px solid #59d8d6;
   outline-offset: 2px;
+}
+
+body {
+  background: #0b0f16;
 }

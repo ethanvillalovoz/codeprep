@@ -48,68 +48,81 @@ export function ChallengeGenerator() {
 
   return (
     <section className="practice-workspace" aria-labelledby="practice-title">
-      <div className="practice-heading">
-        <div>
-          <p className="eyebrow">01 / Practice workspace</p>
-          <h1 id="practice-title">Practice the decision, not the trivia.</h1>
-          <p className="practice-copy">
-            Generate one focused multiple-choice challenge, commit to an answer,
-            then inspect the reasoning.
-          </p>
-        </div>
-        <div className="session-meta">
-          <span>{mode === "demo" ? "Demo session" : "Authenticated session"}</span>
-          <strong>{remaining} / {quotaMax}</strong>
-          <div className="quota-track" aria-label={`${remaining} challenges remaining`}>
-            <span style={{ width: `${remainingPercent}%` }} />
-          </div>
-        </div>
+      <div className="workbench-tabs" aria-label="Open practice files">
+        <span className="is-active">challenge.md</span>
+        <span>session.log</span>
+        <span className="branch-label">demo/main</span>
       </div>
 
-      <div className="practice-controls">
-        <div className="difficulty-control" aria-label="Challenge difficulty">
-          <span>Difficulty</span>
-          <div className="segmented-control">
-            {difficulties.map((level) => (
-              <button
-                key={level}
-                type="button"
-                className={difficulty === level ? "is-active" : ""}
-                aria-pressed={difficulty === level}
-                onClick={() => setDifficulty(level)}
-                disabled={isLoading}
-              >
-                {level}
-              </button>
-            ))}
+      <div className="interview-layout">
+        <aside className="briefing-pane">
+          <p className="eyebrow">Session 04</p>
+          <h1 id="practice-title">Systems interview</h1>
+          <p className="practice-copy">Choose one answer, then inspect the technical rationale.</p>
+
+          <ol className="session-protocol">
+            <li><span>01</span><p><strong>Format</strong>Multiple choice</p></li>
+            <li><span>02</span><p><strong>Focus</strong>Systems and data structures</p></li>
+            <li><span>03</span><p><strong>Feedback</strong>Immediate rationale</p></li>
+          </ol>
+
+          <div className="session-meta">
+            <span>{mode === "demo" ? "Demo session" : "Authenticated session"}</span>
+            <div><strong>{remaining}</strong><small>of {quotaMax} runs left</small></div>
+            <div className="quota-track" aria-label={`${remaining} challenges remaining`}>
+              <span style={{ width: `${remainingPercent}%` }} />
+            </div>
+          </div>
+        </aside>
+
+        <div className="editor-pane">
+          <div className="practice-controls">
+            <div className="difficulty-control" aria-label="Challenge difficulty">
+              <span>Difficulty</span>
+              <div className="segmented-control">
+                {difficulties.map((level) => (
+                  <button
+                    key={level}
+                    type="button"
+                    className={difficulty === level ? "is-active" : ""}
+                    aria-pressed={difficulty === level}
+                    onClick={() => setDifficulty(level)}
+                    disabled={isLoading}
+                  >
+                    {level}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <button
+              type="button"
+              className="generate-button"
+              onClick={generateChallenge}
+              disabled={isLoading || remaining === 0}
+            >
+              <span aria-hidden="true">&#9654;</span>
+              {isLoading ? "Generating" : challenge ? "Next challenge" : "Generate challenge"}
+            </button>
+          </div>
+
+          {error ? <p className="error-message" role="alert">{error}</p> : null}
+
+          <div className="challenge-stage" aria-live="polite">
+            {isLoading ? (
+              <div className="generation-state" role="status">
+                <span className="terminal-prompt" aria-hidden="true">$</span>
+                <p>codeprep generate --difficulty {difficulty}<span className="terminal-cursor" aria-hidden="true" /></p>
+              </div>
+            ) : null}
+            {!isLoading && challenge ? <MCQChallenge key={challenge.id} challenge={challenge} /> : null}
+            {!isLoading && !challenge ? (
+              <div className="empty-challenge">
+                <div className="empty-command"><span>$</span><code>codeprep generate --difficulty {difficulty}</code></div>
+                <p>Run the generator to open a reviewed challenge.</p>
+              </div>
+            ) : null}
           </div>
         </div>
-        <button
-          type="button"
-          className="generate-button"
-          onClick={generateChallenge}
-          disabled={isLoading || remaining === 0}
-        >
-          {isLoading ? "Generating" : challenge ? "Next challenge" : "Generate challenge"}
-        </button>
-      </div>
-
-      {error ? <p className="error-message" role="alert">{error}</p> : null}
-
-      <div className="challenge-stage" aria-live="polite">
-        {isLoading ? (
-          <div className="generation-state" role="status">
-            <span className="pulse-dot" aria-hidden="true" />
-            <p>Constructing a {difficulty} challenge and checking its answer set.</p>
-          </div>
-        ) : null}
-        {!isLoading && challenge ? <MCQChallenge key={challenge.id} challenge={challenge} /> : null}
-        {!isLoading && !challenge ? (
-          <div className="empty-challenge">
-            <span>Ready</span>
-            <p>No active challenge</p>
-          </div>
-        ) : null}
       </div>
     </section>
   )

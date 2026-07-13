@@ -37,10 +37,18 @@ export function MCQChallenge({ challenge, showExplanation = false, onCorrect }) 
   return (
     <article className="challenge-card">
       <div className="challenge-meta">
-        <span>{challenge.difficulty}</span>
-        <span>{showExplanation ? "Completed" : answered ? (correct ? "Correct" : "Review") : "Unanswered"}</span>
+        <span>challenge/{challenge.id}.md</span>
+        <span className={`challenge-status${answered && correct ? " is-success" : ""}`}>
+          {showExplanation ? "Completed" : answered ? (correct ? "Correct" : "Review") : `${challenge.difficulty} / unanswered`}
+        </span>
       </div>
-      <h2>{challenge.title}</h2>
+
+      <div className="challenge-source">
+        <span className="line-number" aria-hidden="true">01</span>
+        <p className="source-comment">// Select the strongest technical answer.</p>
+        <span className="line-number" aria-hidden="true">02</span>
+        <h2>{challenge.title}</h2>
+      </div>
 
       <div className="options" role="group" aria-label="Answer options">
         {options.map((option, index) => (
@@ -60,8 +68,8 @@ export function MCQChallenge({ challenge, showExplanation = false, onCorrect }) 
 
       {reveal ? (
         <section className="explanation" aria-label="Answer explanation">
-          <span>Explanation</span>
-          <p>{challenge.explanation}</p>
+          <div><span aria-hidden="true">$</span><code>codeprep explain --selected</code></div>
+          <p><strong>{correct || showExplanation ? "Decision accepted. " : "Decision needs review. "}</strong>{challenge.explanation}</p>
         </section>
       ) : null}
 

@@ -8,7 +8,7 @@ describe("CodePrep demo", () => {
     const user = userEvent.setup()
     render(<App />)
 
-    expect(await screen.findByText("47 / 50")).toBeVisible()
+    expect(await screen.findByLabelText("47 challenges remaining")).toBeVisible()
     await user.click(screen.getByRole("button", { name: "hard" }))
     await user.click(screen.getByRole("button", { name: /generate challenge/i }))
 

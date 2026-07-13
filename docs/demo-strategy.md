@@ -13,15 +13,14 @@ The demo is labeled in the interface and never implies that fixtures are live mo
 
 ## README Media
 
-`docs/media/codeprep-workspace.gif` is built from browser-verified product states:
+`docs/media/codeprep-demo.mp4` is an 8-second, 1280 x 720 recording of the running workbench:
 
-- Ready workspace.
+- Difficulty selection.
 - Generation in progress.
-- Unanswered challenge.
-- Correct answer and explanation.
-- Session history.
+- A medium data-structures challenge.
+- A committed answer and its explanation.
 
-The underlying desktop and mobile captures remain in `docs/media/` for inspection.
+`docs/media/codeprep-poster.webp` preserves the reviewed challenge for surfaces that do not play video.
 
 ## Hosted Deployment Criteria
 

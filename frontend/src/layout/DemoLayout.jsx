@@ -5,15 +5,15 @@ export default function DemoLayout() {
     <div className="app-layout">
       <header className="app-header">
         <NavLink className="brand" to="/" aria-label="CodePrep home">
-          <span className="brand-mark" aria-hidden="true">CP</span>
-          <span><strong>CodePrep</strong><small>Interview practice</small></span>
+          <strong>CodePrep</strong>
+          <small>technical interview practice</small>
         </NavLink>
         <div className="header-actions">
-          <span className="mode-label">Demo corpus</span>
           <nav aria-label="Primary navigation">
             <NavLink to="/" end>Practice</NavLink>
             <NavLink to="/history">History</NavLink>
           </nav>
+          <span className="mode-label">Demo</span>
           <a href="https://github.com/ethanvillalovoz/codeprep" target="_blank" rel="noreferrer">Repository</a>
         </div>
       </header>

@@ -7,7 +7,9 @@
 
 A focused coding-interview practice workspace that generates one multiple-choice challenge at a time, validates the answer set, explains the result, and keeps a private practice history.
 
-![CodePrep challenge workflow](docs/media/codeprep-workspace.gif)
+[![CodePrep generating a systems challenge and reviewing the committed answer](docs/media/codeprep-poster.webp)](docs/media/codeprep-demo.mp4)
+
+Select the preview to watch the actual demo flow: generate one challenge, commit to an answer, and inspect the technical rationale.
 
 ## What It Demonstrates
 
@@ -136,7 +138,7 @@ frontend/
   src/history/              saved-session review
   src/utils/                demo and authenticated API providers
 docs/
-  media/                    verified desktop and mobile captures
+  media/                    verified interaction capture and poster
 ```
 
 More detail lives in [Architecture](docs/architecture.md), [Usage](docs/usage-guide.md), and [FAQ](docs/faq.md).
