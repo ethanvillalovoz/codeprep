@@ -1,3 +1,4 @@
+import { CheckCircle, ThumbsDown, ThumbsUp } from "@phosphor-icons/react"
 import { useMemo, useState } from "react"
 
 const optionLabels = ["A", "B", "C", "D"]
@@ -36,50 +37,71 @@ export function MCQChallenge({ challenge, showExplanation = false, onCorrect }) 
 
   return (
     <article className="challenge-card">
-      <div className="challenge-meta">
-        <span>challenge/{challenge.id}.md</span>
-        <span className={`challenge-status${answered && correct ? " is-success" : ""}`}>
-          {showExplanation ? "Completed" : answered ? (correct ? "Correct" : "Review") : `${challenge.difficulty} / unanswered`}
-        </span>
-      </div>
+      <section className="question-pane">
+        <header className="challenge-heading">
+          <div className="challenge-meta">
+            <span>Question {challenge.id}</span>
+            <span>{showExplanation ? "Completed" : challenge.difficulty}</span>
+          </div>
+          <h2>{challenge.title}</h2>
+        </header>
 
-      <div className="challenge-source">
-        <span className="line-number" aria-hidden="true">01</span>
-        <p className="source-comment">// Select the strongest technical answer.</p>
-        <span className="line-number" aria-hidden="true">02</span>
-        <h2>{challenge.title}</h2>
-      </div>
-
-      <div className="options" role="group" aria-label="Answer options">
-        {options.map((option, index) => (
-          <button
-            className={optionClass(index)}
-            key={`${option}-${index}`}
-            type="button"
-            onClick={() => selectOption(index)}
-            disabled={answered || showExplanation}
-            aria-pressed={selectedOption === index}
-          >
-            <span>{optionLabels[index] ?? index + 1}</span>
-            <code>{option}</code>
-          </button>
-        ))}
-      </div>
-
-      {reveal ? (
-        <section className="explanation" aria-label="Answer explanation">
-          <div><span aria-hidden="true">$</span><code>codeprep explain --selected</code></div>
-          <p><strong>{correct || showExplanation ? "Decision accepted. " : "Decision needs review. "}</strong>{challenge.explanation}</p>
-        </section>
-      ) : null}
-
-      {answered ? (
-        <div className="rating" aria-label="Challenge feedback">
-          <span>Challenge quality</span>
-          <button type="button" className={rating === "useful" ? "is-selected" : ""} onClick={() => setRating("useful")}>Useful</button>
-          <button type="button" className={rating === "needs-work" ? "is-selected" : ""} onClick={() => setRating("needs-work")}>Needs work</button>
+        <div className="options" role="group" aria-label="Answer options">
+          {options.map((option, index) => (
+            <button
+              className={optionClass(index)}
+              key={`${option}-${index}`}
+              type="button"
+              onClick={() => selectOption(index)}
+              disabled={answered || showExplanation}
+              aria-pressed={selectedOption === index}
+            >
+              <span className="option-label">{optionLabels[index] ?? index + 1}</span>
+              <code>{option}</code>
+              {reveal && index === challenge.correct_answer_id ? (
+                <span className="option-result"><CheckCircle size={18} weight="fill" aria-hidden="true" />Correct</span>
+              ) : null}
+            </button>
+          ))}
         </div>
-      ) : null}
+      </section>
+
+      <aside className="explanation" aria-label="Answer explanation">
+        <span className="explanation-label">Explanation</span>
+        {reveal ? (
+          <>
+            <div className={`decision${correct || showExplanation ? " is-correct" : " is-review"}`}>
+              <CheckCircle size={22} weight="regular" aria-hidden="true" />
+              <strong>{showExplanation ? "Reference answer." : correct ? "Decision accepted." : "Decision needs review."}</strong>
+            </div>
+            <p>{challenge.explanation}</p>
+          </>
+        ) : (
+          <p className="explanation-empty">Choose one answer to inspect the technical rationale.</p>
+        )}
+
+        {answered ? (
+          <div className="rating" aria-label="Challenge feedback">
+            <span>Challenge quality</span>
+            <button
+              type="button"
+              className={rating === "useful" ? "is-selected" : ""}
+              onClick={() => setRating("useful")}
+              aria-label="Mark challenge as useful"
+            >
+              <ThumbsUp size={17} aria-hidden="true" />Useful
+            </button>
+            <button
+              type="button"
+              className={rating === "needs-work" ? "is-selected" : ""}
+              onClick={() => setRating("needs-work")}
+              aria-label="Mark challenge as needing work"
+            >
+              <ThumbsDown size={17} aria-hidden="true" />Needs work
+            </button>
+          </div>
+        ) : null}
+      </aside>
     </article>
   )
 }

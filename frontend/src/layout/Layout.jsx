@@ -13,21 +13,18 @@ export function Layout() {
     <div className="app-layout">
       <header className="app-header">
         <NavLink className="brand" to="/" aria-label="CodePrep home">
-          <span className="brand-mark" aria-hidden="true">CP</span>
-          <span>
-            <strong>CodePrep</strong>
-            <small>Interview practice</small>
-          </span>
+          <strong>CodePrep</strong>
+          <small>technical interview practice</small>
         </NavLink>
 
         <div className="header-actions">
           <SignedIn>
             <Navigation />
-            <UserButton />
           </SignedIn>
           <a href="https://github.com/ethanvillalovoz/codeprep" target="_blank" rel="noreferrer">
             Repository
           </a>
+          <SignedIn><UserButton /></SignedIn>
         </div>
       </header>
 

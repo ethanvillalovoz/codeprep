@@ -1,3 +1,4 @@
+import { Circle } from "@phosphor-icons/react"
 import { NavLink, Outlet } from "react-router-dom"
 
 export default function DemoLayout() {
@@ -12,9 +13,9 @@ export default function DemoLayout() {
           <nav aria-label="Primary navigation">
             <NavLink to="/" end>Practice</NavLink>
             <NavLink to="/history">History</NavLink>
+            <a href="https://github.com/ethanvillalovoz/codeprep" target="_blank" rel="noreferrer">Repository</a>
           </nav>
-          <span className="mode-label">Demo</span>
-          <a href="https://github.com/ethanvillalovoz/codeprep" target="_blank" rel="noreferrer">Repository</a>
+          <span className="mode-label"><Circle size={8} weight="fill" aria-hidden="true" />Demo</span>
         </div>
       </header>
       <main className="app-main"><Outlet /></main>

@@ -1,3 +1,4 @@
+import { ArrowRight } from "@phosphor-icons/react"
 import { useCallback, useEffect, useState } from "react"
 import { MCQChallenge } from "./MCQChallenge.jsx"
 import { useApi } from "../utils/api-context.js"
@@ -48,33 +49,21 @@ export function ChallengeGenerator() {
 
   return (
     <section className="practice-workspace" aria-labelledby="practice-title">
-      <div className="workbench-tabs" aria-label="Open practice files">
-        <span className="is-active">challenge.md</span>
-        <span>session.log</span>
-        <span className="branch-label">demo/main</span>
+      <div className="session-strip">
+        <div className="session-context">
+          <span>Session 04</span>
+          <h1 id="practice-title">Systems interview</h1>
+        </div>
+        <div className="quota-summary">
+          <span>{mode === "demo" ? "Demo session" : "Authenticated session"}</span>
+          <div className="quota-track" aria-label={`${remaining} challenges remaining`}>
+            <span style={{ width: `${remainingPercent}%` }} />
+          </div>
+          <p>Runs left <strong>{remaining}</strong> of {quotaMax}</p>
+        </div>
       </div>
 
       <div className="interview-layout">
-        <aside className="briefing-pane">
-          <p className="eyebrow">Session 04</p>
-          <h1 id="practice-title">Systems interview</h1>
-          <p className="practice-copy">Choose one answer, then inspect the technical rationale.</p>
-
-          <ol className="session-protocol">
-            <li><span>01</span><p><strong>Format</strong>Multiple choice</p></li>
-            <li><span>02</span><p><strong>Focus</strong>Systems and data structures</p></li>
-            <li><span>03</span><p><strong>Feedback</strong>Immediate rationale</p></li>
-          </ol>
-
-          <div className="session-meta">
-            <span>{mode === "demo" ? "Demo session" : "Authenticated session"}</span>
-            <div><strong>{remaining}</strong><small>of {quotaMax} runs left</small></div>
-            <div className="quota-track" aria-label={`${remaining} challenges remaining`}>
-              <span style={{ width: `${remainingPercent}%` }} />
-            </div>
-          </div>
-        </aside>
-
         <div className="editor-pane">
           <div className="practice-controls">
             <div className="difficulty-control" aria-label="Challenge difficulty">
@@ -100,8 +89,8 @@ export function ChallengeGenerator() {
               onClick={generateChallenge}
               disabled={isLoading || remaining === 0}
             >
-              <span aria-hidden="true">&#9654;</span>
               {isLoading ? "Generating" : challenge ? "Next challenge" : "Generate challenge"}
+              <ArrowRight size={17} weight="bold" aria-hidden="true" />
             </button>
           </div>
 
@@ -110,15 +99,14 @@ export function ChallengeGenerator() {
           <div className="challenge-stage" aria-live="polite">
             {isLoading ? (
               <div className="generation-state" role="status">
-                <span className="terminal-prompt" aria-hidden="true">$</span>
-                <p>codeprep generate --difficulty {difficulty}<span className="terminal-cursor" aria-hidden="true" /></p>
+                <p>Preparing a {difficulty} challenge...</p>
               </div>
             ) : null}
             {!isLoading && challenge ? <MCQChallenge key={challenge.id} challenge={challenge} /> : null}
             {!isLoading && !challenge ? (
               <div className="empty-challenge">
-                <div className="empty-command"><span>$</span><code>codeprep generate --difficulty {difficulty}</code></div>
-                <p>Run the generator to open a reviewed challenge.</p>
+                <p>Choose a difficulty, then generate a question.</p>
+                <span>The explanation appears after you commit to an answer.</span>
               </div>
             ) : null}
           </div>

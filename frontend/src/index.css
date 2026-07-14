@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   font-synthesis: none;
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
@@ -31,5 +31,5 @@ select {
 }
 
 body {
-  background: #0b0f16;
+  background: #f4f4f1;
 }
