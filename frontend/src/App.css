@@ -224,6 +224,14 @@
   border-bottom: 1px solid var(--line);
 }
 
+.practice-brief {
+  max-width: 390px;
+  margin: 0 auto 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .difficulty-control {
   display: flex;
   align-items: center;
@@ -454,6 +462,27 @@
 
 .decision strong {
   font-size: 15px;
+  font-weight: 600;
+}
+
+.concept-note {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 22px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.concept-note span {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.concept-note strong {
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -720,6 +749,10 @@
   .practice-controls {
     justify-content: space-between;
     gap: 14px;
+  }
+
+  .practice-brief {
+    display: none;
   }
 
   .challenge-stage,

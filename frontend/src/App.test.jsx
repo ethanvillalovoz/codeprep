@@ -10,7 +10,7 @@ describe("CodePrep demo", () => {
 
     expect(await screen.findByLabelText("47 challenges remaining")).toBeVisible()
     await user.click(screen.getByRole("button", { name: "hard" }))
-    await user.click(screen.getByRole("button", { name: /generate challenge/i }))
+    await user.click(screen.getByRole("button", { name: /new challenge/i }))
 
     expect(await screen.findByText(/monotonic read consistency/i, {}, { timeout: 2_000 })).toBeVisible()
     await user.click(screen.getByRole("button", { name: /monotonic read consistency/i }))

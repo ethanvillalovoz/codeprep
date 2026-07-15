@@ -1,18 +1,19 @@
 import { ArrowRight } from "@phosphor-icons/react"
 import { useCallback, useEffect, useState } from "react"
 import { MCQChallenge } from "./MCQChallenge.jsx"
+import { DEMO_CHALLENGES } from "../data/demo.js"
 import { useApi } from "../utils/api-context.js"
 
 const difficulties = ["easy", "medium", "hard"]
 const quotaMax = 50
 
 export function ChallengeGenerator() {
-  const [challenge, setChallenge] = useState(null)
+  const { makeRequest, mode } = useApi()
+  const [challenge, setChallenge] = useState(() => mode === "demo" ? DEMO_CHALLENGES.medium : null)
   const [difficulty, setDifficulty] = useState("medium")
   const [quota, setQuota] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
-  const { makeRequest, mode } = useApi()
 
   const fetchQuota = useCallback(async () => {
     try {
@@ -66,6 +67,9 @@ export function ChallengeGenerator() {
       <div className="interview-layout">
         <div className="editor-pane">
           <div className="practice-controls">
+            <p className="practice-brief">
+              Pick one answer. The rationale stays hidden until you commit.
+            </p>
             <div className="difficulty-control" aria-label="Challenge difficulty">
               <span>Difficulty</span>
               <div className="segmented-control">
@@ -89,7 +93,7 @@ export function ChallengeGenerator() {
               onClick={generateChallenge}
               disabled={isLoading || remaining === 0}
             >
-              {isLoading ? "Generating" : challenge ? "Next challenge" : "Generate challenge"}
+              {isLoading ? "Generating" : challenge ? "New challenge" : "Generate challenge"}
               <ArrowRight size={17} weight="bold" aria-hidden="true" />
             </button>
           </div>

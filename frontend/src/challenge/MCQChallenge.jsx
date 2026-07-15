@@ -74,6 +74,12 @@ export function MCQChallenge({ challenge, showExplanation = false, onCorrect }) 
               <CheckCircle size={22} weight="regular" aria-hidden="true" />
               <strong>{showExplanation ? "Reference answer." : correct ? "Decision accepted." : "Decision needs review."}</strong>
             </div>
+            {challenge.concept ? (
+              <div className="concept-note">
+                <span>What this tests</span>
+                <strong>{challenge.concept}</strong>
+              </div>
+            ) : null}
             <p>{challenge.explanation}</p>
           </>
         ) : (

@@ -5,13 +5,13 @@
 [![React](https://img.shields.io/badge/React-19-222222.svg)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-222222.svg)](https://fastapi.tiangolo.com/)
 
-A focused coding-interview practice workspace that generates one multiple-choice challenge at a time, validates the answer set, explains the result, and keeps a private practice history.
+Most practice tools make the explanation too easy to peek at. CodePrep puts one interview question in front of you, waits for an answer, and only then shows the reasoning. The live path adds authenticated history and a daily generation limit.
 
 [![CodePrep demo: generate a systems question, answer it, and inspect the rationale](docs/media/codeprep-demo.gif)](docs/media/codeprep-demo.mp4)
 
-One short session: generate a systems question, commit to an answer, then inspect the technical rationale. [MP4 demo](docs/media/codeprep-demo.mp4) · [poster frame](docs/media/codeprep-poster.webp)
+In the recording, I answer a binary-search-tree question, check the rationale, and request a harder follow-up. [MP4 demo](docs/media/codeprep-demo.mp4) · [poster frame](docs/media/codeprep-poster.webp)
 
-## What It Demonstrates
+## What Is Actually Here
 
 - A deterministic demo that opens without accounts, API keys, or a running backend.
 - A protected production path with Clerk authentication and server-verified sessions.
@@ -61,17 +61,9 @@ Set `VITE_CODEPREP_MODE=live` in `frontend/.env` to enable Clerk and the API cli
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    U[User] --> UI[React workspace]
-    UI --> C[Clerk session]
-    UI --> API[FastAPI]
-    API --> V[Pydantic validation]
-    V --> HF[Hugging Face inference]
-    API --> DB[(SQLite or Postgres)]
-    C --> WH[Signed webhook]
-    WH --> API
-```
+[![CodePrep architecture from the candidate workspace through authentication, validation, inference, and persistence](docs/media/architecture.svg)](docs/media/architecture.excalidraw)
+
+The image links to an editable Excalidraw file.
 
 The browser never receives the model token. The backend asks a hosted inference provider for JSON, validates the exact four-option schema, then writes the challenge and quota decrement in one transaction.
 
