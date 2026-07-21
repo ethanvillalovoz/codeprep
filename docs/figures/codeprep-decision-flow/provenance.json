@@ -1,70 +1,26 @@
 {
-  "claim": "CodePrep hides rationale until answer commitment and its live path validates one four-option challenge before atomically persisting the challenge and quota decrement.",
+  "claim": "CodePrep routes one browser contract to local fixtures or an authenticated generation path that validates model output before one atomic challenge-and-quota commit.",
   "figure_id": "codeprep-decision-flow",
   "inputs": [
-    {
-      "bytes": 1659,
-      "path": "frontend/src/data/demo.js",
-      "role": "demo_fixture",
-      "sha256": "c9804fb6588b168f3b4891f6ea4d372ca5d7ade9921e88f6255a0f6e1d950cc3"
-    },
-    {
-      "bytes": 1052,
-      "path": "frontend/src/utils/DemoApiProvider.jsx",
-      "role": "demo_provider",
-      "sha256": "63beca5177975ac72976c59374ec241a14a536860e9e2df106e5858ebc3f75c3"
-    },
-    {
-      "bytes": 4245,
-      "path": "frontend/src/challenge/MCQChallenge.jsx",
-      "role": "frontend_interaction",
-      "sha256": "8e6e6a9632b461d1aad798c88cbb762ffdb83f21355bfe5655410b8f37f28831"
-    },
-    {
-      "bytes": 3465,
-      "path": "backend/src/ai_generator.py",
-      "role": "generator",
-      "sha256": "76349f58d869c5c5b1210932c1b5cd6f4ee9952123c9ac5237c8e5a56b5c7faf"
-    },
-    {
-      "bytes": 3916,
-      "path": "backend/src/routes/challenge.py",
-      "role": "live_route",
-      "sha256": "abc419faff8435d19e2beb8fe3ee2dd20173ace4646bb8242d5bc6e7521de660"
-    }
+    {"bytes": 1052, "path": "frontend/src/utils/DemoApiProvider.jsx", "role": "demo_adapter", "sha256": "63beca5177975ac72976c59374ec241a14a536860e9e2df106e5858ebc3f75c3"},
+    {"bytes": 1110, "path": "frontend/src/utils/LiveApiProvider.jsx", "role": "live_adapter", "sha256": "8cbaea006b11655b6f610fcfe6337330a386681d78cab3b40ca06034d46535fb"},
+    {"bytes": 3465, "path": "backend/src/ai_generator.py", "role": "provider_and_schema", "sha256": "76349f58d869c5c5b1210932c1b5cd6f4ee9952123c9ac5237c8e5a56b5c7faf"},
+    {"bytes": 3916, "path": "backend/src/routes/challenge.py", "role": "generation_transaction", "sha256": "abc419faff8435d19e2beb8fe3ee2dd20173ace4646bb8242d5bc6e7521de660"},
+    {"bytes": 2318, "path": "backend/src/routes/webhooks.py", "role": "identity_provisioning", "sha256": "98a5b62c041e9cec1c5248f7537ef1ab06e86e3494028a3a933d69b9e9839bd2"},
+    {"bytes": 2006, "path": "backend/src/database/models.py", "role": "persistence_models", "sha256": "3a29477a0e471cf7daa5bda568eeb6bf3c48f52a51533526a29e7af9b7017c68"}
   ],
   "outputs": [
-    {
-      "bytes": 18420,
-      "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx",
-      "role": "editable_pptx",
-      "sha256": "faa5b70f899e9e5d881458ba3b65e21dea884efef6549742f9f602162ee655c7"
-    },
-    {
-      "bytes": 648281,
-      "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg",
-      "role": "svg",
-      "sha256": "903cd2646ad35e5625064224ce4585facb07109c5235b1b165e2613c40952a5b"
-    },
-    {
-      "bytes": 217166,
-      "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png",
-      "role": "png",
-      "sha256": "e1f8e86fd26c741bc518736f07a89c598f47c796813c6a568742edc6abc37684"
-    },
-    {
-      "bytes": 132938,
-      "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf",
-      "role": "pdf",
-      "sha256": "4c994395cab419b80f30d47868d4b81e6642f684a91b9edcd9cae3f408e94e55"
-    }
+    {"bytes": 19104, "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx", "role": "editable_pptx", "sha256": "8692c3548a0d7043ba3dc92beaba44d87b41d0cc7297db0f15d2ac322f58d54b"},
+    {"bytes": 609168, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg", "role": "svg", "sha256": "58c42319b8648a86c8178d952407289fe8c45c18539c48e9759430fec06e52a8"},
+    {"bytes": 187956, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png", "role": "png", "sha256": "dc38c932f22fb973376069dfccdf9ebef5bb7dea0a6d0fea1e9fdf0ff5fcd1df"},
+    {"bytes": 125578, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf", "role": "pdf", "sha256": "9f824eb10bd02db58fde895c8a395f5892441b3467d19aa2d2f10b9f81937343"}
   ],
   "processing_notes": [
-    "Native editable before/action/after storyboard with a dark IDE-inspired graphite, lime, violet, and amber palette; exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
+    "Native editable split-runtime architecture with distinct browser, generation, validation, commit, rollback, provisioning, and trust roles; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "b1857bb4cf41b6b067f10329664ac749b9eabe19",
-  "selection_note": "Default deterministic medium challenge after committing the correct answer; all four options and the complete live transaction path represented.",
+  "source_revision": "6040a215be670e46093967384d00ff02cb17fcdb",
+  "selection_note": "Only maintained adapter, route, schema, transaction, rollback, provisioning, and read branches are represented; no model output or learning result is shown.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
 }

@@ -1,39 +1,38 @@
-# Figure contract: CodePrep decision flow
+# Figure contract: CodePrep system architecture
 
 ## Communication job
 
-This figure should allow a skeptical technical reviewer to understand that CodePrep reveals a rationale only after answer commitment while its live path validates generated challenges and commits the challenge plus quota decrement atomically.
+This figure should let a technical reviewer follow CodePrep's shared browser request contract into its deterministic demo or authenticated backend, then inspect the live generation, schema gate, atomic persistence, rollback, provisioning, and read paths.
 
 ## Figure form
 
-A before/action/after interaction storyboard: the unanswered state visibly withholds the rationale, selecting option `B` is the single transition, and the answered state reveals the concept and explanation. Live generation is a secondary horizontal rail so backend transaction semantics do not compete with the defining user interaction.
+A split system architecture. The browser routes the same request contract to either a local fixture provider or a Clerk-authenticated API adapter. The backend passes generation through user/quota checks, hosted inference, and exact Pydantic validation before challenge insertion and quota decrement commit together. Failure and identity-provisioning branches remain explicit.
 
 ## Visual encoding
 
-The figure uses an IDE-inspired dark palette: orange marks the human action, electric lime marks the accepted answer and committed transaction, violet marks live-generation mechanics, amber marks rollback, and red marks unsupported claims. Labels and layout remain redundant with color for grayscale reading.
+The figure uses an IDE-inspired dark palette: orange marks browser and authentication flow, violet marks generation, cyan marks validation and persisted state, lime marks commit, amber marks rollback, and red marks unsupported model-output assumptions. Labels and layout remain redundant with color.
 
 ## Supported claim
 
-The credential-free demo serves deterministic challenges through the same frontend request contract and keeps the explanation hidden until an option is selected. In live mode, a Clerk-authenticated request checks quota, obtains one provider response, validates an exact four-option Pydantic schema, and commits the new challenge with the quota decrement in one transaction; failures roll back.
+The credential-free demo implements the same frontend request contract without Clerk, hosted inference, or a database. In live mode, a Clerk-authenticated request checks quota, obtains one provider response, validates an exact four-option Pydantic schema, and commits the new challenge with the quota decrement in one SQLAlchemy transaction; failures roll back without consuming quota. Signed `user.created` webhooks provision quota records.
 
 ## Evidence used
 
-- `frontend/src/data/demo.js` for the exact deterministic challenge, answer, concept, and explanation.
-- `frontend/src/utils/DemoApiProvider.jsx` for the credential-free in-memory provider that preserves the frontend request contract without Clerk, a hosted model, or a database.
-- `frontend/src/challenge/MCQChallenge.jsx` for answer commitment and rationale reveal behavior.
+- `frontend/src/utils/DemoApiProvider.jsx` and `frontend/src/utils/LiveApiProvider.jsx` for the shared frontend contract and its local/authenticated implementations.
 - `backend/src/ai_generator.py` for provider parsing and exact challenge validation.
 - `backend/src/routes/challenge.py` for authentication, quota checking, transaction commit, and rollback behavior.
+- `backend/src/routes/webhooks.py` and `backend/src/database/` for signed identity provisioning, tables, and persistence.
 
 ## Evidence boundary
 
-- The displayed challenge and quota are deterministic fixtures, not live model or user data.
+- The figure describes maintained code paths and contains no live model response or user data.
 - The figure makes no learning-outcome, interview-performance, question-quality, provider-accuracy, or usage-analytics claim.
 - Demo mode does not exercise Clerk, the hosted model, or database transactions.
 - Atomicity is local to the maintained database transaction; production scaling still requires migrations and managed persistence.
 
-## Selection rule
+## Scope rule
 
-The figure uses the default medium challenge after selecting its committed correct answer. The question, all four options, rationale, difficulty, and remaining-demo-quota state are shown; no question was selected for apparent quality.
+Only branches and transaction semantics verified in maintained source are shown. No learning outcome, provider quality, production-scale guarantee, or usage result is introduced.
 
 ## Delivery formats
 
