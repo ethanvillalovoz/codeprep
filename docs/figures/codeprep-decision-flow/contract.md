@@ -8,6 +8,10 @@ This figure should allow a skeptical technical reviewer to understand that CodeP
 
 A before/action/after interaction storyboard: the unanswered state visibly withholds the rationale, selecting option `B` is the single transition, and the answered state reveals the concept and explanation. Live generation is a secondary horizontal rail so backend transaction semantics do not compete with the defining user interaction.
 
+## Visual encoding
+
+The figure uses an IDE-inspired dark palette: orange marks the human action, electric lime marks the accepted answer and committed transaction, violet marks live-generation mechanics, amber marks rollback, and red marks unsupported claims. Labels and layout remain redundant with color for grayscale reading.
+
 ## Supported claim
 
 The credential-free demo serves deterministic challenges through the same frontend request contract and keeps the explanation hidden until an option is selected. In live mode, a Clerk-authenticated request checks quota, obtains one provider response, validates an exact four-option Pydantic schema, and commits the new challenge with the quota decrement in one transaction; failures roll back.

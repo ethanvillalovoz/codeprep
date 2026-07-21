@@ -1,92 +1,92 @@
-{"kind":"deck","id":"pr/d0laxh","name":"Deck"}
-{"kind":"layout","layoutId":"fa9c4207-f167-40a6-aa4a-6fbdafb02c55","name":"Master","type":"master"}
-{"kind":"layout","layoutId":"8803c8b7-e5a1-490a-a655-7888af4bb100","name":"Title Slide","type":"title"}
-{"kind":"slide","id":"sl/b00csv","slide":1,"title":"CodePrep turns one answer selection into a visible reasoning state","textShapes":57}
-{"kind":"textbox","id":"sh/ofqx0zqx","slide":1,"name":"title","text":"CodePrep turns one answer selection into a visible reasoning state","textPreview":"CodePrep turns one answer selection into a visible reasoning state","textChars":66,"textLines":1,"bbox":[42,24,1196,42]}
-{"kind":"textbox","id":"sh/nehw7upc","slide":1,"name":"subtitle","text":"The rationale is absent before commitment and appears immediately after selection; live challenge creation adds a separate validated transaction.","textPreview":"The rationale is absent before commitment and appears immediately after selection; live challenge creation adds a separate validated tran...","textChars":145,"textLines":1,"bbox":[42,71,1196,25]}
-{"kind":"shape","id":"sh/md8fyp8r","slide":1,"name":"header-rule","bbox":[42,109,1196,0]}
-{"kind":"textbox","id":"sh/x4jed47e","slide":1,"name":"story-label","text":"BEFORE  →  ACTION  →  AFTER","textPreview":"BEFORE  →  ACTION  →  AFTER","textChars":27,"textLines":1,"bbox":[42,130,360,18]}
-{"kind":"shape","id":"sh/w3ax4jqt","slide":1,"name":"commit-arrow","bbox":[531,278,98,16]}
-{"kind":"textbox","id":"sh/b21wbep8","slide":1,"name":"commit-label","text":"select B","textPreview":"select B","textChars":8,"textLines":1,"bbox":[541,248,80,18]}
-{"kind":"textbox","id":"sh/a1sf2983","slide":1,"name":"commit-value","text":"O(log n)","textPreview":"O(log n)","textChars":8,"textLines":1,"bbox":[541,305,80,18]}
-{"kind":"shape","id":"sh/l83yho7q","slide":1,"name":"before-frame","bbox":[42,153,470,323]}
-{"kind":"shape","id":"sh/k7ax8j65","slide":1,"name":"before-topbar","bbox":[42,153,470,31]}
-{"kind":"textbox","id":"sh/q50va94j","slide":1,"name":"before-state","text":"STATE 0 · UNANSWERED","textPreview":"STATE 0 · UNANSWERED","textChars":20,"textLines":1,"bbox":[56,162,180,15]}
-{"kind":"textbox","id":"sh/b69c3e54","slide":1,"name":"before-difficulty","text":"MEDIUM","textPreview":"MEDIUM","textChars":6,"textLines":1,"bbox":[428,162,66,15]}
-{"kind":"textbox","id":"sh/c7idcjmp","slide":1,"name":"before-question","text":"What is the time complexity of finding a value in a balanced binary search tree?","textPreview":"What is the time complexity of finding a value in a balanced binary search tree?","textChars":80,"textLines":1,"bbox":[62,205,266,54]}
-{"kind":"textbox","id":"sh/x8ru5ona","slide":1,"name":"before-instruction","text":"Choose one answer.","textPreview":"Choose one answer.","textChars":18,"textLines":1,"bbox":[62,268,220,17]}
-{"kind":"shape","id":"sh/y90vet4v","slide":1,"name":"before-option-0","bbox":[62,294,266,30]}
-{"kind":"textbox","id":"sh/za9c7y5g","slide":1,"name":"before-option-label-0","text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[72,301,24,16]}
-{"kind":"textbox","id":"sh/kbidgjml","slide":1,"name":"before-option-copy-0","text":"O(1)","textPreview":"O(1)","textChars":4,"textLines":1,"bbox":[104,301,210,16]}
-{"kind":"shape","id":"sh/lcbu9on6","slide":1,"name":"before-option-1","bbox":[62,332,266,30]}
-{"kind":"textbox","id":"sh/edgb2pob","slide":1,"name":"before-option-label-1","text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[72,339,24,16]}
-{"kind":"textbox","id":"sh/fepcvu5w","slide":1,"name":"before-option-copy-1","text":"O(log n)","textPreview":"O(log n)","textChars":8,"textLines":1,"bbox":[104,339,210,16]}
-{"kind":"shape","id":"sh/jils3qlo","slide":1,"name":"before-option-2","bbox":[62,370,266,30]}
-{"kind":"textbox","id":"sh/ihcral43","slide":1,"name":"before-option-label-2","text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[72,377,24,16]}
-{"kind":"textbox","id":"sh/5k3a503u","slide":1,"name":"before-option-copy-2","text":"O(n)","textPreview":"O(n)","textChars":4,"textLines":1,"bbox":[104,377,210,16]}
-{"kind":"shape","id":"sh/4ju9cvm9","slide":1,"name":"before-option-3","bbox":[62,408,266,30]}
-{"kind":"textbox","id":"sh/vel8zqls","slide":1,"name":"before-option-label-3","text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[72,415,24,16]}
-{"kind":"textbox","id":"sh/utsr6l47","slide":1,"name":"before-option-copy-3","text":"O(n log n)","textPreview":"O(n log n)","textChars":10,"textLines":1,"bbox":[104,415,210,16]}
-{"kind":"shape","id":"sh/hg3q1g3i","slide":1,"name":"before-divider","bbox":[348,198,0,244]}
-{"kind":"textbox","id":"sh/wfu98bmd","slide":1,"name":"before-explanation-label","text":"EXPLANATION","textPreview":"EXPLANATION","textChars":11,"textLines":1,"bbox":[370,205,120,15]}
-{"kind":"shape","id":"sh/fa5sbalw","slide":1,"name":"before-locked","bbox":[370,239,120,160]}
-{"kind":"textbox","id":"sh/epwri5kb","slide":1,"name":"before-lock","text":"RATIONALE\nLOCKED","textPreview":"RATIONALE | LOCKED","textChars":16,"textLines":2,"bbox":[374,278,112,44]}
-{"kind":"textbox","id":"sh/cvqpw72t","slide":1,"name":"before-lock-copy","text":"Select an option to inspect the technical reasoning.","textPreview":"Select an option to inspect the technical reasoning.","textChars":52,"textLines":1,"bbox":[382,334,96,48]}
-{"kind":"textbox","id":"sh/xwz65cje","slide":1,"name":"before-note","text":"No concept or explanation is visible.","textPreview":"No concept or explanation is visible.","textChars":37,"textLines":1,"bbox":[62,451,428,17]}
-{"kind":"shape","id":"sh/atonuxkn","slide":1,"name":"after-frame","bbox":[648,153,590,323]}
-{"kind":"shape","id":"sh/buxo3218","slide":1,"name":"after-topbar","bbox":[648,153,590,31]}
-{"kind":"textbox","id":"sh/kzqp0r25","slide":1,"name":"after-state","text":"STATE 1 · ANSWER COMMITTED","textPreview":"STATE 1 · ANSWER COMMITTED","textChars":26,"textLines":1,"bbox":[662,162,230,15]}
-{"kind":"textbox","id":"sh/lkz69cja","slide":1,"name":"after-result","text":"DECISION ACCEPTED","textPreview":"DECISION ACCEPTED","textChars":17,"textLines":1,"bbox":[1040,162,180,15]}
-{"kind":"textbox","id":"sh/yx87yhkz","slide":1,"name":"after-question","text":"What is the time complexity of finding a value in a balanced binary search tree?","textPreview":"What is the time complexity of finding a value in a balanced binary search tree?","textChars":80,"textLines":1,"bbox":[668,205,310,54]}
-{"kind":"shape","id":"sh/zyho7m1k","slide":1,"name":"after-option-0","bbox":[668,274,310,30]}
-{"kind":"textbox","id":"sh/8nap4ri1","slide":1,"name":"after-option-label-0","text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[678,281,24,16]}
-{"kind":"textbox","id":"sh/9oj6dwjm","slide":1,"name":"after-option-copy-0","text":"O(1)","textPreview":"O(1)","textChars":4,"textLines":1,"bbox":[710,281,190,16]}
-{"kind":"shape","id":"sh/tkryxsjq","slide":1,"name":"after-option-1","bbox":[668,312,310,30]}
-{"kind":"textbox","id":"sh/8jix4n25","slide":1,"name":"after-option-label-1","text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[678,319,24,16]}
-{"kind":"textbox","id":"sh/7ipgvi1k","slide":1,"name":"after-option-copy-1","text":"O(log n)","textPreview":"O(log n)","textChars":8,"textLines":1,"bbox":[710,319,190,16]}
-{"kind":"textbox","id":"sh/6hgf2dkz","slide":1,"name":"after-correct","text":"CORRECT","textPreview":"CORRECT","textChars":7,"textLines":1,"bbox":[884,319,82,16]}
-{"kind":"shape","id":"sh/lg7yt8je","slide":1,"name":"after-option-2","bbox":[668,350,310,30]}
-{"kind":"textbox","id":"sh/kvyx032t","slide":1,"name":"after-option-label-2","text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[678,357,24,16]}
-{"kind":"textbox","id":"sh/jupgri18","slide":1,"name":"after-option-copy-2","text":"O(n)","textPreview":"O(n)","textChars":4,"textLines":1,"bbox":[710,357,190,16]}
-{"kind":"shape","id":"sh/ytgfydk3","slide":1,"name":"after-option-3","bbox":[668,388,310,30]}
-{"kind":"textbox","id":"sh/5cby5cji","slide":1,"name":"after-option-label-3","text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[678,395,24,16]}
-{"kind":"textbox","id":"sh/4r2hc72d","slide":1,"name":"after-option-copy-3","text":"O(n log n)","textPreview":"O(n log n)","textChars":10,"textLines":1,"bbox":[710,395,190,16]}
-{"kind":"shape","id":"sh/2xcv690v","slide":1,"name":"after-divider","bbox":[996,198,0,244]}
-{"kind":"textbox","id":"sh/nylczeh0","slide":1,"name":"after-explanation-label","text":"RATIONALE REVEALED","textPreview":"RATIONALE REVEALED","textChars":18,"textLines":1,"bbox":[1018,205,198,15]}
-{"kind":"textbox","id":"sh/ozud8jil","slide":1,"name":"after-concept-label","text":"WHAT THIS TESTS","textPreview":"WHAT THIS TESTS","textChars":15,"textLines":1,"bbox":[1018,242,198,14]}
-{"kind":"textbox","id":"sh/90nu14z6","slide":1,"name":"after-concept","text":"Balanced-tree search height","textPreview":"Balanced-tree search height","textChars":27,"textLines":1,"bbox":[1018,263,198,34]}
-{"kind":"shape","id":"sh/etcv2p0j","slide":1,"name":"after-reason-rule","bbox":[1018,308,198,0]}
-{"kind":"textbox","id":"sh/fulcvuh4","slide":1,"name":"after-explanation","text":"Each comparison discards roughly half of the remaining subtree, so search follows one root-to-leaf path of height O(log n).","textPreview":"Each comparison discards roughly half of the remaining subtree, so search follows one root-to-leaf path of height O(log n).","textChars":123,"textLines":1,"bbox":[1018,326,198,82]}
-{"kind":"textbox","id":"sh/0vud4zip","slide":1,"name":"after-note","text":"The same selection also enables challenge-quality feedback.","textPreview":"The same selection also enables challenge-quality feedback.","textChars":59,"textLines":1,"bbox":[1018,421,198,34]}
-{"kind":"textbox","id":"sh/1w3ux4za","slide":1,"name":"live-label","text":"LIVE CHALLENGE CREATION · SEPARATE FROM THE INTERACTION ABOVE","textPreview":"LIVE CHALLENGE CREATION · SEPARATE FROM THE INTERACTION ABOVE","textChars":61,"textLines":1,"bbox":[42,499,560,18]}
-{"kind":"shape","id":"sh/ypwvet0n","slide":1,"name":"live-arrow-0","bbox":[200,558,32,16]}
-{"kind":"shape","id":"sh/jq5w7yh8","slide":1,"name":"live-arrow-1","bbox":[398,558,32,16]}
-{"kind":"shape","id":"sh/vahszqx0","slide":1,"name":"live-arrow-2","bbox":[596,558,32,16]}
-{"kind":"shape","id":"sh/u98r6lgf","slide":1,"name":"live-arrow-3","bbox":[826,558,32,16]}
-{"kind":"shape","id":"sh/hcza10fq","slide":1,"name":"live-node-0","bbox":[42,531,150,70]}
-{"kind":"textbox","id":"sh/gbq98vy5","slide":1,"name":"live-head-0","text":"SESSION","textPreview":"SESSION","textChars":7,"textLines":1,"bbox":[54,541,126,15]}
-{"kind":"textbox","id":"sh/3yhs3qxw","slide":1,"name":"live-copy-0","text":"Clerk user","textPreview":"Clerk user","textChars":10,"textLines":1,"bbox":[54,563,126,30]}
-{"kind":"shape","id":"sh/ix8ralgb","slide":1,"name":"live-node-1","bbox":[240,531,150,70]}
-{"kind":"textbox","id":"sh/50za50f2","slide":1,"name":"live-head-1","text":"QUOTA","textPreview":"QUOTA","textChars":5,"textLines":1,"bbox":[252,541,126,15]}
-{"kind":"textbox","id":"sh/4zqtcvyh","slide":1,"name":"live-copy-1","text":"> 0","textPreview":"> 0","textChars":3,"textLines":1,"bbox":[252,563,126,30]}
-{"kind":"shape","id":"sh/r21s7axs","slide":1,"name":"live-node-2","bbox":[438,531,150,70]}
-{"kind":"textbox","id":"sh/q1sbe5gn","slide":1,"name":"live-head-2","text":"PROVIDER","textPreview":"PROVIDER","textChars":8,"textLines":1,"bbox":[450,541,126,15]}
-{"kind":"textbox","id":"sh/o7a9oful","slide":1,"name":"live-copy-2","text":"one JSON","textPreview":"one JSON","textChars":8,"textLines":1,"bbox":[450,563,126,30]}
-{"kind":"shape","id":"sh/p83axkv6","slide":1,"name":"live-node-3","bbox":[636,531,182,70]}
-{"kind":"textbox","id":"sh/25srm5cf","slide":1,"name":"live-head-3","text":"PYDANTIC","textPreview":"PYDANTIC","textChars":8,"textLines":1,"bbox":[648,541,158,15]}
-{"kind":"textbox","id":"sh/n618vad0","slide":1,"name":"live-copy-3","text":"4 unique\nanswer 0–3","textPreview":"4 unique | answer 0–3","textChars":19,"textLines":2,"bbox":[648,563,158,30]}
-{"kind":"shape","id":"sh/03a9kvup","slide":1,"name":"live-node-4","bbox":[866,531,220,70]}
-{"kind":"textbox","id":"sh/14jqt0vu","slide":1,"name":"live-head-4","text":"TRANSACTION","textPreview":"TRANSACTION","textChars":11,"textLines":1,"bbox":[878,541,196,15]}
-{"kind":"textbox","id":"sh/e1sri5cj","slide":1,"name":"live-copy-4","text":"challenge +\nquota − 1","textPreview":"challenge + | quota − 1","textChars":21,"textLines":2,"bbox":[878,563,196,30]}
-{"kind":"shape","id":"sh/f218rqd4","slide":1,"name":"demo-note","bbox":[1110,531,128,70]}
-{"kind":"textbox","id":"sh/szq9gvud","slide":1,"name":"demo-note-head","text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[1122,541,104,15]}
-{"kind":"textbox","id":"sh/d0jqp0vy","slide":1,"name":"demo-note-copy","text":"same frontend contract; no auth, provider, or DB","textPreview":"same frontend contract; no auth, provider, or DB","textChars":48,"textLines":1,"bbox":[1122,561,104,34]}
-{"kind":"shape","id":"sh/5c3ytsvm","slide":1,"name":"rollback-link","bbox":[958,610,0,25]}
-{"kind":"textbox","id":"sh/kbuh0ne1","slide":1,"name":"rollback","text":"any failure → rollback; quota unchanged","textPreview":"any failure → rollback; quota unchanged","textChars":39,"textLines":1,"bbox":[792,635,332,18]}
-{"kind":"shape","id":"sh/jalgridg","slide":1,"name":"footer-rule","bbox":[42,666,1196,0]}
-{"kind":"textbox","id":"sh/i9czydwv","slide":1,"name":"boundary-head","text":"SUPPORTED","textPreview":"SUPPORTED","textChars":9,"textLines":1,"bbox":[42,681,92,15]}
-{"kind":"textbox","id":"sh/t0nyxsvi","slide":1,"name":"boundary-supported","text":"commit-before-rationale interaction · exact four-option validation · atomic challenge-and-quota write","textPreview":"commit-before-rationale interaction · exact four-option validation · atomic challenge-and-quota write","textChars":101,"textLines":1,"bbox":[142,677,650,22]}
-{"kind":"textbox","id":"sh/szeh4nex","slide":1,"name":"not-head","text":"NOT CLAIMED","textPreview":"NOT CLAIMED","textChars":11,"textLines":1,"bbox":[822,681,105,15]}
-{"kind":"textbox","id":"sh/7e5gvids","slide":1,"name":"not-copy","text":"learning outcomes, interview performance, question quality, or provider accuracy","textPreview":"learning outcomes, interview performance, question quality, or provider accuracy","textChars":80,"textLines":1,"bbox":[934,677,290,28]}
-{"kind":"textbox","id":"sh/6dcz2dw7","slide":1,"name":"sources","text":"Sources: demo.js · MCQChallenge.jsx · ai_generator.py · routes/challenge.py","textPreview":"Sources: demo.js · MCQChallenge.jsx · ai_generator.py · routes/challenge.py","textChars":75,"textLines":1,"bbox":[42,706,1196,11]}
-{"kind":"notes","id":"nt/b00csv","slide":1,"text":""}
+{"kind":"deck","id":"pr/3waj65","name":"Deck"}
+{"kind":"layout","layoutId":"6b00cf93-0c24-4a42-841b-6e10ba22d65c","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"8b81d811-1a0c-43c1-8f86-0b91b62dff03","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/03zjca","slide":1,"title":"CodePrep turns one answer selection into a visible reasoning state","textShapes":57}
+{"kind":"textbox","id":"sh/t47a50vm","slide":1,"name":"title","text":"CodePrep turns one answer selection into a visible reasoning state","textPreview":"CodePrep turns one answer selection into a visible reasoning state","textChars":66,"textLines":1,"bbox":[42,24,1196,42]}
+{"kind":"textbox","id":"sh/61gbulcv","slide":1,"name":"subtitle","text":"The rationale is absent before commitment and appears immediately after selection; live challenge creation adds a separate validated transaction.","textPreview":"The rationale is absent before commitment and appears immediately after selection; live challenge creation adds a separate validated tran...","textChars":145,"textLines":1,"bbox":[42,71,1196,25]}
+{"kind":"shape","id":"sh/72ps3qdg","slide":1,"name":"header-rule","bbox":[42,109,1196,0]}
+{"kind":"textbox","id":"sh/g7it0fux","slide":1,"name":"story-label","text":"BEFORE  →  ACTION  →  AFTER","textPreview":"BEFORE  →  ACTION  →  AFTER","textChars":27,"textLines":1,"bbox":[42,130,360,18]}
+{"kind":"shape","id":"sh/h8ra9kvi","slide":1,"name":"commit-arrow","bbox":[531,278,98,16]}
+{"kind":"textbox","id":"sh/u5gby5c7","slide":1,"name":"commit-label","text":"select B","textPreview":"select B","textChars":8,"textLines":1,"bbox":[541,248,80,18]}
+{"kind":"textbox","id":"sh/f6ps7adc","slide":1,"name":"commit-value","text":"O(log n)","textPreview":"O(log n)","textChars":8,"textLines":1,"bbox":[541,305,80,18]}
+{"kind":"shape","id":"sh/wbe9obet","slide":1,"name":"before-frame","bbox":[42,153,470,323]}
+{"kind":"shape","id":"sh/xcnaxgve","slide":1,"name":"before-topbar","bbox":[42,153,470,31]}
+{"kind":"textbox","id":"sh/5kbepsvu","slide":1,"name":"before-state","text":"STATE 0 · UNANSWERED","textPreview":"STATE 0 · UNANSWERED","textChars":20,"textLines":1,"bbox":[56,162,180,15]}
+{"kind":"textbox","id":"sh/kj2xgnu9","slide":1,"name":"before-difficulty","text":"MEDIUM","textPreview":"MEDIUM","textChars":6,"textLines":1,"bbox":[428,162,66,15]}
+{"kind":"textbox","id":"sh/jitwnido","slide":1,"name":"before-question","text":"What is the time complexity of finding a value in a balanced binary search tree?","textPreview":"What is the time complexity of finding a value in a balanced binary search tree?","textChars":80,"textLines":1,"bbox":[62,205,266,54]}
+{"kind":"textbox","id":"sh/ihkvedc3","slide":1,"name":"before-instruction","text":"Choose one answer.","textPreview":"Choose one answer.","textChars":18,"textLines":1,"bbox":[62,268,220,17]}
+{"kind":"shape","id":"sh/t8vetsvq","slide":1,"name":"before-option-0","bbox":[62,294,266,30]}
+{"kind":"textbox","id":"sh/snmxk7u5","slide":1,"name":"before-option-label-0","text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[72,301,24,16]}
+{"kind":"textbox","id":"sh/7mdwr2d0","slide":1,"name":"before-option-copy-0","text":"O(1)","textPreview":"O(1)","textChars":4,"textLines":1,"bbox":[104,301,210,16]}
+{"kind":"shape","id":"sh/6lkfixcf","slide":1,"name":"before-option-1","bbox":[62,332,266,30]}
+{"kind":"textbox","id":"sh/hcvexcv2","slide":1,"name":"before-option-label-1","text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[72,339,24,16]}
+{"kind":"textbox","id":"sh/gbmxo7uh","slide":1,"name":"before-option-copy-1","text":"O(log n)","textPreview":"O(log n)","textChars":8,"textLines":1,"bbox":[104,339,210,16]}
+{"kind":"shape","id":"sh/0fuhkb2t","slide":1,"name":"before-option-2","bbox":[62,370,266,30]}
+{"kind":"textbox","id":"sh/1g3ytgjy","slide":1,"name":"before-option-label-2","text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[72,377,24,16]}
+{"kind":"textbox","id":"sh/etczilkn","slide":1,"name":"before-option-copy-2","text":"O(n)","textPreview":"O(n)","textChars":4,"textLines":1,"bbox":[104,377,210,16]}
+{"kind":"shape","id":"sh/fulgr618","slide":1,"name":"before-option-3","bbox":[62,408,266,30]}
+{"kind":"textbox","id":"sh/ojehov2p","slide":1,"name":"before-option-label-3","text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[72,415,24,16]}
+{"kind":"textbox","id":"sh/pknyx0ja","slide":1,"name":"before-option-copy-3","text":"O(n log n)","textPreview":"O(n log n)","textChars":10,"textLines":1,"bbox":[104,415,210,16]}
+{"kind":"shape","id":"sh/2hczmlkj","slide":1,"name":"before-divider","bbox":[348,198,0,244]}
+{"kind":"textbox","id":"sh/ni5gvq14","slide":1,"name":"before-explanation-label","text":"EXPLANATION","textPreview":"EXPLANATION","textChars":11,"textLines":1,"bbox":[370,205,120,15]}
+{"kind":"shape","id":"sh/4naxcr2l","slide":1,"name":"before-locked","bbox":[370,239,120,160]}
+{"kind":"textbox","id":"sh/5ojylwj6","slide":1,"name":"before-lock","text":"RATIONALE\nLOCKED","textPreview":"RATIONALE | LOCKED","textChars":16,"textLines":2,"bbox":[374,278,112,44]}
+{"kind":"textbox","id":"sh/7uts7ypk","slide":1,"name":"before-lock-copy","text":"Select an option to inspect the technical reasoning.","textPreview":"Select an option to inspect the technical reasoning.","textChars":52,"textLines":1,"bbox":[382,334,96,48]}
+{"kind":"textbox","id":"sh/6t0bet8f","slide":1,"name":"before-note","text":"No concept or explanation is visible.","textPreview":"No concept or explanation is visible.","textChars":37,"textLines":1,"bbox":[62,451,428,17]}
+{"kind":"shape","id":"sh/tgba987q","slide":1,"name":"after-frame","bbox":[648,153,590,323]}
+{"kind":"shape","id":"sh/sv2tg3q5","slide":1,"name":"after-topbar","bbox":[648,153,590,31]}
+{"kind":"textbox","id":"sh/jq9s3epo","slide":1,"name":"after-state","text":"STATE 1 · ANSWER COMMITTED","textPreview":"STATE 1 · ANSWER COMMITTED","textChars":26,"textLines":1,"bbox":[662,162,230,15]}
+{"kind":"textbox","id":"sh/ip0ba983","slide":1,"name":"after-result","text":"DECISION ACCEPTED","textPreview":"DECISION ACCEPTED","textChars":17,"textLines":1,"bbox":[1040,162,180,15]}
+{"kind":"textbox","id":"sh/5sra5o7u","slide":1,"name":"after-question","text":"What is the time complexity of finding a value in a balanced binary search tree?","textPreview":"What is the time complexity of finding a value in a balanced binary search tree?","textChars":80,"textLines":1,"bbox":[668,205,310,54]}
+{"kind":"shape","id":"sh/kritcjq9","slide":1,"name":"after-option-0","bbox":[668,274,310,30]}
+{"kind":"textbox","id":"sh/vmpszeps","slide":1,"name":"after-option-label-0","text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[678,281,24,16]}
+{"kind":"textbox","id":"sh/algr6987","slide":1,"name":"after-option-copy-0","text":"O(1)","textPreview":"O(1)","textChars":4,"textLines":1,"bbox":[710,281,190,16]}
+{"kind":"shape","id":"sh/qtkfah4r","slide":1,"name":"after-option-1","bbox":[668,312,310,30]}
+{"kind":"textbox","id":"sh/butw32lc","slide":1,"name":"after-option-label-1","text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[678,319,24,16]}
+{"kind":"textbox","id":"sh/cv2xc7mx","slide":1,"name":"after-option-copy-1","text":"O(log n)","textPreview":"O(log n)","textChars":8,"textLines":1,"bbox":[710,319,190,16]}
+{"kind":"textbox","id":"sh/dwbe5c32","slide":1,"name":"after-correct","text":"CORRECT","textPreview":"CORRECT","textChars":7,"textLines":1,"bbox":[884,319,82,16]}
+{"kind":"shape","id":"sh/250v6x4f","slide":1,"name":"after-option-2","bbox":[668,350,310,30]}
+{"kind":"textbox","id":"sh/369wz250","slide":1,"name":"after-option-label-2","text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[678,357,24,16]}
+{"kind":"textbox","id":"sh/o7id87ml","slide":1,"name":"after-option-copy-2","text":"O(n)","textPreview":"O(n)","textChars":4,"textLines":1,"bbox":[710,357,190,16]}
+{"kind":"shape","id":"sh/psre1c36","slide":1,"name":"after-option-3","bbox":[668,388,310,30]}
+{"kind":"textbox","id":"sh/e10v2x4j","slide":1,"name":"after-option-label-3","text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[678,395,24,16]}
+{"kind":"textbox","id":"sh/f29wvi54","slide":1,"name":"after-option-copy-3","text":"O(n log n)","textPreview":"O(n log n)","textChars":10,"textLines":1,"bbox":[710,395,190,16]}
+{"kind":"shape","id":"sh/hwfih0nm","slide":1,"name":"after-divider","bbox":[996,198,0,244]}
+{"kind":"textbox","id":"sh/wv6h8v61","slide":1,"name":"after-explanation-label","text":"RATIONALE REVEALED","textPreview":"RATIONALE REVEALED","textChars":18,"textLines":1,"bbox":[1018,205,198,15]}
+{"kind":"textbox","id":"sh/vuxgfq5g","slide":1,"name":"after-concept-label","text":"WHAT THIS TESTS","textPreview":"WHAT THIS TESTS","textChars":15,"textLines":1,"bbox":[1018,242,198,14]}
+{"kind":"textbox","id":"sh/utoz6lov","slide":1,"name":"after-concept","text":"Balanced-tree search height","textPreview":"Balanced-tree search height","textChars":27,"textLines":1,"bbox":[1018,263,198,34]}
+{"kind":"shape","id":"sh/9sfydgna","slide":1,"name":"after-reason-rule","bbox":[1018,308,198,0]}
+{"kind":"textbox","id":"sh/8rmh4b65","slide":1,"name":"after-explanation","text":"Each comparison discards roughly half of the remaining subtree, so search follows one root-to-leaf path of height O(log n).","textPreview":"Each comparison discards roughly half of the remaining subtree, so search follows one root-to-leaf path of height O(log n).","textChars":123,"textLines":1,"bbox":[1018,326,198,82]}
+{"kind":"textbox","id":"sh/nqdgb65k","slide":1,"name":"after-note","text":"The same selection also enables challenge-quality feedback.","textPreview":"The same selection also enables challenge-quality feedback.","textChars":59,"textLines":1,"bbox":[1018,421,198,34]}
+{"kind":"textbox","id":"sh/mp4z21oz","slide":1,"name":"live-label","text":"LIVE CHALLENGE CREATION · SEPARATE FROM THE INTERACTION ABOVE","textPreview":"LIVE CHALLENGE CREATION · SEPARATE FROM THE INTERACTION ABOVE","textChars":61,"textLines":1,"bbox":[42,499,560,18]}
+{"kind":"shape","id":"sh/lovy9g7e","slide":1,"name":"live-arrow-0","bbox":[200,558,32,16]}
+{"kind":"shape","id":"sh/0nmh0b6t","slide":1,"name":"live-arrow-1","bbox":[398,558,32,16]}
+{"kind":"shape","id":"sh/c7qhgbep","slide":1,"name":"live-arrow-2","bbox":[596,558,32,16]}
+{"kind":"shape","id":"sh/d8zipgfa","slide":1,"name":"live-arrow-3","bbox":[826,558,32,16]}
+{"kind":"shape","id":"sh/q58ze1wj","slide":1,"name":"live-node-0","bbox":[42,531,150,70]}
+{"kind":"textbox","id":"sh/r6h0n6x4","slide":1,"name":"live-head-0","text":"SESSION","textPreview":"SESSION","textChars":7,"textLines":1,"bbox":[54,541,126,15]}
+{"kind":"textbox","id":"sh/436hcret","slide":1,"name":"live-copy-0","text":"Clerk user","textPreview":"Clerk user","textChars":10,"textLines":1,"bbox":[54,563,126,30]}
+{"kind":"shape","id":"sh/p4fylwfy","slide":1,"name":"live-node-1","bbox":[240,531,150,70]}
+{"kind":"textbox","id":"sh/2hoza1wn","slide":1,"name":"live-head-1","text":"QUOTA","textPreview":"QUOTA","textChars":5,"textLines":1,"bbox":[252,541,126,15]}
+{"kind":"textbox","id":"sh/32xgj6x8","slide":1,"name":"live-copy-1","text":"> 0","textPreview":"> 0","textChars":3,"textLines":1,"bbox":[252,563,126,30]}
+{"kind":"shape","id":"sh/ozahovex","slide":1,"name":"live-node-2","bbox":[438,531,150,70]}
+{"kind":"textbox","id":"sh/90jix0vi","slide":1,"name":"live-head-2","text":"PROVIDER","textPreview":"PROVIDER","textChars":8,"textLines":1,"bbox":[450,541,126,15]}
+{"kind":"textbox","id":"sh/julknuhk","slide":1,"name":"live-copy-2","text":"one JSON","textPreview":"one JSON","textChars":8,"textLines":1,"bbox":[450,563,126,30]}
+{"kind":"shape","id":"sh/itc3epgz","slide":1,"name":"live-node-3","bbox":[636,531,182,70]}
+{"kind":"textbox","id":"sh/5wn2p4fq","slide":1,"name":"live-head-3","text":"PYDANTIC","textPreview":"PYDANTIC","textChars":8,"textLines":1,"bbox":[648,541,158,15]}
+{"kind":"textbox","id":"sh/kvulgzy5","slide":1,"name":"live-copy-3","text":"4 unique\nanswer 0–3","textPreview":"4 unique | answer 0–3","textChars":19,"textLines":2,"bbox":[648,563,158,30]}
+{"kind":"shape","id":"sh/7y5kruxg","slide":1,"name":"live-node-4","bbox":[866,531,220,70]}
+{"kind":"textbox","id":"sh/6xw3i9gb","slide":1,"name":"live-head-4","text":"TRANSACTION","textPreview":"TRANSACTION","textChars":11,"textLines":1,"bbox":[878,541,196,15]}
+{"kind":"textbox","id":"sh/t0n2t4fm","slide":1,"name":"live-copy-4","text":"challenge +\nquota − 1","textPreview":"challenge + | quota − 1","textChars":21,"textLines":2,"bbox":[878,563,196,30]}
+{"kind":"shape","id":"sh/szelkzy1","slide":1,"name":"demo-note","bbox":[1110,531,128,70]}
+{"kind":"textbox","id":"sh/n21kfahc","slide":1,"name":"demo-note-head","text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[1122,541,104,15]}
+{"kind":"textbox","id":"sh/m1sj65gr","slide":1,"name":"demo-note-copy","text":"same frontend contract; no auth, provider, or DB","textPreview":"same frontend contract; no auth, provider, or DB","textChars":48,"textLines":1,"bbox":[1122,561,104,34]}
+{"kind":"shape","id":"sh/ad8rqt4r","slide":1,"name":"rollback-link","bbox":[958,610,0,25]}
+{"kind":"textbox","id":"sh/behsjelc","slide":1,"name":"rollback","text":"any failure → rollback; quota unchanged","textPreview":"any failure → rollback; quota unchanged","textChars":39,"textLines":1,"bbox":[792,635,332,18]}
+{"kind":"shape","id":"sh/cfq9sjmx","slide":1,"name":"footer-rule","bbox":[42,666,1196,0]}
+{"kind":"textbox","id":"sh/xgzalo3i","slide":1,"name":"boundary-head","text":"SUPPORTED","textPreview":"SUPPORTED","textChars":9,"textLines":1,"bbox":[42,681,92,15]}
+{"kind":"textbox","id":"sh/yh8but43","slide":1,"name":"boundary-supported","text":"commit-before-rationale interaction · exact four-option validation · atomic challenge-and-quota write","textPreview":"commit-before-rationale interaction · exact four-option validation · atomic challenge-and-quota write","textChars":101,"textLines":1,"bbox":[142,677,650,22]}
+{"kind":"textbox","id":"sh/zihsnylo","slide":1,"name":"not-head","text":"NOT CLAIMED","textPreview":"NOT CLAIMED","textChars":11,"textLines":1,"bbox":[822,681,105,15]}
+{"kind":"textbox","id":"sh/kjqtw3mt","slide":1,"name":"not-copy","text":"learning outcomes, interview performance, question quality, or provider accuracy","textPreview":"learning outcomes, interview performance, question quality, or provider accuracy","textChars":80,"textLines":1,"bbox":[934,677,290,28]}
+{"kind":"textbox","id":"sh/lkjap83e","slide":1,"name":"sources","text":"Sources: demo.js · MCQChallenge.jsx · ai_generator.py · routes/challenge.py","textPreview":"Sources: demo.js · MCQChallenge.jsx · ai_generator.py · routes/challenge.py","textChars":75,"textLines":1,"bbox":[42,706,1196,11]}
+{"kind":"notes","id":"nt/03zjca","slide":1,"text":""}

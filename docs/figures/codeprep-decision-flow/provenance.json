@@ -35,35 +35,35 @@
   ],
   "outputs": [
     {
-      "bytes": 18416,
+      "bytes": 18420,
       "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx",
       "role": "editable_pptx",
-      "sha256": "15280f77881139669628837265345314beff70fc4c51878816e1dcb1331e7ad6"
+      "sha256": "faa5b70f899e9e5d881458ba3b65e21dea884efef6549742f9f602162ee655c7"
     },
     {
-      "bytes": 648242,
+      "bytes": 648281,
       "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg",
       "role": "svg",
-      "sha256": "e9ae5e0c4b5c1b450a4569eb2811ede44dc72fc17a17a8bce661755599ed774b"
+      "sha256": "903cd2646ad35e5625064224ce4585facb07109c5235b1b165e2613c40952a5b"
     },
     {
-      "bytes": 216814,
+      "bytes": 217166,
       "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png",
       "role": "png",
-      "sha256": "7eb443928984234ba9d70797eb4bc4844516228c2144f2830d101d6265043fa6"
+      "sha256": "e1f8e86fd26c741bc518736f07a89c598f47c796813c6a568742edc6abc37684"
     },
     {
-      "bytes": 132951,
+      "bytes": 132938,
       "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf",
       "role": "pdf",
-      "sha256": "4609ccfbe442fe0eb7b0dbe0913053573411428ca9db614ce47b132af5e229a5"
+      "sha256": "4c994395cab419b80f30d47868d4b81e6642f684a91b9edcd9cae3f408e94e55"
     }
   ],
   "processing_notes": [
-    "Native editable before/action/after storyboard exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
+    "Native editable before/action/after storyboard with a dark IDE-inspired graphite, lime, violet, and amber palette; exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "160d81e6dda8eadb814e08db0691d649179c017b",
+  "source_revision": "b1857bb4cf41b6b067f10329664ac749b9eabe19",
   "selection_note": "Default deterministic medium challenge after committing the correct answer; all four options and the complete live transaction path represented.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
