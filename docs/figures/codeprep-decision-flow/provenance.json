@@ -1,0 +1,76 @@
+{
+  "claim": "CodePrep hides rationale until answer commitment and its live path validates one four-option challenge before atomically persisting the challenge and quota decrement.",
+  "figure_id": "codeprep-decision-flow",
+  "inputs": [
+    {
+      "bytes": 85764,
+      "path": "docs/figures/codeprep-decision-flow/media/committed-answer.png",
+      "role": "demo_capture",
+      "sha256": "a081bec0876b460c0b45e191d213d57c9d743efffb907c98324bd9e4bd0d0f8c"
+    },
+    {
+      "bytes": 1659,
+      "path": "frontend/src/data/demo.js",
+      "role": "demo_fixture",
+      "sha256": "c9804fb6588b168f3b4891f6ea4d372ca5d7ade9921e88f6255a0f6e1d950cc3"
+    },
+    {
+      "bytes": 1052,
+      "path": "frontend/src/utils/DemoApiProvider.jsx",
+      "role": "demo_provider",
+      "sha256": "63beca5177975ac72976c59374ec241a14a536860e9e2df106e5858ebc3f75c3"
+    },
+    {
+      "bytes": 4245,
+      "path": "frontend/src/challenge/MCQChallenge.jsx",
+      "role": "frontend_interaction",
+      "sha256": "8e6e6a9632b461d1aad798c88cbb762ffdb83f21355bfe5655410b8f37f28831"
+    },
+    {
+      "bytes": 3465,
+      "path": "backend/src/ai_generator.py",
+      "role": "generator",
+      "sha256": "76349f58d869c5c5b1210932c1b5cd6f4ee9952123c9ac5237c8e5a56b5c7faf"
+    },
+    {
+      "bytes": 3916,
+      "path": "backend/src/routes/challenge.py",
+      "role": "live_route",
+      "sha256": "abc419faff8435d19e2beb8fe3ee2dd20173ace4646bb8242d5bc6e7521de660"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 92441,
+      "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx",
+      "role": "editable_pptx",
+      "sha256": "5ec33c9e0690b34114faaa9a124932f0d6d64706e7d49cc1ea15ad7ce415d853"
+    },
+    {
+      "bytes": 619670,
+      "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg",
+      "role": "svg",
+      "sha256": "20c18174d8280644a1bcfc0e695310ef555221d611883fc62aae2c43bded73f4"
+    },
+    {
+      "bytes": 390152,
+      "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png",
+      "role": "png",
+      "sha256": "2856adddffb8a07ecbb5868e9f043bb4e7a51b803973aa06bbb6579e831b1cd4"
+    },
+    {
+      "bytes": 184239,
+      "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf",
+      "role": "pdf",
+      "sha256": "a6b4c40df22e9098ae7ddd702a26f3b91776be06c8560cbe7373da6203e4c872"
+    }
+  ],
+  "processing_notes": [
+    "Local deterministic demo captured at 1920x1080; editable composition exported through LibreOffice; final-size and grayscale renders inspected manually."
+  ],
+  "schema_version": 1,
+  "source_revision": "6f7d76ad748c51ff688f8e07cc13803e2a8067f5",
+  "selection_note": "Default deterministic medium challenge after committing the correct answer; all four options and the complete live transaction path represented.",
+  "target_width_in": 7.16,
+  "venue": "GitHub README"
+}

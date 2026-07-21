@@ -1,0 +1,38 @@
+{"kind":"deck","id":"pr/fs1ghf","name":"Deck"}
+{"kind":"layout","layoutId":"999c2609-dc73-41f5-9698-9d0641e39f80","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"eeb449fc-1031-4b15-8822-1a3266e2e7e1","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/3x6t48","slide":1,"title":"CodePrep reveals rationale only after an answer is committed","textShapes":19}
+{"kind":"textbox","id":"sh/hgj2t4vy","slide":1,"name":"title","text":"CodePrep reveals rationale only after an answer is committed","textPreview":"CodePrep reveals rationale only after an answer is committed","textChars":60,"textLines":1,"bbox":[42,24,1196,44]}
+{"kind":"textbox","id":"sh/udsjypwn","slide":1,"name":"subtitle","text":"The public demo preserves the interaction; the live path adds authentication, schema validation, and one atomic challenge-and-quota write.","textPreview":"The public demo preserves the interaction; the live path adds authentication, schema validation, and one atomic challenge-and-quota write.","textChars":138,"textLines":1,"bbox":[42,73,1196,26]}
+{"kind":"shape","id":"sh/ve1krux8","slide":1,"name":"header-rule","bbox":[42,111,1196,0]}
+{"kind":"textbox","id":"sh/4jal4jep","slide":1,"name":"demo-label","text":"COMMITTED DECISION","textPreview":"COMMITTED DECISION","textChars":18,"textLines":1,"bbox":[42,130,260,22]}
+{"kind":"shape","id":"sh/5k32x4va","slide":1,"name":"screenshot-frame","bbox":[42,158,760,405]}
+{"kind":"textbox","id":"sh/3i1kved4","slide":1,"name":"demo-caption","text":"Default medium fixture · all four options shown · answer B committed · rationale revealed","textPreview":"Default medium fixture · all four options shown · answer B committed · rationale revealed","textChars":89,"textLines":1,"bbox":[42,570,760,22]}
+{"kind":"textbox","id":"sh/knq1sfel","slide":1,"name":"rails-label","text":"TWO EXECUTION RAILS","textPreview":"TWO EXECUTION RAILS","textChars":19,"textLines":1,"bbox":[840,130,260,22]}
+{"kind":"shape","id":"sh/loz2lkf6","slide":1,"name":"demo-rail","bbox":[840,158,396,116]}
+{"kind":"textbox","id":"sh/h4ni9wj6","slide":1,"name":"demo-rail-head","text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[856,168,72,19]}
+{"kind":"textbox","id":"sh/wjeh0ril","slide":1,"name":"demo-rail-title","text":"Deterministic fixture","textPreview":"Deterministic fixture","textChars":21,"textLines":1,"bbox":[856,191,260,23]}
+{"kind":"textbox","id":"sh/vil07m10","slide":1,"name":"demo-rail-copy","text":"Same frontend request contract · in-memory quota · no account, provider, or database","textPreview":"Same frontend request contract · in-memory quota · no account, provider, or database","textChars":84,"textLines":1,"bbox":[856,220,350,42]}
+{"kind":"shape","id":"sh/ahczyh0f","slide":1,"name":"live-arrow-1","bbox":[1032,324,11,19]}
+{"kind":"shape","id":"sh/58nidwj2","slide":1,"name":"live-arrow-2","bbox":[1032,389,11,19]}
+{"kind":"shape","id":"sh/47eh4bih","slide":1,"name":"live-arrow-3","bbox":[1032,454,11,19]}
+{"kind":"shape","id":"sh/j650b61w","slide":1,"name":"live-auth","bbox":[840,291,396,44]}
+{"kind":"textbox","id":"sh/i5wz210r","slide":1,"name":"live-auth-copy","text":"Clerk session + quota remaining > 0","textPreview":"Clerk session + quota remaining > 0","textChars":35,"textLines":1,"bbox":[856,302,360,21]}
+{"kind":"shape","id":"sh/tc7i1gje","slide":1,"name":"live-model","bbox":[840,356,396,44]}
+{"kind":"textbox","id":"sh/sbyh8bit","slide":1,"name":"live-model-copy","text":"Hosted provider returns one JSON challenge","textPreview":"Hosted provider returns one JSON challenge","textChars":42,"textLines":1,"bbox":[856,367,360,21]}
+{"kind":"shape","id":"sh/cf614fqp","slide":1,"name":"live-schema","bbox":[840,421,396,44]}
+{"kind":"textbox","id":"sh/dgf2dkra","slide":1,"name":"live-schema-copy","text":"Pydantic: exactly 4 unique options + answer 0–3","textPreview":"Pydantic: exactly 4 unique options + answer 0–3","textChars":47,"textLines":1,"bbox":[856,432,360,21]}
+{"kind":"shape","id":"sh/qd4j2p8z","slide":1,"name":"live-tx","bbox":[840,486,396,64]}
+{"kind":"textbox","id":"sh/rexkba9k","slide":1,"name":"live-tx-head","text":"ONE TRANSACTION","textPreview":"ONE TRANSACTION","textChars":15,"textLines":1,"bbox":[856,496,170,18]}
+{"kind":"textbox","id":"sh/0j618zq1","slide":1,"name":"live-tx-copy","text":"Persist challenge  +  decrement quota","textPreview":"Persist challenge  +  decrement quota","textChars":37,"textLines":1,"bbox":[856,520,350,22]}
+{"kind":"shape","id":"sh/1kf2h4rm","slide":1,"name":"rollback","bbox":[840,566,396,42]}
+{"kind":"textbox","id":"sh/ehoj6p8v","slide":1,"name":"rollback-copy","text":"Failure → rollback; quota unchanged","textPreview":"Failure → rollback; quota unchanged","textChars":35,"textLines":1,"bbox":[856,577,360,21]}
+{"kind":"shape","id":"sh/zixkfu9g","slide":1,"name":"boundary-rule","bbox":[42,624,1196,0]}
+{"kind":"textbox","id":"sh/gnm1wvqx","slide":1,"name":"evidence-head","text":"SUPPORTED","textPreview":"SUPPORTED","textChars":9,"textLines":1,"bbox":[42,641,130,18]}
+{"kind":"textbox","id":"sh/hov250r2","slide":1,"name":"evidence-copy","text":"Commit-before-rationale interaction and maintained transaction semantics.","textPreview":"Commit-before-rationale interaction and maintained transaction semantics.","textChars":73,"textLines":1,"bbox":[42,664,384,34]}
+{"kind":"shape","id":"sh/jelwr2xw","slide":1,"name":"divider","bbox":[456,641,0,52]}
+{"kind":"textbox","id":"sh/idcvyxwb","slide":1,"name":"not-head","text":"NOT CLAIMED","textPreview":"NOT CLAIMED","textChars":11,"textLines":1,"bbox":[482,641,150,18]}
+{"kind":"textbox","id":"sh/5g3etcf2","slide":1,"name":"not-copy","text":"No learning-outcome, interview-performance, question-quality, provider-accuracy, or usage-analytics evidence.","textPreview":"No learning-outcome, interview-performance, question-quality, provider-accuracy, or usage-analytics evidence.","textChars":109,"textLines":1,"bbox":[482,664,600,34]}
+{"kind":"textbox","id":"sh/4fud07eh","slide":1,"name":"sources","text":"Sources: frontend/src/data/demo.js · MCQChallenge.jsx · backend/src/ai_generator.py · routes/challenge.py","textPreview":"Sources: frontend/src/data/demo.js · MCQChallenge.jsx · backend/src/ai_generator.py · routes/challenge.py","textChars":105,"textLines":1,"bbox":[42,703,1196,14]}
+{"kind":"image","id":"im/bih0ra9c","slide":1,"name":"","alt":"CodePrep deterministic medium challenge after choosing O(log n), with the rationale revealed beside all four options","bbox":[45,161,754,399]}
+{"kind":"notes","id":"nt/3x6t48","slide":1,"text":""}

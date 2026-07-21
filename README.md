@@ -61,9 +61,9 @@ Set `VITE_CODEPREP_MODE=live` in `frontend/.env` to enable Clerk and the API cli
 
 ## Architecture
 
-[![CodePrep architecture from the candidate workspace through authentication, validation, inference, and persistence](docs/media/architecture.svg)](docs/media/architecture.excalidraw)
+[![CodePrep decision flow showing rationale after answer commitment and the authenticated live transaction path](docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg)](docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf)
 
-The image links to an editable Excalidraw file.
+The overview uses the complete default demo decision and distinguishes it from the authenticated live execution rail. [Figure contract, editable source, provenance, and preflight records](docs/figures/codeprep-decision-flow/)
 
 The browser never receives the model token. The backend asks a hosted inference provider for JSON, validates the exact four-option schema, then writes the challenge and quota decrement in one transaction.
 
@@ -131,6 +131,7 @@ frontend/
   src/utils/                demo and authenticated API providers
 docs/
   media/                    verified interaction capture and poster
+  figures/                  editable evidence figure, exports, and preflight records
 ```
 
 More detail lives in [Architecture](docs/architecture.md), [Usage](docs/usage-guide.md), and [FAQ](docs/faq.md).
