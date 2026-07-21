@@ -10,16 +10,16 @@
     {"bytes": 2006, "path": "backend/src/database/models.py", "role": "persistence_models", "sha256": "3a29477a0e471cf7daa5bda568eeb6bf3c48f52a51533526a29e7af9b7017c68"}
   ],
   "outputs": [
-    {"bytes": 17162, "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx", "role": "editable_pptx", "sha256": "56b37cf013db652a5687306680043fb1dc7876668e6b3506338b4484ce250cb1"},
-    {"bytes": 573501, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg", "role": "svg", "sha256": "1106c7105c660516afe15da17f93905ded23c34774e80514bf593a11406286a6"},
-    {"bytes": 145892, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png", "role": "png", "sha256": "b7a36a89778d2694a642284cb623d203d43af237bede32ff2f3dccd5fb73735a"},
-    {"bytes": 109390, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf", "role": "pdf", "sha256": "0f8a99c6319ff3a7c3eb22d4338c4a9ae5294d3b2cffd7356bc293c92d57e5b2"}
+    {"bytes": 17098, "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx", "role": "editable_pptx", "sha256": "f45470f2c1370e94225f1b92a7d6515c3ce5344a46aea9996b44efe2b4b3042a"},
+    {"bytes": 573430, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg", "role": "svg", "sha256": "e9e715e9d48255d5de2737eaa82e4a69f05413ba53e1f9731c3bf05f2142dfdf"},
+    {"bytes": 143147, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png", "role": "png", "sha256": "e3257c75c1381ed8c7284364eb38328c544401e89ba1e72825230cb9d917d813"},
+    {"bytes": 109320, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf", "role": "pdf", "sha256": "108834ddb36316617c2910af1793307d68cb615af015753c15044d3b561c8316"}
   ],
   "processing_notes": [
-    "Native editable request-sequence diagram with six lifelines, alternate demo/live bands, an API-owned schema gate, and an explicit SQLAlchemy transaction enclosure; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
+    "Native editable request-sequence diagram using CodePrep's warm off-white, rust, charcoal, and green product tokens; six lifelines, alternate demo/live bands, an API-owned schema gate, and an explicit SQLAlchemy transaction enclosure remain visible; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "46a11f55b4b6e797d1fe5cacce215af9a543d7dd",
+  "source_revision": "3f7b6e86484a4d5b183e34e24d9a334a8a3a00d2",
   "selection_note": "Only maintained adapter, route, schema, transaction, rollback, provisioning, and read branches are represented; no model output or learning result is shown.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
