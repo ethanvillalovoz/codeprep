@@ -1,5 +1,5 @@
 {
-  "bytes": 132938,
+  "bytes": 125578,
   "failures": [],
   "file": "/Users/ethanvillalovoz/Documents/Codex/2026-07-15/ok/work/visual-audit/repos/codeprep/docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf",
   "font_report": {
@@ -48,7 +48,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "GAAAAA+Carlito-Bold",
+        "name": "GAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -56,7 +56,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "HAAAAA+Carlito",
+        "name": "HAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -80,7 +80,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "KAAAAA+Carlito",
+        "name": "KAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -88,7 +88,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "LAAAAA+Carlito-Bold",
+        "name": "LAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -105,38 +105,6 @@
         "embedded": true,
         "encoding": "WinAnsi",
         "name": "NAAAAA+Carlito",
-        "subset": true,
-        "type": "TrueType",
-        "unicode": true
-      },
-      {
-        "embedded": true,
-        "encoding": "WinAnsi",
-        "name": "OAAAAA+Carlito-Bold",
-        "subset": true,
-        "type": "TrueType",
-        "unicode": true
-      },
-      {
-        "embedded": true,
-        "encoding": "WinAnsi",
-        "name": "PAAAAA+Carlito-Bold",
-        "subset": true,
-        "type": "TrueType",
-        "unicode": true
-      },
-      {
-        "embedded": true,
-        "encoding": "WinAnsi",
-        "name": "QAAAAA+Carlito-Bold",
-        "subset": true,
-        "type": "TrueType",
-        "unicode": true
-      },
-      {
-        "embedded": true,
-        "encoding": "WinAnsi",
-        "name": "RAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true

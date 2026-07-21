@@ -1,16 +1,16 @@
-# CodePrep decision-flow figure
+# CodePrep system-architecture figure
 
-This directory contains the public answer-commitment and execution-mode overview.
+This directory contains the public demo/live architecture overview and its traceable code inputs.
 
 | File | Purpose |
 | --- | --- |
-| `contract.md` | Supported claim, default-demo selection rule, and evidence boundary |
+| `contract.md` | Communication job, architecture scope, and trust boundary |
 | `provenance.json` | Input and output checksums plus source revision |
 | `editable/codeprep-decision-flow.pptx` | Editable composition |
 | `exports/codeprep-decision-flow.svg` | README-ready vector export |
 | `exports/codeprep-decision-flow.png` | Raster review export |
 | `exports/codeprep-decision-flow.pdf` | Print/preflight artifact |
-| `media/committed-answer.png` | Archival local demo capture; not an input to the vector figure |
+| `media/committed-answer.png` | Archival local demo capture; not an input to the architecture figure |
 | `preflight/` | PowerPoint, final-size, grayscale, and PDF checks |
 
-The storyboard is reconstructed from the maintained deterministic fixture and frontend interaction logic rather than embedded as a screenshot. The live execution rail is derived from maintained code and tests; it is not evidence of educational effectiveness or hosted-model quality.
+The diagram traces the shared frontend request contract into either local deterministic fixtures or the authenticated FastAPI path, including schema validation, one-transaction persistence, rollback, identity provisioning, and read routes. It is not evidence of educational effectiveness or hosted-model quality.

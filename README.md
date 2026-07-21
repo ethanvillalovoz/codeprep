@@ -61,9 +61,9 @@ Set `VITE_CODEPREP_MODE=live` in `frontend/.env` to enable Clerk and the API cli
 
 ## Architecture
 
-[![CodePrep decision flow showing rationale after answer commitment and the authenticated live transaction path](docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg)](docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf)
+[![CodePrep architecture showing the shared browser request contract, deterministic demo branch, authenticated generation path, validation gate, atomic commit, and rollback](docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg)](docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf)
 
-The overview uses the complete default demo decision and distinguishes it from the authenticated live execution rail. [Figure contract, editable source, provenance, and preflight records](docs/figures/codeprep-decision-flow/)
+The overview traces the demo and live implementations of the browser request contract, then follows live generation through auth, quota, schema validation, commit, and rollback. [Figure contract, editable source, provenance, and preflight records](docs/figures/codeprep-decision-flow/)
 
 The browser never receives the model token. The backend asks a hosted inference provider for JSON, validates the exact four-option schema, then writes the challenge and quota decrement in one transaction.
 
@@ -131,7 +131,7 @@ frontend/
   src/utils/                demo and authenticated API providers
 docs/
   media/                    verified interaction capture and poster
-  figures/                  editable evidence figure, exports, and preflight records
+  figures/                  editable architecture figure, exports, and preflight records
 ```
 
 More detail lives in [Architecture](docs/architecture.md), [Usage](docs/usage-guide.md), and [FAQ](docs/faq.md).
