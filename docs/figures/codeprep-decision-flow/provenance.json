@@ -10,16 +10,16 @@
     {"bytes": 2006, "path": "backend/src/database/models.py", "role": "persistence_models", "sha256": "3a29477a0e471cf7daa5bda568eeb6bf3c48f52a51533526a29e7af9b7017c68"}
   ],
   "outputs": [
-    {"bytes": 19104, "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx", "role": "editable_pptx", "sha256": "8692c3548a0d7043ba3dc92beaba44d87b41d0cc7297db0f15d2ac322f58d54b"},
-    {"bytes": 609168, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg", "role": "svg", "sha256": "58c42319b8648a86c8178d952407289fe8c45c18539c48e9759430fec06e52a8"},
-    {"bytes": 187956, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png", "role": "png", "sha256": "dc38c932f22fb973376069dfccdf9ebef5bb7dea0a6d0fea1e9fdf0ff5fcd1df"},
-    {"bytes": 125578, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf", "role": "pdf", "sha256": "9f824eb10bd02db58fde895c8a395f5892441b3467d19aa2d2f10b9f81937343"}
+    {"bytes": 17162, "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx", "role": "editable_pptx", "sha256": "56b37cf013db652a5687306680043fb1dc7876668e6b3506338b4484ce250cb1"},
+    {"bytes": 573501, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg", "role": "svg", "sha256": "1106c7105c660516afe15da17f93905ded23c34774e80514bf593a11406286a6"},
+    {"bytes": 145892, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png", "role": "png", "sha256": "b7a36a89778d2694a642284cb623d203d43af237bede32ff2f3dccd5fb73735a"},
+    {"bytes": 109390, "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf", "role": "pdf", "sha256": "0f8a99c6319ff3a7c3eb22d4338c4a9ae5294d3b2cffd7356bc293c92d57e5b2"}
   ],
   "processing_notes": [
-    "Native editable split-runtime architecture with distinct browser, generation, validation, commit, rollback, provisioning, and trust roles; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
+    "Native editable request-sequence diagram with six lifelines, alternate demo/live bands, an API-owned schema gate, and an explicit SQLAlchemy transaction enclosure; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "6040a215be670e46093967384d00ff02cb17fcdb",
+  "source_revision": "46a11f55b4b6e797d1fe5cacce215af9a543d7dd",
   "selection_note": "Only maintained adapter, route, schema, transaction, rollback, provisioning, and read branches are represented; no model output or learning result is shown.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
