@@ -1,76 +1,76 @@
-{"kind":"deck","id":"pr/zawphp","name":"Deck"}
-{"kind":"layout","layoutId":"cead3253-78fa-4806-997f-c7e7ddf75dbd","name":"Master","type":"master"}
-{"kind":"layout","layoutId":"c678b09c-d6f9-429c-8935-1271159e953b","name":"Title Slide","type":"title"}
-{"kind":"slide","id":"sl/v49bgw","slide":1,"title":"REQUEST SEQUENCE · DEMO AND LIVE","textShapes":43}
-{"kind":"textbox","id":"sh/7i1c3m5k","slide":1,"name":"kicker","text":"REQUEST SEQUENCE · DEMO AND LIVE","textPreview":"REQUEST SEQUENCE · DEMO AND LIVE","textChars":32,"textLines":1,"bbox":[50,18,330,18]}
-{"kind":"textbox","id":"sh/8judcr65","slide":1,"name":"title","text":"CodePrep commits a challenge and its quota update together","textPreview":"CodePrep commits a challenge and its quota update together","textChars":58,"textLines":1,"bbox":[50,39,1040,38]}
-{"kind":"textbox","id":"sh/9k3u5wnq","slide":1,"name":"subtitle","text":"The browser contract is shared; authentication, model inference, validation, and persistence exist only on the live path.","textPreview":"The browser contract is shared; authentication, model inference, validation, and persistence exist only on the live path.","textChars":121,"textLines":1,"bbox":[50,80,920,20]}
-{"kind":"textbox","id":"sh/ulcve1ob","slide":1,"name":"route","text":"POST /api/generate-challenge","textPreview":"POST /api/generate-challenge","textChars":28,"textLines":1,"bbox":[995,82,235,18]}
-{"kind":"shape","id":"sh/vmlc765w","slide":1,"name":"demo-band","bbox":[44,185,1192,103]}
-{"kind":"shape","id":"sh/wnudgb6h","slide":1,"name":"live-band","bbox":[44,301,1192,373]}
-{"kind":"textbox","id":"sh/ho3e9gnm","slide":1,"name":"demo-band-label","text":"ALT · DEMO","textPreview":"ALT · DEMO","textChars":10,"textLines":1,"bbox":[56,197,100,18]}
-{"kind":"textbox","id":"sh/qp8v2hor","slide":1,"name":"demo-band-note","text":"local response · no auth · no model · no database","textPreview":"local response · no auth · no model · no database","textChars":49,"textLines":1,"bbox":[930,197,284,18]}
-{"kind":"textbox","id":"sh/bqhcv2pc","slide":1,"name":"live-band-label","text":"ALT · LIVE","textPreview":"ALT · LIVE","textChars":10,"textLines":1,"bbox":[56,313,100,18]}
-{"kind":"shape","id":"sh/zm9kfal8","slide":1,"name":"browser-head","bbox":[34,112,132,56]}
-{"kind":"textbox","id":"sh/el0j65kn","slide":1,"name":"browser-label","text":"Browser","textPreview":"Browser","textChars":7,"textLines":1,"bbox":[43,124,114,18]}
-{"kind":"textbox","id":"sh/1ob2hk3e","slide":1,"name":"browser-sub","text":"React workspace","textPreview":"React workspace","textChars":15,"textLines":1,"bbox":[43,146,114,14]}
-{"kind":"shape","id":"sh/0n2l8f2t","slide":1,"name":"browser-lifeline","bbox":[100,168,0,493]}
-{"kind":"shape","id":"sh/ry9kbalc","slide":1,"name":"adapter-head","bbox":[244,112,132,56]}
-{"kind":"textbox","id":"sh/qx0j25kr","slide":1,"name":"adapter-label","text":"API adapter","textPreview":"API adapter","textChars":11,"textLines":1,"bbox":[253,124,114,18]}
-{"kind":"textbox","id":"sh/dkr2d032","slide":1,"name":"adapter-sub","text":"demo or live","textPreview":"demo or live","textChars":12,"textLines":1,"bbox":[253,146,114,14]}
-{"kind":"shape","id":"sh/czi14v2x","slide":1,"name":"adapter-lifeline","bbox":[310,168,0,493]}
-{"kind":"shape","id":"sh/3upk7ql0","slide":1,"name":"clerk-head","bbox":[444,112,132,56]}
-{"kind":"textbox","id":"sh/2tgjylkf","slide":1,"name":"clerk-label","text":"Clerk","textPreview":"Clerk","textChars":5,"textLines":1,"bbox":[453,124,114,18]}
-{"kind":"textbox","id":"sh/6pg3alon","slide":1,"name":"clerk-sub","text":"session + webhook","textPreview":"session + webhook","textChars":17,"textLines":1,"bbox":[453,146,114,14]}
-{"kind":"shape","id":"sh/7qpkjq58","slide":1,"name":"clerk-lifeline","bbox":[510,168,0,493]}
-{"kind":"shape","id":"sh/srylcv6d","slide":1,"name":"api-head","bbox":[664,112,132,56]}
-{"kind":"textbox","id":"sh/ts72l0ny","slide":1,"name":"api-label","text":"FastAPI","textPreview":"FastAPI","textChars":7,"textLines":1,"bbox":[673,124,114,18]}
-{"kind":"textbox","id":"sh/utg3e5oj","slide":1,"name":"api-sub","text":"auth + quota + route","textPreview":"auth + quota + route","textChars":20,"textLines":1,"bbox":[673,146,114,14]}
-{"kind":"shape","id":"sh/fup4nq54","slide":1,"name":"api-lifeline","bbox":[730,168,0,493]}
-{"kind":"shape","id":"sh/gvylgv6p","slide":1,"name":"hf-head","bbox":[874,112,132,56]}
-{"kind":"textbox","id":"sh/hwrmp0na","slide":1,"name":"hf-label","text":"HF inference","textPreview":"HF inference","textChars":12,"textLines":1,"bbox":[883,124,114,18]}
-{"kind":"textbox","id":"sh/2x03i54v","slide":1,"name":"hf-sub","text":"JSON candidate","textPreview":"JSON candidate","textChars":14,"textLines":1,"bbox":[883,146,114,14]}
-{"kind":"shape","id":"sh/3i94ra50","slide":1,"name":"hf-lifeline","bbox":[940,168,0,493]}
-{"kind":"shape","id":"sh/dcb6h47i","slide":1,"name":"db-head","bbox":[1094,112,132,56]}
-{"kind":"textbox","id":"sh/cr25ozqx","slide":1,"name":"db-label","text":"SQL database","textPreview":"SQL database","textChars":12,"textLines":1,"bbox":[1103,124,114,18]}
-{"kind":"textbox","id":"sh/rqtofupc","slide":1,"name":"db-sub","text":"challenges + quotas","textPreview":"challenges + quotas","textChars":19,"textLines":1,"bbox":[1103,146,114,14]}
-{"kind":"shape","id":"sh/qpknmp8r","slide":1,"name":"db-lifeline","bbox":[1160,168,0,493]}
-{"kind":"shape","id":"sh/lgv6lo7e","slide":1,"name":"demo-request-arrow","bbox":[108,224,194,8]}
-{"kind":"textbox","id":"sh/0f25sj6t","slide":1,"name":"demo-request-label","text":"makeRequest()","textPreview":"makeRequest()","textChars":13,"textLines":1,"bbox":[118,202,174,17]}
-{"kind":"textbox","id":"sh/zetojep8","slide":1,"name":"demo-request-detail","text":"shared frontend contract","textPreview":"shared frontend contract","textChars":24,"textLines":1,"bbox":[118,236,174,15]}
-{"kind":"shape","id":"sh/edknq983","slide":1,"name":"demo-response-arrow","bbox":[108,270,194,8]}
-{"kind":"textbox","id":"sh/9kv6po7q","slide":1,"name":"demo-response-label","text":"deterministic Challenge","textPreview":"deterministic Challenge","textChars":23,"textLines":1,"bbox":[118,248,174,17]}
-{"kind":"textbox","id":"sh/8jmpwj65","slide":1,"name":"demo-response-detail","text":"fixture response","textPreview":"fixture response","textChars":16,"textLines":1,"bbox":[118,282,174,15]}
-{"kind":"shape","id":"sh/kfq9onqd","slide":1,"name":"live-request-arrow","bbox":[108,344,194,8]}
-{"kind":"textbox","id":"sh/5gzqhsry","slide":1,"name":"live-request-label","text":"makeRequest()","textPreview":"makeRequest()","textChars":13,"textLines":1,"bbox":[118,322,174,17]}
-{"kind":"textbox","id":"sh/idormd87","slide":1,"name":"live-request-detail","text":"runtime mode = live","textPreview":"runtime mode = live","textChars":19,"textLines":1,"bbox":[118,356,174,15]}
-{"kind":"shape","id":"sh/jex8fi9s","slide":1,"name":"live-token-arrow","bbox":[318,391,184,8]}
-{"kind":"textbox","id":"sh/wb69kna1","slide":1,"name":"live-token-label","text":"session token","textPreview":"session token","textChars":13,"textLines":1,"bbox":[328,369,164,17]}
-{"kind":"textbox","id":"sh/xcfqdsrm","slide":1,"name":"live-token-detail","text":"Bearer JWT","textPreview":"Bearer JWT","textChars":10,"textLines":1,"bbox":[328,403,164,15]}
-{"kind":"shape","id":"sh/a9oridsb","slide":1,"name":"live-auth-arrow","bbox":[518,438,204,8]}
-{"kind":"textbox","id":"sh/vax8bi9g","slide":1,"name":"live-auth-label","text":"verified user","textPreview":"verified user","textChars":13,"textLines":1,"bbox":[528,416,184,17]}
-{"kind":"textbox","id":"sh/g7a9w7ql","slide":1,"name":"live-auth-detail","text":"authorized party checked","textPreview":"authorized party checked","textChars":24,"textLines":1,"bbox":[528,450,184,15]}
-{"kind":"shape","id":"sh/h8japcrq","slide":1,"name":"quota-read-arrow","bbox":[738,485,414,8]}
-{"kind":"textbox","id":"sh/r2lcf6t8","slide":1,"name":"quota-read-label","text":"load / reset quota","textPreview":"load / reset quota","textChars":18,"textLines":1,"bbox":[748,463,394,17]}
-{"kind":"textbox","id":"sh/q1cbm1sn","slide":1,"name":"quota-read-detail","text":"50 daily · 429 when empty","textPreview":"50 daily · 429 when empty","textChars":25,"textLines":1,"bbox":[748,497,394,15]}
-{"kind":"shape","id":"sh/d43uhgby","slide":1,"name":"model-request-arrow","bbox":[738,532,194,8]}
-{"kind":"textbox","id":"sh/c3utobat","slide":1,"name":"model-request-label","text":"request JSON","textPreview":"request JSON","textChars":12,"textLines":1,"bbox":[748,510,174,17]}
-{"kind":"textbox","id":"sh/z65cjqt4","slide":1,"name":"model-request-detail","text":"hosted inference","textPreview":"hosted inference","textChars":16,"textLines":1,"bbox":[748,544,174,15]}
-{"kind":"shape","id":"sh/e5wbqlsj","slide":1,"name":"model-response-arrow","bbox":[738,574,194,8]}
-{"kind":"textbox","id":"sh/1snul0ba","slide":1,"name":"model-response-label","text":"candidate","textPreview":"candidate","textChars":9,"textLines":1,"bbox":[748,552,174,17]}
-{"kind":"shape","id":"sh/07etsvap","slide":1,"name":"validation-link","bbox":[700,612,22,7]}
-{"kind":"shape","id":"sh/fa1c7mt0","slide":1,"name":"validation-gate","bbox":[574,588,136,50]}
-{"kind":"textbox","id":"sh/u9sbehcf","slide":1,"name":"validation-title","text":"Pydantic gate","textPreview":"Pydantic gate","textChars":13,"textLines":1,"bbox":[586,598,112,17]}
-{"kind":"textbox","id":"sh/i10n2tgf","slide":1,"name":"validation-copy","text":"4 unique · id 0–3","textPreview":"4 unique · id 0–3","textChars":17,"textLines":1,"bbox":[584,620,116,13]}
-{"kind":"shape","id":"sh/j2tobyhk","slide":1,"name":"tx-boundary","bbox":[770,588,446,82]}
-{"kind":"textbox","id":"sh/432543y5","slide":1,"name":"tx-label","text":"ONE SQLALCHEMY TRANSACTION","textPreview":"ONE SQLALCHEMY TRANSACTION","textChars":26,"textLines":1,"bbox":[786,597,214,15]}
-{"kind":"shape","id":"sh/54b6dozq","slide":1,"name":"tx-write-arrow","bbox":[738,635,414,8]}
-{"kind":"textbox","id":"sh/ux0ny9g3","slide":1,"name":"tx-write-label","text":"insert Challenge + decrement quota","textPreview":"insert Challenge + decrement quota","textChars":34,"textLines":1,"bbox":[785,615,320,17]}
-{"kind":"shape","id":"sh/vy9o7eho","slide":1,"name":"tx-commit-arrow","bbox":[738,658,414,7]}
-{"kind":"textbox","id":"sh/wzi50jy9","slide":1,"name":"tx-commit-label","text":"commit","textPreview":"commit","textChars":6,"textLines":1,"bbox":[900,641,110,15]}
-{"kind":"textbox","id":"sh/h0r69ozu","slide":1,"name":"rollback-label","text":"failure: rollback · quota unchanged","textPreview":"failure: rollback · quota unchanged","textChars":35,"textLines":1,"bbox":[818,675,300,16]}
-{"kind":"shape","id":"sh/m9gnu9g7","slide":1,"name":"side-paths","bbox":[660,218,520,52]}
-{"kind":"textbox","id":"sh/7a9o3ehs","slide":1,"name":"side-paths-label","text":"ASYNC + READ PATHS","textPreview":"ASYNC + READ PATHS","textChars":18,"textLines":1,"bbox":[675,228,126,16]}
-{"kind":"textbox","id":"sh/pofq9cja","slide":1,"name":"side-paths-copy","text":"user.created → Svix → quota row   ·   GET quota   ·   history ≤100","textPreview":"user.created → Svix → quota row   ·   GET quota   ·   history ≤100","textChars":66,"textLines":1,"bbox":[810,233,354,18]}
-{"kind":"textbox","id":"sh/on69g7ip","slide":1,"name":"sources","text":"LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textPreview":"LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textChars":114,"textLines":1,"bbox":[260,704,760,13]}
-{"kind":"notes","id":"nt/v49bgw","slide":1,"text":""}
+{"kind":"deck","id":"pr/cmopsy","name":"Deck"}
+{"kind":"layout","layoutId":"ab310c06-e3ae-4e54-a1b9-ee5cfa58c73c","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"5a1eaf88-9a4f-4831-8e7d-55751e1e18d0","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/af0qav","slide":1,"title":"REQUEST SEQUENCE · DEMO AND LIVE","textShapes":43}
+{"kind":"textbox","id":"sh/veh0b2p8","slide":1,"name":"kicker","text":"REQUEST SEQUENCE · DEMO AND LIVE","textPreview":"REQUEST SEQUENCE · DEMO AND LIVE","textChars":32,"textLines":1,"bbox":[50,18,330,18]}
+{"kind":"textbox","id":"sh/gfqhk7qt","slide":1,"name":"title","text":"CodePrep commits a challenge and its quota update together","textPreview":"CodePrep commits a challenge and its quota update together","textChars":58,"textLines":1,"bbox":[50,39,1040,38]}
+{"kind":"textbox","id":"sh/hgzidc7y","slide":1,"name":"subtitle","text":"The browser contract is shared; authentication, model inference, validation, and persistence exist only on the live path.","textPreview":"The browser contract is shared; authentication, model inference, validation, and persistence exist only on the live path.","textChars":121,"textLines":1,"bbox":[50,80,920,20]}
+{"kind":"textbox","id":"sh/69ozed8b","slide":1,"name":"route","text":"POST /api/generate-challenge","textPreview":"POST /api/generate-challenge","textChars":28,"textLines":1,"bbox":[995,82,235,18]}
+{"kind":"shape","id":"sh/7ah07ipw","slide":1,"name":"demo-band","bbox":[44,185,1192,103]}
+{"kind":"shape","id":"sh/8bqhgnqh","slide":1,"name":"live-band","bbox":[44,301,1192,373]}
+{"kind":"textbox","id":"sh/tczi9s72","slide":1,"name":"demo-band-label","text":"ALT · DEMO","textPreview":"ALT · DEMO","textChars":10,"textLines":1,"bbox":[56,197,100,18]}
+{"kind":"textbox","id":"sh/q5sjah8v","slide":1,"name":"demo-band-note","text":"local response · no auth · no model · no database","textPreview":"local response · no auth · no model · no database","textChars":49,"textLines":1,"bbox":[930,197,284,18]}
+{"kind":"textbox","id":"sh/r610jmpg","slide":1,"name":"live-band-label","text":"ALT · LIVE","textPreview":"ALT · LIVE","textChars":10,"textLines":1,"bbox":[56,313,100,18]}
+{"kind":"shape","id":"sh/321szml8","slide":1,"name":"browser-head","bbox":[34,112,132,56]}
+{"kind":"textbox","id":"sh/21srqh43","slide":1,"name":"browser-label","text":"Browser","textPreview":"Browser","textChars":7,"textLines":1,"bbox":[43,124,114,18]}
+{"kind":"textbox","id":"sh/p4ja1c3e","slide":1,"name":"browser-sub","text":"React workspace","textPreview":"React workspace","textChars":15,"textLines":1,"bbox":[43,146,114,14]}
+{"kind":"shape","id":"sh/43a9srmt","slide":1,"name":"browser-lifeline","bbox":[100,168,0,493]}
+{"kind":"shape","id":"sh/rqls3mlk","slide":1,"name":"adapter-head","bbox":[244,112,132,56]}
+{"kind":"textbox","id":"sh/qpsruh4z","slide":1,"name":"adapter-label","text":"API adapter","textPreview":"API adapter","textChars":11,"textLines":1,"bbox":[253,124,114,18]}
+{"kind":"textbox","id":"sh/ds3a5w3q","slide":1,"name":"adapter-sub","text":"demo or live","textPreview":"demo or live","textChars":12,"textLines":1,"bbox":[253,146,114,14]}
+{"kind":"shape","id":"sh/cru9wrm5","slide":1,"name":"adapter-lifeline","bbox":[310,168,0,493]}
+{"kind":"shape","id":"sh/zuls76lg","slide":1,"name":"clerk-head","bbox":[444,112,132,56]}
+{"kind":"textbox","id":"sh/etcby14v","slide":1,"name":"clerk-label","text":"Clerk","textPreview":"Clerk","textChars":5,"textLines":1,"bbox":[453,124,114,18]}
+{"kind":"textbox","id":"sh/apgv65o3","slide":1,"name":"clerk-sub","text":"session + webhook","textPreview":"session + webhook","textChars":17,"textLines":1,"bbox":[453,146,114,14]}
+{"kind":"shape","id":"sh/vqpcza5o","slide":1,"name":"clerk-lifeline","bbox":[510,168,0,493]}
+{"kind":"shape","id":"sh/wryd8v69","slide":1,"name":"api-head","bbox":[664,112,132,56]}
+{"kind":"textbox","id":"sh/xs7u10nu","slide":1,"name":"api-label","text":"FastAPI","textPreview":"FastAPI","textChars":7,"textLines":1,"bbox":[673,124,114,18]}
+{"kind":"textbox","id":"sh/mlwv2lo7","slide":1,"name":"api-sub","text":"auth + quota + route","textPreview":"auth + quota + route","textChars":20,"textLines":1,"bbox":[673,146,114,14]}
+{"kind":"shape","id":"sh/nm5cvq5s","slide":1,"name":"api-lifeline","bbox":[730,168,0,493]}
+{"kind":"shape","id":"sh/oned4v6d","slide":1,"name":"hf-head","bbox":[874,112,132,56]}
+{"kind":"textbox","id":"sh/9onux0ny","slide":1,"name":"hf-label","text":"HF inference","textPreview":"HF inference","textChars":12,"textLines":1,"bbox":[883,124,114,18]}
+{"kind":"textbox","id":"sh/6h0vepob","slide":1,"name":"hf-sub","text":"JSON candidate","textPreview":"JSON candidate","textChars":14,"textLines":1,"bbox":[883,146,114,14]}
+{"kind":"shape","id":"sh/7i9w7u5w","slide":1,"name":"hf-lifeline","bbox":[940,168,0,493]}
+{"kind":"shape","id":"sh/hcbyxo7e","slide":1,"name":"db-head","bbox":[1094,112,132,56]}
+{"kind":"textbox","id":"sh/gb2x4jqt","slide":1,"name":"db-label","text":"SQL database","textPreview":"SQL database","textChars":12,"textLines":1,"bbox":[1103,124,114,18]}
+{"kind":"textbox","id":"sh/fatgvep8","slide":1,"name":"db-sub","text":"challenges + quotas","textPreview":"challenges + quotas","textChars":19,"textLines":1,"bbox":[1103,146,114,14]}
+{"kind":"shape","id":"sh/u9kf298n","slide":1,"name":"db-lifeline","bbox":[1160,168,0,493]}
+{"kind":"shape","id":"sh/t8byt472","slide":1,"name":"demo-request-arrow","bbox":[108,224,194,8]}
+{"kind":"textbox","id":"sh/snix0zqh","slide":1,"name":"demo-request-label","text":"makeRequest()","textPreview":"makeRequest()","textChars":13,"textLines":1,"bbox":[118,202,174,17]}
+{"kind":"textbox","id":"sh/7m9grepw","slide":1,"name":"demo-request-detail","text":"shared frontend contract","textPreview":"shared frontend contract","textChars":24,"textLines":1,"bbox":[118,236,174,15]}
+{"kind":"shape","id":"sh/6l0fy98b","slide":1,"name":"demo-response-arrow","bbox":[108,270,194,8]}
+{"kind":"textbox","id":"sh/d4vy5876","slide":1,"name":"demo-response-label","text":"deterministic Challenge","textPreview":"deterministic Challenge","textChars":23,"textLines":1,"bbox":[118,248,174,17]}
+{"kind":"textbox","id":"sh/cjmhc3q1","slide":1,"name":"demo-response-detail","text":"fixture response","textPreview":"fixture response","textChars":16,"textLines":1,"bbox":[118,282,174,15]}
+{"kind":"shape","id":"sh/kna5w3qh","slide":1,"name":"live-request-arrow","bbox":[108,344,194,8]}
+{"kind":"textbox","id":"sh/loj65872","slide":1,"name":"live-request-label","text":"makeRequest()","textPreview":"makeRequest()","textChars":13,"textLines":1,"bbox":[118,322,174,17]}
+{"kind":"textbox","id":"sh/ylsnut8b","slide":1,"name":"live-request-detail","text":"runtime mode = live","textPreview":"runtime mode = live","textChars":19,"textLines":1,"bbox":[118,356,174,15]}
+{"kind":"shape","id":"sh/jm1o3ypw","slide":1,"name":"live-token-arrow","bbox":[318,391,184,8]}
+{"kind":"textbox","id":"sh/8rup03qt","slide":1,"name":"live-token-label","text":"session token","textPreview":"session token","textChars":13,"textLines":1,"bbox":[328,369,164,17]}
+{"kind":"textbox","id":"sh/tc36987y","slide":1,"name":"live-token-detail","text":"Bearer JWT","textPreview":"Bearer JWT","textChars":10,"textLines":1,"bbox":[328,403,164,15]}
+{"kind":"shape","id":"sh/6ps7yd8n","slide":1,"name":"live-auth-arrow","bbox":[518,438,204,8]}
+{"kind":"textbox","id":"sh/7q1o7ip8","slide":1,"name":"live-auth-label","text":"verified user","textPreview":"verified user","textChars":13,"textLines":1,"bbox":[528,416,184,17]}
+{"kind":"textbox","id":"sh/gfup4nqp","slide":1,"name":"live-auth-detail","text":"authorized party checked","textPreview":"authorized party checked","textChars":24,"textLines":1,"bbox":[528,450,184,15]}
+{"kind":"shape","id":"sh/hg36ds7a","slide":1,"name":"quota-read-arrow","bbox":[738,485,414,8]}
+{"kind":"textbox","id":"sh/rap83m9c","slide":1,"name":"quota-read-label","text":"load / reset quota","textPreview":"load / reset quota","textChars":18,"textLines":1,"bbox":[748,463,394,17]}
+{"kind":"textbox","id":"sh/q9wruhsr","slide":1,"name":"quota-read-detail","text":"50 daily · 429 when empty","textPreview":"50 daily · 429 when empty","textChars":25,"textLines":1,"bbox":[748,497,394,15]}
+{"kind":"shape","id":"sh/dc7a5wri","slide":1,"name":"model-request-arrow","bbox":[738,532,194,8]}
+{"kind":"textbox","id":"sh/sby9wrax","slide":1,"name":"model-request-label","text":"request JSON","textPreview":"request JSON","textChars":12,"textLines":1,"bbox":[748,510,174,17]}
+{"kind":"textbox","id":"sh/3658zm9g","slide":1,"name":"model-request-detail","text":"hosted inference","textPreview":"hosted inference","textChars":16,"textLines":1,"bbox":[748,544,174,15]}
+{"kind":"shape","id":"sh/ilwrqhsv","slide":1,"name":"model-response-arrow","bbox":[738,574,194,8]}
+{"kind":"textbox","id":"sh/58nq1cr6","slide":1,"name":"model-response-label","text":"candidate","textPreview":"candidate","textChars":9,"textLines":1,"bbox":[748,552,174,17]}
+{"kind":"shape","id":"sh/47e9s7a1","slide":1,"name":"validation-link","bbox":[700,612,22,7]}
+{"kind":"shape","id":"sh/n29sb69k","slide":1,"name":"validation-gate","bbox":[574,588,136,50]}
+{"kind":"textbox","id":"sh/2hgr21sz","slide":1,"name":"validation-title","text":"Pydantic gate","textPreview":"Pydantic gate","textChars":13,"textLines":1,"bbox":[586,598,112,17]}
+{"kind":"textbox","id":"sh/yxkba5c7","slide":1,"name":"validation-copy","text":"4 unique · id 0–3","textPreview":"4 unique · id 0–3","textChars":17,"textLines":1,"bbox":[584,620,116,13]}
+{"kind":"shape","id":"sh/jytc3ats","slide":1,"name":"tx-boundary","bbox":[770,588,446,82]}
+{"kind":"textbox","id":"sh/kz2dcfud","slide":1,"name":"tx-label","text":"ONE SQLALCHEMY TRANSACTION","textPreview":"ONE SQLALCHEMY TRANSACTION","textChars":26,"textLines":1,"bbox":[786,597,214,15]}
+{"kind":"shape","id":"sh/l0bu5kby","slide":1,"name":"tx-write-arrow","bbox":[738,635,414,8]}
+{"kind":"textbox","id":"sh/614vepcj","slide":1,"name":"tx-write-label","text":"insert Challenge + decrement quota","textPreview":"insert Challenge + decrement quota","textChars":34,"textLines":1,"bbox":[785,615,320,17]}
+{"kind":"shape","id":"sh/72dc7ato","slide":1,"name":"tx-commit-arrow","bbox":[738,658,414,7]}
+{"kind":"textbox","id":"sh/83mdgfu9","slide":1,"name":"tx-commit-label","text":"commit","textPreview":"commit","textChars":6,"textLines":1,"bbox":[900,641,110,15]}
+{"kind":"textbox","id":"sh/t4vu9kbu","slide":1,"name":"rollback-label","text":"failure: rollback · quota unchanged","textPreview":"failure: rollback · quota unchanged","textChars":35,"textLines":1,"bbox":[818,675,300,16]}
+{"kind":"shape","id":"sh/250b2lcz","slide":1,"name":"side-paths","bbox":[660,218,520,52]}
+{"kind":"textbox","id":"sh/n69cvqtk","slide":1,"name":"side-paths-label","text":"ASYNC + READ PATHS","textPreview":"ASYNC + READ PATHS","textChars":18,"textLines":1,"bbox":[675,228,126,16]}
+{"kind":"textbox","id":"sh/50ze1ov2","slide":1,"name":"side-paths-copy","text":"user.created → Svix → quota row   ·   GET quota   ·   history ≤100","textPreview":"user.created → Svix → quota row   ·   GET quota   ·   history ≤100","textChars":66,"textLines":1,"bbox":[810,233,354,18]}
+{"kind":"textbox","id":"sh/4z6x8jeh","slide":1,"name":"sources","text":"LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textPreview":"LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textChars":114,"textLines":1,"bbox":[260,704,760,13]}
+{"kind":"notes","id":"nt/af0qav","slide":1,"text":""}

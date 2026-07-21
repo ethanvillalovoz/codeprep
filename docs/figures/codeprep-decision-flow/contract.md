@@ -10,7 +10,7 @@ A request-sequence diagram with six lifelines and two alternate bands. The demo 
 
 ## Visual encoding
 
-The figure uses an IDE-inspired dark palette: orange marks the browser/adapter exchange, cyan marks identity and validation, violet marks live API/model traffic, lime marks the database transaction, and amber marks rollback semantics. Lifelines, arrow direction, alternate bands, and labels remain redundant with color.
+The figure directly reuses CodePrep's product tokens: warm off-white and neutral surfaces establish the paper, rust marks requests and active execution, charcoal marks authenticated backend traffic, green marks valid responses and the database transaction, and muted red marks rollback. Lifelines, arrow direction, alternate bands, and labels remain redundant with color.
 
 ## Supported claim
 
