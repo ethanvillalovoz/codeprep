@@ -4,14 +4,18 @@
 
 This figure should allow a skeptical technical reviewer to understand that CodePrep reveals a rationale only after answer commitment while its live path validates generated challenges and commits the challenge plus quota decrement atomically.
 
+## Figure form
+
+A before/action/after interaction storyboard: the unanswered state visibly withholds the rationale, selecting option `B` is the single transition, and the answered state reveals the concept and explanation. Live generation is a secondary horizontal rail so backend transaction semantics do not compete with the defining user interaction.
+
 ## Supported claim
 
 The credential-free demo serves deterministic challenges through the same frontend request contract and keeps the explanation hidden until an option is selected. In live mode, a Clerk-authenticated request checks quota, obtains one provider response, validates an exact four-option Pydantic schema, and commits the new challenge with the quota decrement in one transaction; failures roll back.
 
 ## Evidence used
 
-- `docs/figures/codeprep-decision-flow/media/committed-answer.png` for the complete default medium demo after answer commitment.
-- `frontend/src/data/demo.js` and `frontend/src/utils/DemoApiProvider.jsx` for the deterministic challenge, history, and in-memory quota fixture.
+- `frontend/src/data/demo.js` for the exact deterministic challenge, answer, concept, and explanation.
+- `frontend/src/utils/DemoApiProvider.jsx` for the credential-free in-memory provider that preserves the frontend request contract without Clerk, a hosted model, or a database.
 - `frontend/src/challenge/MCQChallenge.jsx` for answer commitment and rationale reveal behavior.
 - `backend/src/ai_generator.py` for provider parsing and exact challenge validation.
 - `backend/src/routes/challenge.py` for authentication, quota checking, transaction commit, and rollback behavior.
