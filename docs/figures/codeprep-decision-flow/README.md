@@ -13,4 +13,4 @@ This directory contains the public demo/live architecture overview and its trace
 | `media/committed-answer.png` | Archival local demo capture; not an input to the architecture figure |
 | `preflight/` | PowerPoint, final-size, grayscale, and PDF checks |
 
-The diagram traces the shared frontend request contract into either local deterministic fixtures or the authenticated FastAPI path, including schema validation, one-transaction persistence, rollback, identity provisioning, and read routes. It is not evidence of educational effectiveness or hosted-model quality.
+The sequence diagram contrasts the shared frontend request in demo and live modes across browser, adapter, identity, API, model, and database lifelines. It makes schema validation, one-transaction persistence, rollback, identity provisioning, and read routes explicit. It is not evidence of educational effectiveness or hosted-model quality.

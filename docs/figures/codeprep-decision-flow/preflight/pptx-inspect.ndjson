@@ -1,98 +1,76 @@
-{"kind":"deck","id":"pr/9oxsdn","name":"Deck"}
-{"kind":"layout","layoutId":"9e296b15-a764-4c75-9c1c-916f73d70e6c","name":"Master","type":"master"}
-{"kind":"layout","layoutId":"f9ebf1a1-630b-462f-af72-b78b78a9234c","name":"Title Slide","type":"title"}
-{"kind":"slide","id":"sl/t4ivol","slide":1,"title":"CodePrep admits model output only through validation and one atomic commit","textShapes":55}
-{"kind":"textbox","id":"sh/yxcn618r","slide":1,"name":"title","text":"CodePrep admits model output only through validation and one atomic commit","textPreview":"CodePrep admits model output only through validation and one atomic commit","textChars":74,"textLines":1,"bbox":[42,22,1196,42]}
-{"kind":"textbox","id":"sh/l03m1gri","slide":1,"name":"subtitle","text":"One browser contract selects demo fixtures or a signed FastAPI path; validated JSON enters the database only with the quota update.","textPreview":"One browser contract selects demo fixtures or a signed FastAPI path; validated JSON enters the database only with the quota update.","textChars":131,"textLines":1,"bbox":[42,69,1196,25]}
-{"kind":"shape","id":"sh/0zu58bqx","slide":1,"name":"header-rule","bbox":[42,108,1196,0]}
-{"kind":"shape","id":"sh/bul4b69g","slide":1,"name":"webhook-to-verify","bbox":[170,500,28,12]}
-{"kind":"shape","id":"sh/qtsn218v","slide":1,"name":"verify-to-provision","bbox":[346,500,28,12]}
-{"kind":"shape","id":"sh/dw3mdwrm","slide":1,"name":"provision-to-db","bbox":[531,500,44,12]}
-{"kind":"textbox","id":"sh/cvu54rq1","slide":1,"name":"browser-label","text":"BROWSER RUNTIME","textPreview":"BROWSER RUNTIME","textChars":15,"textLines":1,"bbox":[42,128,230,18]}
-{"kind":"shape","id":"sh/36147m94","slide":1,"name":"browser-shell","bbox":[42,154,480,322]}
-{"kind":"shape","id":"sh/25snyh8z","slide":1,"name":"react-frame","bbox":[58,205,118,82]}
-{"kind":"textbox","id":"sh/4bu1kvqp","slide":1,"name":"react-eyebrow","text":"REACT 19","textPreview":"REACT 19","textChars":8,"textLines":1,"bbox":[70,215,94,15]}
-{"kind":"textbox","id":"sh/5c3it0ru","slide":1,"name":"react-title","text":"practice\nworkspace","textPreview":"practice | workspace","textChars":18,"textLines":2,"bbox":[68,236,98,32]}
-{"kind":"textbox","id":"sh/ipcji58j","slide":1,"name":"react-note","text":"makeRequest()","textPreview":"makeRequest()","textChars":13,"textLines":1,"bbox":[67,263,100,16]}
-{"kind":"shape","id":"sh/3al0rq94","slide":1,"name":"mode-router","bbox":[203,198,70,94]}
-{"kind":"textbox","id":"sh/gnuhgvqd","slide":1,"name":"mode-text","text":"runtime\nmode","textPreview":"runtime | mode","textChars":12,"textLines":2,"bbox":[214,225,48,40]}
-{"kind":"shape","id":"sh/ho3ip0ry","slide":1,"name":"live-path-frame","bbox":[320,205,160,82]}
-{"kind":"textbox","id":"sh/ulszel87","slide":1,"name":"live-path-eyebrow","text":"LIVE ADAPTER","textPreview":"LIVE ADAPTER","textChars":12,"textLines":1,"bbox":[332,215,136,15]}
-{"kind":"textbox","id":"sh/vml0nq9s","slide":1,"name":"live-path-title","text":"Clerk session\n+ LiveApiProvider","textPreview":"Clerk session | + LiveApiProvider","textChars":31,"textLines":2,"bbox":[330,236,140,32]}
-{"kind":"textbox","id":"sh/0je1sfqh","slide":1,"name":"live-path-note","text":"Bearer JWT","textPreview":"Bearer JWT","textChars":10,"textLines":1,"bbox":[329,263,142,16]}
-{"kind":"shape","id":"sh/1kni1kr2","slide":1,"name":"demo-provider-frame","bbox":[150,337,130,82]}
-{"kind":"textbox","id":"sh/903ilkj6","slide":1,"name":"demo-provider-eyebrow","text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[162,347,106,15]}
-{"kind":"textbox","id":"sh/oza1cfi1","slide":1,"name":"demo-provider-title","text":"Demo API\nprovider","textPreview":"Demo API | provider","textChars":17,"textLines":2,"bbox":[160,368,110,32]}
-{"kind":"textbox","id":"sh/ny10ja1g","slide":1,"name":"demo-provider-note","text":"same request contract","textPreview":"same request contract","textChars":21,"textLines":1,"bbox":[159,395,112,16]}
-{"kind":"shape","id":"sh/mxsza50v","slide":1,"name":"fixtures-frame","bbox":[320,337,150,82]}
-{"kind":"textbox","id":"sh/1wjihkja","slide":1,"name":"fixtures-eyebrow","text":"LOCAL","textPreview":"LOCAL","textChars":5,"textLines":1,"bbox":[332,347,126,15]}
-{"kind":"textbox","id":"sh/0vah8fip","slide":1,"name":"fixtures-title","text":"deterministic\nfixtures","textPreview":"deterministic | fixtures","textChars":22,"textLines":2,"bbox":[330,368,130,32]}
-{"kind":"textbox","id":"sh/za10fa14","slide":1,"name":"fixtures-note","text":"no auth · model · DB","textPreview":"no auth · model · DB","textChars":20,"textLines":1,"bbox":[329,395,132,16]}
-{"kind":"textbox","id":"sh/e9sz650j","slide":1,"name":"demo-boundary","text":"Demo path terminates inside the browser.","textPreview":"Demo path terminates inside the browser.","textChars":40,"textLines":1,"bbox":[148,436,324,18]}
-{"kind":"textbox","id":"sh/d8zid0je","slide":1,"name":"backend-label","text":"AUTHENTICATED GENERATION PATH","textPreview":"AUTHENTICATED GENERATION PATH","textChars":29,"textLines":1,"bbox":[545,128,390,18]}
-{"kind":"shape","id":"sh/c7qh4vit","slide":1,"name":"backend-shell","bbox":[545,154,693,322]}
-{"kind":"shape","id":"sh/idofe1gb","slide":1,"name":"fastapi-frame","bbox":[560,205,120,82]}
-{"kind":"textbox","id":"sh/3exgn6hw","slide":1,"name":"fastapi-eyebrow","text":"FASTAPI ROUTE","textPreview":"FASTAPI ROUTE","textChars":13,"textLines":1,"bbox":[572,215,96,15]}
-{"kind":"textbox","id":"sh/4f6xgbyh","slide":1,"name":"fastapi-title","text":"generate\nchallenge","textPreview":"generate | challenge","textChars":18,"textLines":2,"bbox":[570,236,100,32]}
-{"kind":"textbox","id":"sh/pgfypgz2","slide":1,"name":"fastapi-note","text":"POST /api","textPreview":"POST /api","textChars":9,"textLines":1,"bbox":[569,263,102,16]}
-{"kind":"shape","id":"sh/u9ofahgf","slide":1,"name":"quota-frame","bbox":[710,205,125,82]}
-{"kind":"textbox","id":"sh/vaxwjmh0","slide":1,"name":"quota-eyebrow","text":"GATE","textPreview":"GATE","textChars":4,"textLines":1,"bbox":[722,215,101,15]}
-{"kind":"textbox","id":"sh/gb6xcryl","slide":1,"name":"quota-title","text":"auth + quota","textPreview":"auth + quota","textChars":12,"textLines":1,"bbox":[720,236,105,32]}
-{"kind":"textbox","id":"sh/hcfylwz6","slide":1,"name":"quota-note","text":"load · reset · 429","textPreview":"load · reset · 429","textChars":18,"textLines":1,"bbox":[719,263,107,16]}
-{"kind":"shape","id":"sh/654f6hg3","slide":1,"name":"hf-frame","bbox":[865,205,105,82]}
-{"kind":"textbox","id":"sh/76dwfmho","slide":1,"name":"hf-eyebrow","text":"PROVIDER","textPreview":"PROVIDER","textChars":8,"textLines":1,"bbox":[877,215,81,15]}
-{"kind":"textbox","id":"sh/zyxcbilk","slide":1,"name":"hf-title","text":"HF inference","textPreview":"HF inference","textChars":12,"textLines":1,"bbox":[875,236,85,32]}
-{"kind":"textbox","id":"sh/yxobidkz","slide":1,"name":"hf-note","text":"JSON requested","textPreview":"JSON requested","textChars":14,"textLines":1,"bbox":[874,263,87,16]}
-{"kind":"shape","id":"sh/l0fuds3q","slide":1,"name":"schema-frame","bbox":[1000,205,120,82]}
-{"kind":"textbox","id":"sh/kz6tkn25","slide":1,"name":"schema-eyebrow","text":"PYDANTIC","textPreview":"PYDANTIC","textChars":8,"textLines":1,"bbox":[1012,215,96,15]}
-{"kind":"textbox","id":"sh/budc7ilo","slide":1,"name":"schema-title","text":"validate JSON","textPreview":"validate JSON","textChars":13,"textLines":1,"bbox":[1010,236,100,32]}
-{"kind":"textbox","id":"sh/at4bedk3","slide":1,"name":"schema-note","text":"4 unique · id 0–3","textPreview":"4 unique · id 0–3","textChars":17,"textLines":1,"bbox":[1009,263,102,16]}
-{"kind":"shape","id":"sh/xwfu9s3e","slide":1,"name":"transaction","bbox":[1150,190,88,158]}
-{"kind":"textbox","id":"sh/cv6tgn2t","slide":1,"name":"tx-label","text":"ONE TX","textPreview":"ONE TX","textChars":6,"textLines":1,"bbox":[1161,204,66,16]}
-{"kind":"textbox","id":"sh/n6ds3ylc","slide":1,"name":"tx-content","text":"insert row\n+\ndecrement quota\n\ncommit","textPreview":"insert row | + | decrement quota |  | commit","textChars":36,"textLines":5,"bbox":[1159,236,70,88]}
-{"kind":"shape","id":"sh/254batkr","slide":1,"name":"rollback","bbox":[965,370,160,56]}
-{"kind":"textbox","id":"sh/szihofed","slide":1,"name":"rollback-text","text":"any failure\nrollback · quota unchanged","textPreview":"any failure | rollback · quota unchanged","textChars":38,"textLines":2,"bbox":[977,382,136,32]}
-{"kind":"shape","id":"sh/t0rixkfy","slide":1,"name":"database","bbox":[1138,381,100,67]}
-{"kind":"textbox","id":"sh/6xgzm5w7","slide":1,"name":"db-title","text":"SQL DATABASE","textPreview":"SQL DATABASE","textChars":12,"textLines":1,"bbox":[1148,392,80,16]}
-{"kind":"textbox","id":"sh/ry90vaxs","slide":1,"name":"db-copy","text":"SQLite or Postgres","textPreview":"SQLite or Postgres","textChars":18,"textLines":1,"bbox":[1148,418,80,18]}
-{"kind":"shape","id":"sh/gnihsfep","slide":1,"name":"react-to-mode","bbox":[176,243,27,12]}
-{"kind":"shape","id":"sh/1ori1kfa","slide":1,"name":"mode-to-demo","bbox":[235,294,12,42]}
-{"kind":"shape","id":"sh/e10zq5wj","slide":1,"name":"demo-to-fixture","bbox":[280,374,40,12]}
-{"kind":"shape","id":"sh/f290zax4","slide":1,"name":"mode-to-live","bbox":[273,243,47,12]}
-{"kind":"shape","id":"sh/w7yhgve5","slide":1,"name":"live-to-api","bbox":[480,243,80,12]}
-{"kind":"shape","id":"sh/xs7ip0fq","slide":1,"name":"api-to-quota","bbox":[680,243,30,12]}
-{"kind":"shape","id":"sh/xozytc7u","slide":1,"name":"quota-to-hf","bbox":[835,243,30,12]}
-{"kind":"shape","id":"sh/cnqxk769","slide":1,"name":"hf-to-schema","bbox":[970,243,30,12]}
-{"kind":"shape","id":"sh/bmxgrmpo","slide":1,"name":"schema-to-tx","bbox":[1120,243,30,12]}
-{"kind":"shape","id":"sh/alofiho3","slide":1,"name":"tx-to-db","bbox":[1190,348,12,33]}
-{"kind":"shape","id":"sh/lszyxw7q","slide":1,"name":"failure-to-rollback","bbox":[1082,318,12,45]}
-{"kind":"textbox","id":"sh/krqxor65","slide":1,"name":"control-label","text":"IDENTITY PROVISIONING","textPreview":"IDENTITY PROVISIONING","textChars":21,"textLines":1,"bbox":[42,482,230,18]}
-{"kind":"shape","id":"sh/zqhgvmpk","slide":1,"name":"clerk-event-frame","bbox":[42,511,128,70]}
-{"kind":"textbox","id":"sh/yp8fmhoz","slide":1,"name":"clerk-event-eyebrow","text":"CLERK","textPreview":"CLERK","textChars":5,"textLines":1,"bbox":[54,521,104,15]}
-{"kind":"textbox","id":"sh/9wjy1w7m","slide":1,"name":"clerk-event-title","text":"user.created","textPreview":"user.created","textChars":12,"textLines":1,"bbox":[52,542,108,27]}
-{"kind":"shape","id":"sh/8vaxsr6h","slide":1,"name":"svix-frame","bbox":[198,511,148,70]}
-{"kind":"textbox","id":"sh/q1kvmt4j","slide":1,"name":"svix-eyebrow","text":"WEBHOOK","textPreview":"WEBHOOK","textChars":7,"textLines":1,"bbox":[210,521,124,15]}
-{"kind":"textbox","id":"sh/r2tcvy54","slide":1,"name":"svix-title","text":"Svix signature\nverification","textPreview":"Svix signature | verification","textChars":27,"textLines":2,"bbox":[208,542,128,27]}
-{"kind":"shape","id":"sh/s32do3mp","slide":1,"name":"provision-frame","bbox":[374,511,157,70]}
-{"kind":"textbox","id":"sh/d4vux8na","slide":1,"name":"provision-eyebrow","text":"PROVISION","textPreview":"PROVISION","textChars":9,"textLines":1,"bbox":[386,521,133,15]}
-{"kind":"textbox","id":"sh/e54vqd4v","slide":1,"name":"provision-title","text":"ChallengeQuota\nrecord","textPreview":"ChallengeQuota | record","textChars":21,"textLines":2,"bbox":[384,542,137,27]}
-{"kind":"shape","id":"sh/f6dczi5g","slide":1,"name":"side-routes","bbox":[575,511,356,70]}
-{"kind":"textbox","id":"sh/0rmds3m1","slide":1,"name":"side-routes-title","text":"Read paths","textPreview":"Read paths","textChars":10,"textLines":1,"bbox":[589,523,80,16]}
-{"kind":"textbox","id":"sh/1svu18nm","slide":1,"name":"side-routes-copy","text":"GET /api/quota    ·    GET /api/my-history (newest 100)","textPreview":"GET /api/quota    ·    GET /api/my-history (newest 100)","textChars":55,"textLines":1,"bbox":[675,523,240,34]}
-{"kind":"textbox","id":"sh/2t4vud4r","slide":1,"name":"db-models","text":"Tables: challenges + challenge_quotas","textPreview":"Tables: challenges + challenge_quotas","textChars":37,"textLines":1,"bbox":[954,530,284,18]}
-{"kind":"shape","id":"sh/nudc3i5c","slide":1,"name":"boundary-rule","bbox":[42,606,1196,0]}
-{"kind":"textbox","id":"sh/7mt8ju9s","slide":1,"name":"boundary-label","text":"TRUST + FAILURE BOUNDARY","textPreview":"TRUST + FAILURE BOUNDARY","textChars":24,"textLines":1,"bbox":[42,624,230,18]}
-{"kind":"shape","id":"sh/mlkrqp87","slide":1,"name":"boundary-0","bbox":[42,653,275,46]}
-{"kind":"textbox","id":"sh/9obqlkry","slide":1,"name":"boundary-head-0","text":"SECRETS","textPreview":"SECRETS","textChars":7,"textLines":1,"bbox":[52,663,78,16]}
-{"kind":"textbox","id":"sh/8n29sfqd","slide":1,"name":"boundary-body-0","text":"Clerk, webhook, and HF secrets remain in backend environment variables","textPreview":"Clerk, webhook, and HF secrets remain in backend environment variables","textChars":70,"textLines":1,"bbox":[130,658,176,34]}
-{"kind":"shape","id":"sh/vqd8nu94","slide":1,"name":"boundary-1","bbox":[341,653,275,46]}
-{"kind":"textbox","id":"sh/up4rup8j","slide":1,"name":"boundary-head-1","text":"MODEL OUTPUT","textPreview":"MODEL OUTPUT","textChars":12,"textLines":1,"bbox":[351,663,78,16]}
-{"kind":"textbox","id":"sh/hsvap4ru","slide":1,"name":"boundary-body-1","text":"malformed, empty, or non-unique options become a generic 503","textPreview":"malformed, empty, or non-unique options become a generic 503","textChars":60,"textLines":1,"bbox":[429,658,176,34]}
-{"kind":"shape","id":"sh/wrm9wzq9","slide":1,"name":"boundary-2","bbox":[640,653,275,46]}
-{"kind":"textbox","id":"sh/jedsre90","slide":1,"name":"boundary-head-2","text":"ATOMICITY","textPreview":"ATOMICITY","textChars":9,"textLines":1,"bbox":[650,663,78,16]}
-{"kind":"textbox","id":"sh/it4ry98f","slide":1,"name":"boundary-body-2","text":"challenge insert and quota decrement share one SQLAlchemy session","textPreview":"challenge insert and quota decrement share one SQLAlchemy session","textChars":65,"textLines":1,"bbox":[728,658,176,34]}
-{"kind":"shape","id":"sh/gj6poj6t","slide":1,"name":"boundary-3","bbox":[939,653,275,46]}
-{"kind":"textbox","id":"sh/1kfqh4ny","slide":1,"name":"boundary-head-3","text":"SCALE","textPreview":"SCALE","textChars":5,"textLines":1,"bbox":[949,663,78,16]}
-{"kind":"textbox","id":"sh/eho7m9on","slide":1,"name":"boundary-body-3","text":"SQLite is local default; managed Postgres + migrations are still required for scale","textPreview":"SQLite is local default; managed Postgres + migrations are still required for scale","textChars":83,"textLines":1,"bbox":[1027,658,176,34]}
-{"kind":"textbox","id":"sh/fix8fe58","slide":1,"name":"sources","text":"Sources: LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textPreview":"Sources: LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textChars":123,"textLines":1,"bbox":[245,705,790,14]}
-{"kind":"notes","id":"nt/t4ivol","slide":1,"text":""}
+{"kind":"deck","id":"pr/zawphp","name":"Deck"}
+{"kind":"layout","layoutId":"cead3253-78fa-4806-997f-c7e7ddf75dbd","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"c678b09c-d6f9-429c-8935-1271159e953b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/v49bgw","slide":1,"title":"REQUEST SEQUENCE · DEMO AND LIVE","textShapes":43}
+{"kind":"textbox","id":"sh/7i1c3m5k","slide":1,"name":"kicker","text":"REQUEST SEQUENCE · DEMO AND LIVE","textPreview":"REQUEST SEQUENCE · DEMO AND LIVE","textChars":32,"textLines":1,"bbox":[50,18,330,18]}
+{"kind":"textbox","id":"sh/8judcr65","slide":1,"name":"title","text":"CodePrep commits a challenge and its quota update together","textPreview":"CodePrep commits a challenge and its quota update together","textChars":58,"textLines":1,"bbox":[50,39,1040,38]}
+{"kind":"textbox","id":"sh/9k3u5wnq","slide":1,"name":"subtitle","text":"The browser contract is shared; authentication, model inference, validation, and persistence exist only on the live path.","textPreview":"The browser contract is shared; authentication, model inference, validation, and persistence exist only on the live path.","textChars":121,"textLines":1,"bbox":[50,80,920,20]}
+{"kind":"textbox","id":"sh/ulcve1ob","slide":1,"name":"route","text":"POST /api/generate-challenge","textPreview":"POST /api/generate-challenge","textChars":28,"textLines":1,"bbox":[995,82,235,18]}
+{"kind":"shape","id":"sh/vmlc765w","slide":1,"name":"demo-band","bbox":[44,185,1192,103]}
+{"kind":"shape","id":"sh/wnudgb6h","slide":1,"name":"live-band","bbox":[44,301,1192,373]}
+{"kind":"textbox","id":"sh/ho3e9gnm","slide":1,"name":"demo-band-label","text":"ALT · DEMO","textPreview":"ALT · DEMO","textChars":10,"textLines":1,"bbox":[56,197,100,18]}
+{"kind":"textbox","id":"sh/qp8v2hor","slide":1,"name":"demo-band-note","text":"local response · no auth · no model · no database","textPreview":"local response · no auth · no model · no database","textChars":49,"textLines":1,"bbox":[930,197,284,18]}
+{"kind":"textbox","id":"sh/bqhcv2pc","slide":1,"name":"live-band-label","text":"ALT · LIVE","textPreview":"ALT · LIVE","textChars":10,"textLines":1,"bbox":[56,313,100,18]}
+{"kind":"shape","id":"sh/zm9kfal8","slide":1,"name":"browser-head","bbox":[34,112,132,56]}
+{"kind":"textbox","id":"sh/el0j65kn","slide":1,"name":"browser-label","text":"Browser","textPreview":"Browser","textChars":7,"textLines":1,"bbox":[43,124,114,18]}
+{"kind":"textbox","id":"sh/1ob2hk3e","slide":1,"name":"browser-sub","text":"React workspace","textPreview":"React workspace","textChars":15,"textLines":1,"bbox":[43,146,114,14]}
+{"kind":"shape","id":"sh/0n2l8f2t","slide":1,"name":"browser-lifeline","bbox":[100,168,0,493]}
+{"kind":"shape","id":"sh/ry9kbalc","slide":1,"name":"adapter-head","bbox":[244,112,132,56]}
+{"kind":"textbox","id":"sh/qx0j25kr","slide":1,"name":"adapter-label","text":"API adapter","textPreview":"API adapter","textChars":11,"textLines":1,"bbox":[253,124,114,18]}
+{"kind":"textbox","id":"sh/dkr2d032","slide":1,"name":"adapter-sub","text":"demo or live","textPreview":"demo or live","textChars":12,"textLines":1,"bbox":[253,146,114,14]}
+{"kind":"shape","id":"sh/czi14v2x","slide":1,"name":"adapter-lifeline","bbox":[310,168,0,493]}
+{"kind":"shape","id":"sh/3upk7ql0","slide":1,"name":"clerk-head","bbox":[444,112,132,56]}
+{"kind":"textbox","id":"sh/2tgjylkf","slide":1,"name":"clerk-label","text":"Clerk","textPreview":"Clerk","textChars":5,"textLines":1,"bbox":[453,124,114,18]}
+{"kind":"textbox","id":"sh/6pg3alon","slide":1,"name":"clerk-sub","text":"session + webhook","textPreview":"session + webhook","textChars":17,"textLines":1,"bbox":[453,146,114,14]}
+{"kind":"shape","id":"sh/7qpkjq58","slide":1,"name":"clerk-lifeline","bbox":[510,168,0,493]}
+{"kind":"shape","id":"sh/srylcv6d","slide":1,"name":"api-head","bbox":[664,112,132,56]}
+{"kind":"textbox","id":"sh/ts72l0ny","slide":1,"name":"api-label","text":"FastAPI","textPreview":"FastAPI","textChars":7,"textLines":1,"bbox":[673,124,114,18]}
+{"kind":"textbox","id":"sh/utg3e5oj","slide":1,"name":"api-sub","text":"auth + quota + route","textPreview":"auth + quota + route","textChars":20,"textLines":1,"bbox":[673,146,114,14]}
+{"kind":"shape","id":"sh/fup4nq54","slide":1,"name":"api-lifeline","bbox":[730,168,0,493]}
+{"kind":"shape","id":"sh/gvylgv6p","slide":1,"name":"hf-head","bbox":[874,112,132,56]}
+{"kind":"textbox","id":"sh/hwrmp0na","slide":1,"name":"hf-label","text":"HF inference","textPreview":"HF inference","textChars":12,"textLines":1,"bbox":[883,124,114,18]}
+{"kind":"textbox","id":"sh/2x03i54v","slide":1,"name":"hf-sub","text":"JSON candidate","textPreview":"JSON candidate","textChars":14,"textLines":1,"bbox":[883,146,114,14]}
+{"kind":"shape","id":"sh/3i94ra50","slide":1,"name":"hf-lifeline","bbox":[940,168,0,493]}
+{"kind":"shape","id":"sh/dcb6h47i","slide":1,"name":"db-head","bbox":[1094,112,132,56]}
+{"kind":"textbox","id":"sh/cr25ozqx","slide":1,"name":"db-label","text":"SQL database","textPreview":"SQL database","textChars":12,"textLines":1,"bbox":[1103,124,114,18]}
+{"kind":"textbox","id":"sh/rqtofupc","slide":1,"name":"db-sub","text":"challenges + quotas","textPreview":"challenges + quotas","textChars":19,"textLines":1,"bbox":[1103,146,114,14]}
+{"kind":"shape","id":"sh/qpknmp8r","slide":1,"name":"db-lifeline","bbox":[1160,168,0,493]}
+{"kind":"shape","id":"sh/lgv6lo7e","slide":1,"name":"demo-request-arrow","bbox":[108,224,194,8]}
+{"kind":"textbox","id":"sh/0f25sj6t","slide":1,"name":"demo-request-label","text":"makeRequest()","textPreview":"makeRequest()","textChars":13,"textLines":1,"bbox":[118,202,174,17]}
+{"kind":"textbox","id":"sh/zetojep8","slide":1,"name":"demo-request-detail","text":"shared frontend contract","textPreview":"shared frontend contract","textChars":24,"textLines":1,"bbox":[118,236,174,15]}
+{"kind":"shape","id":"sh/edknq983","slide":1,"name":"demo-response-arrow","bbox":[108,270,194,8]}
+{"kind":"textbox","id":"sh/9kv6po7q","slide":1,"name":"demo-response-label","text":"deterministic Challenge","textPreview":"deterministic Challenge","textChars":23,"textLines":1,"bbox":[118,248,174,17]}
+{"kind":"textbox","id":"sh/8jmpwj65","slide":1,"name":"demo-response-detail","text":"fixture response","textPreview":"fixture response","textChars":16,"textLines":1,"bbox":[118,282,174,15]}
+{"kind":"shape","id":"sh/kfq9onqd","slide":1,"name":"live-request-arrow","bbox":[108,344,194,8]}
+{"kind":"textbox","id":"sh/5gzqhsry","slide":1,"name":"live-request-label","text":"makeRequest()","textPreview":"makeRequest()","textChars":13,"textLines":1,"bbox":[118,322,174,17]}
+{"kind":"textbox","id":"sh/idormd87","slide":1,"name":"live-request-detail","text":"runtime mode = live","textPreview":"runtime mode = live","textChars":19,"textLines":1,"bbox":[118,356,174,15]}
+{"kind":"shape","id":"sh/jex8fi9s","slide":1,"name":"live-token-arrow","bbox":[318,391,184,8]}
+{"kind":"textbox","id":"sh/wb69kna1","slide":1,"name":"live-token-label","text":"session token","textPreview":"session token","textChars":13,"textLines":1,"bbox":[328,369,164,17]}
+{"kind":"textbox","id":"sh/xcfqdsrm","slide":1,"name":"live-token-detail","text":"Bearer JWT","textPreview":"Bearer JWT","textChars":10,"textLines":1,"bbox":[328,403,164,15]}
+{"kind":"shape","id":"sh/a9oridsb","slide":1,"name":"live-auth-arrow","bbox":[518,438,204,8]}
+{"kind":"textbox","id":"sh/vax8bi9g","slide":1,"name":"live-auth-label","text":"verified user","textPreview":"verified user","textChars":13,"textLines":1,"bbox":[528,416,184,17]}
+{"kind":"textbox","id":"sh/g7a9w7ql","slide":1,"name":"live-auth-detail","text":"authorized party checked","textPreview":"authorized party checked","textChars":24,"textLines":1,"bbox":[528,450,184,15]}
+{"kind":"shape","id":"sh/h8japcrq","slide":1,"name":"quota-read-arrow","bbox":[738,485,414,8]}
+{"kind":"textbox","id":"sh/r2lcf6t8","slide":1,"name":"quota-read-label","text":"load / reset quota","textPreview":"load / reset quota","textChars":18,"textLines":1,"bbox":[748,463,394,17]}
+{"kind":"textbox","id":"sh/q1cbm1sn","slide":1,"name":"quota-read-detail","text":"50 daily · 429 when empty","textPreview":"50 daily · 429 when empty","textChars":25,"textLines":1,"bbox":[748,497,394,15]}
+{"kind":"shape","id":"sh/d43uhgby","slide":1,"name":"model-request-arrow","bbox":[738,532,194,8]}
+{"kind":"textbox","id":"sh/c3utobat","slide":1,"name":"model-request-label","text":"request JSON","textPreview":"request JSON","textChars":12,"textLines":1,"bbox":[748,510,174,17]}
+{"kind":"textbox","id":"sh/z65cjqt4","slide":1,"name":"model-request-detail","text":"hosted inference","textPreview":"hosted inference","textChars":16,"textLines":1,"bbox":[748,544,174,15]}
+{"kind":"shape","id":"sh/e5wbqlsj","slide":1,"name":"model-response-arrow","bbox":[738,574,194,8]}
+{"kind":"textbox","id":"sh/1snul0ba","slide":1,"name":"model-response-label","text":"candidate","textPreview":"candidate","textChars":9,"textLines":1,"bbox":[748,552,174,17]}
+{"kind":"shape","id":"sh/07etsvap","slide":1,"name":"validation-link","bbox":[700,612,22,7]}
+{"kind":"shape","id":"sh/fa1c7mt0","slide":1,"name":"validation-gate","bbox":[574,588,136,50]}
+{"kind":"textbox","id":"sh/u9sbehcf","slide":1,"name":"validation-title","text":"Pydantic gate","textPreview":"Pydantic gate","textChars":13,"textLines":1,"bbox":[586,598,112,17]}
+{"kind":"textbox","id":"sh/i10n2tgf","slide":1,"name":"validation-copy","text":"4 unique · id 0–3","textPreview":"4 unique · id 0–3","textChars":17,"textLines":1,"bbox":[584,620,116,13]}
+{"kind":"shape","id":"sh/j2tobyhk","slide":1,"name":"tx-boundary","bbox":[770,588,446,82]}
+{"kind":"textbox","id":"sh/432543y5","slide":1,"name":"tx-label","text":"ONE SQLALCHEMY TRANSACTION","textPreview":"ONE SQLALCHEMY TRANSACTION","textChars":26,"textLines":1,"bbox":[786,597,214,15]}
+{"kind":"shape","id":"sh/54b6dozq","slide":1,"name":"tx-write-arrow","bbox":[738,635,414,8]}
+{"kind":"textbox","id":"sh/ux0ny9g3","slide":1,"name":"tx-write-label","text":"insert Challenge + decrement quota","textPreview":"insert Challenge + decrement quota","textChars":34,"textLines":1,"bbox":[785,615,320,17]}
+{"kind":"shape","id":"sh/vy9o7eho","slide":1,"name":"tx-commit-arrow","bbox":[738,658,414,7]}
+{"kind":"textbox","id":"sh/wzi50jy9","slide":1,"name":"tx-commit-label","text":"commit","textPreview":"commit","textChars":6,"textLines":1,"bbox":[900,641,110,15]}
+{"kind":"textbox","id":"sh/h0r69ozu","slide":1,"name":"rollback-label","text":"failure: rollback · quota unchanged","textPreview":"failure: rollback · quota unchanged","textChars":35,"textLines":1,"bbox":[818,675,300,16]}
+{"kind":"shape","id":"sh/m9gnu9g7","slide":1,"name":"side-paths","bbox":[660,218,520,52]}
+{"kind":"textbox","id":"sh/7a9o3ehs","slide":1,"name":"side-paths-label","text":"ASYNC + READ PATHS","textPreview":"ASYNC + READ PATHS","textChars":18,"textLines":1,"bbox":[675,228,126,16]}
+{"kind":"textbox","id":"sh/pofq9cja","slide":1,"name":"side-paths-copy","text":"user.created → Svix → quota row   ·   GET quota   ·   history ≤100","textPreview":"user.created → Svix → quota row   ·   GET quota   ·   history ≤100","textChars":66,"textLines":1,"bbox":[810,233,354,18]}
+{"kind":"textbox","id":"sh/on69g7ip","slide":1,"name":"sources","text":"LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textPreview":"LiveApiProvider.jsx · DemoApiProvider.jsx · routes/challenge.py · ai_generator.py · database/ · routes/webhooks.py","textChars":114,"textLines":1,"bbox":[260,704,760,13]}
+{"kind":"notes","id":"nt/v49bgw","slide":1,"text":""}

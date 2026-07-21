@@ -1,5 +1,5 @@
 {
-  "bytes": 125578,
+  "bytes": 109390,
   "failures": [],
   "file": "/Users/ethanvillalovoz/Documents/Codex/2026-07-15/ok/work/visual-audit/repos/codeprep/docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf",
   "font_report": {
@@ -16,7 +16,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "CAAAAA+Carlito",
+        "name": "CAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -24,7 +24,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "DAAAAA+Carlito-Bold",
+        "name": "DAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -40,7 +40,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "FAAAAA+Carlito-Bold",
+        "name": "FAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -48,7 +48,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "GAAAAA+Carlito",
+        "name": "GAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -56,7 +56,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "HAAAAA+Carlito-Bold",
+        "name": "HAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -64,7 +64,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "IAAAAA+Carlito",
+        "name": "IAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -72,7 +72,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "JAAAAA+Carlito-Bold",
+        "name": "JAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -88,7 +88,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "LAAAAA+Carlito",
+        "name": "LAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true

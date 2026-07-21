@@ -6,11 +6,11 @@ This figure should let a technical reviewer follow CodePrep's shared browser req
 
 ## Figure form
 
-A split system architecture. The browser routes the same request contract to either a local fixture provider or a Clerk-authenticated API adapter. The backend passes generation through user/quota checks, hosted inference, and exact Pydantic validation before challenge insertion and quota decrement commit together. Failure and identity-provisioning branches remain explicit.
+A request-sequence diagram with six lifelines and two alternate bands. The demo band terminates at a deterministic fixture response. The live band continues through Clerk, FastAPI, hosted inference, an API-owned Pydantic gate, and an explicitly enclosed SQLAlchemy transaction that couples challenge insertion with quota decrement. Provisioning and read paths appear as a separate asynchronous inset rather than another pipeline stage.
 
 ## Visual encoding
 
-The figure uses an IDE-inspired dark palette: orange marks browser and authentication flow, violet marks generation, cyan marks validation and persisted state, lime marks commit, amber marks rollback, and red marks unsupported model-output assumptions. Labels and layout remain redundant with color.
+The figure uses an IDE-inspired dark palette: orange marks the browser/adapter exchange, cyan marks identity and validation, violet marks live API/model traffic, lime marks the database transaction, and amber marks rollback semantics. Lifelines, arrow direction, alternate bands, and labels remain redundant with color.
 
 ## Supported claim
 
