@@ -1,0 +1,149 @@
+{
+  "bytes": 184239,
+  "failures": [],
+  "file": "/Users/ethanvillalovoz/Documents/Codex/2026-07-15/ok/work/visual-audit/repos/codeprep/docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf",
+  "font_report": {
+    "available": true,
+    "fonts": [
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "BAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "CAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "DAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "EAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "FAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "GAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "HAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "IAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "JAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "KAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "LAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "MAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      }
+    ]
+  },
+  "image_report": {
+    "available": true,
+    "images": [
+      {
+        "effective_ppi": [
+          454.4,
+          454.4
+        ],
+        "native_ppi": [
+          244.0,
+          244.0
+        ],
+        "number": 0,
+        "page": 1,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "type": "image"
+      }
+    ]
+  },
+  "pdf": {
+    "available": true,
+    "creator": "Impress",
+    "height_in": 7.5,
+    "page_size": "960.009 x 540 pts",
+    "pages": 1,
+    "pdf_version": "1.7",
+    "producer": "LibreOfficeDev 26.8.0.0.alpha0 (AARCH64)",
+    "width_in": 13.333458333333333
+  },
+  "status": "WARN",
+  "target_width_in": 7.16,
+  "tools": {
+    "pdffonts": "/Users/ethanvillalovoz/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/bin/pdffonts",
+    "pdfimages": "/Users/ethanvillalovoz/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/bin/pdfimages",
+    "pdfinfo": "/Users/ethanvillalovoz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdfinfo"
+  },
+  "warnings": [
+    "manually verify that raster line art reaches 600 ppi at placed size",
+    "manual review required for final-size text, line weight, clipping, color accessibility, and scientific correctness"
+  ]
+}
