@@ -3,12 +3,6 @@
   "figure_id": "codeprep-decision-flow",
   "inputs": [
     {
-      "bytes": 85764,
-      "path": "docs/figures/codeprep-decision-flow/media/committed-answer.png",
-      "role": "demo_capture",
-      "sha256": "a081bec0876b460c0b45e191d213d57c9d743efffb907c98324bd9e4bd0d0f8c"
-    },
-    {
       "bytes": 1659,
       "path": "frontend/src/data/demo.js",
       "role": "demo_fixture",
@@ -41,35 +35,35 @@
   ],
   "outputs": [
     {
-      "bytes": 92441,
+      "bytes": 18416,
       "path": "docs/figures/codeprep-decision-flow/editable/codeprep-decision-flow.pptx",
       "role": "editable_pptx",
-      "sha256": "5ec33c9e0690b34114faaa9a124932f0d6d64706e7d49cc1ea15ad7ce415d853"
+      "sha256": "15280f77881139669628837265345314beff70fc4c51878816e1dcb1331e7ad6"
     },
     {
-      "bytes": 619670,
+      "bytes": 648242,
       "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.svg",
       "role": "svg",
-      "sha256": "20c18174d8280644a1bcfc0e695310ef555221d611883fc62aae2c43bded73f4"
+      "sha256": "e9ae5e0c4b5c1b450a4569eb2811ede44dc72fc17a17a8bce661755599ed774b"
     },
     {
-      "bytes": 390152,
+      "bytes": 216814,
       "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.png",
       "role": "png",
-      "sha256": "2856adddffb8a07ecbb5868e9f043bb4e7a51b803973aa06bbb6579e831b1cd4"
+      "sha256": "7eb443928984234ba9d70797eb4bc4844516228c2144f2830d101d6265043fa6"
     },
     {
-      "bytes": 184239,
+      "bytes": 132951,
       "path": "docs/figures/codeprep-decision-flow/exports/codeprep-decision-flow.pdf",
       "role": "pdf",
-      "sha256": "a6b4c40df22e9098ae7ddd702a26f3b91776be06c8560cbe7373da6203e4c872"
+      "sha256": "4609ccfbe442fe0eb7b0dbe0913053573411428ca9db614ce47b132af5e229a5"
     }
   ],
   "processing_notes": [
-    "Local deterministic demo captured at 1920x1080; editable composition exported through LibreOffice; final-size and grayscale renders inspected manually."
+    "Native editable before/action/after storyboard exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "6f7d76ad748c51ff688f8e07cc13803e2a8067f5",
+  "source_revision": "160d81e6dda8eadb814e08db0691d649179c017b",
   "selection_note": "Default deterministic medium challenge after committing the correct answer; all four options and the complete live transaction path represented.",
   "target_width_in": 7.16,
   "venue": "GitHub README"

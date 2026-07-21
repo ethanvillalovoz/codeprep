@@ -10,7 +10,7 @@ This directory contains the public answer-commitment and execution-mode overview
 | `exports/codeprep-decision-flow.svg` | README-ready vector export |
 | `exports/codeprep-decision-flow.png` | Raster review export |
 | `exports/codeprep-decision-flow.pdf` | Print/preflight artifact |
-| `media/committed-answer.png` | Completed local deterministic demo capture |
+| `media/committed-answer.png` | Archival local demo capture; not an input to the vector figure |
 | `preflight/` | PowerPoint, final-size, grayscale, and PDF checks |
 
-The capture is a deterministic fixture. The live execution rail is derived from maintained code and tests; it is not evidence of educational effectiveness or hosted-model quality.
+The storyboard is reconstructed from the maintained deterministic fixture and frontend interaction logic rather than embedded as a screenshot. The live execution rail is derived from maintained code and tests; it is not evidence of educational effectiveness or hosted-model quality.
