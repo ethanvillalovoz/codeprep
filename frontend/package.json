@@ -18,7 +18,7 @@
     "@phosphor-icons/react": "^2.1.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^6.30.4"
+    "react-router-dom": "^6.30.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
